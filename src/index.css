@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik/Aeonik-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik/Aeonik-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  /* breakpoints */
+  --breakpoint-xs: 480px;
+  /* fonts */
+  --font-ibm: "IBM Plex Mono";
+  --font-aeonik: "Aeonik";
+  /* colors */
+  --color-gold: #CE9C35;
+  --color-blueish-gray: #7286A0;
+  --color-light-black: #212121;
+}
+
+body {
+  font-family: "Aeonik", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+/* spacing */
+.my-container {
+  @apply mx-auto w-full max-w-[1950px];
+}
+
+.side-padding {
+  @apply px-3 xs:px-5 md:px-10;
+}
+.side-margin {
+  @apply mx-3 xs:mx-5 md:mx-10;
+}
+
+/* backgrounds and gradients */
+.bg-dark-green-blue-gradient {
+  @apply bg-[linear-gradient(90deg,#024045_0%,#6C9ABD_50%,#001959_100%)];
+}
+.bg-dark-green-blue-gradient-vertical {
+  @apply bg-[linear-gradient(180deg,#024045_0%,#6C9ABD_50%,#001959_100%)];
+}
+.bg-dark-green-blue-gradient-oblique {
+  @apply bg-[linear-gradient(-45deg,#024045_0%,#6C9ABD_50%,#001959_100%)];
+}
+
+.bg-linear-white-transparent-50 {
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+}
+
+.bg-linear-white-transparent-70 {
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+}
+
+.bg-gold-gradient {
+  @apply bg-[linear-gradient(350deg,#36381C_0%,#96A893_30%,#2D2A23_100%)];
+}
+
+.bg-button {
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  position: relative;
+}
+
+.bg-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/noisy-bg.webp");
+  background-size: cover;
+  opacity: 0.2; /* 20% */
+  z-index: 0;
+}
+
+/* text */
+.text-16 {
+  @apply text-[15px] leading-[18px] xs:text-[16px] xs:leading-[21px];
+}
+
+.text-25 {
+  @apply text-[23px] leading-[27px] xs:text-[25px] xs:leading-[31px];
+}
