@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import ArrowSvg from "../ui/ArrowSvg";
-import GradientCircle from "../ui/GradientCircle";
-import { LINKS } from "../../lib/data";
+import { GENERAL_DATA, LINKS } from "../../lib/data";
+import HtechLogoSvg from "../ui/HtechLogoSvg";
 
 export default function Footer() {
   return (
@@ -9,28 +9,17 @@ export default function Footer() {
       <div className="relative z-1">
         <Outlet />
       </div>
-      <footer className="relative z-0 pt-[220px] pb-[20px] text-white">
-        {/* bg */}
-        <div className="absolute -top-[1000px] right-0 bottom-0 left-0 overflow-clip">
-          <div className="absolute top-[1100px] right-0 -bottom-1/2 left-0 z-0 overflow-x-clip">
-            <div className="h-full w-[140vw]! -translate-x-[20vw] bg-black blur-[max(4vw,40px)]"></div>
-          </div>
-        </div>
-        <div className="absolute -top-[1000px] right-0 bottom-0 left-0 overflow-clip">
-          <div className="absolute top-[1200px] right-0 w-[635px] translate-x-1/4 lg:w-[50vw] lg:min-w-[690px]">
-            <GradientCircle className="blur-[max(12vw,120px)]!" />
-          </div>
-        </div>
-
+      <footer className=" pt-20 pb-10 bg-light-black text-white space-y-20">
         {/* content */}
-        <div className="my-container side-padding relative flex gap-22 max-md:flex-col">
+        <div className="my-container side-padding flex gap-22 flex-col">
           {/* newsletter */}
           <div className="max-w-[380px]">
-            <p className="text-[28px] leading-[31px]">AI waits for no one.</p>
-            <p className="text-[20px] leading-[31px]">
+            <p className="text-20">
+              <span className="text-gold">AI moves fast</span>
+              <br />
               We’ll keep you up to date with the latest.
             </p>
-            <p className="mt-[20px] text-[14px] leading-[22px] text-light-gray">
+            <p className="mt-3 sm:mt-5 text-14  opacity-60">
               Enter your business email below to receive updates from Gaiant.
               Please refer to our{" "}
               <span className="underline">privacy policy</span> for details or
@@ -55,111 +44,113 @@ export default function Footer() {
                 <span className="hidden">Submit</span>
                 <ArrowSvg color="white" className="w-[18px]" />
               </button>
-              <div className="bg-dark-green-blue-gradient absolute right-0 bottom-0 left-0 h-[2px] rounded-full" />
+              <div className="bg-blueish-gray-gold-gradient absolute right-0 bottom-0 left-0 h-[2px] rounded-full" />
             </form>
           </div>
 
           {/* links */}
-          <div className="flex gap-20 max-md:flex-wrap lg:mx-auto xl:gap-32">
+          <div className="flex gap-20 flex-wrap xl:gap-24">
             {/* col 1 */}
-            <div className="w-[72px]">
-              <p className="mb-6 font-ibm! text-[13px] text-light-blue">
-                PRODUCTS
-              </p>
-              <div className="space-y-[20px] text-[14px] leading-[21px]">
-                {LINKS.find((l) => l.name == "Products")?.sublinks?.map(
-                  (link, i) => (
-                    <Link
-                      className="block cursor-pointer duration-200 ease-in-out hover:opacity-60"
-                      key={i}
-                      to={link.link}
-                    >
-                      <p>{link.name}</p>
-                    </Link>
-                  )
-                )}
-              </div>
-              <p className="mt-20 mb-6 font-ibm! text-[13px] text-light-blue lg:hidden">
-                COMPANY
-              </p>
-              <div className="space-y-[20px] text-[14px] leading-[21px] lg:hidden">
-                {LINKS.find((l) => l.name == "Company")?.sublinks?.map(
-                  (link, i) => (
-                    <Link
-                      className="block cursor-pointer duration-200 ease-in-out hover:opacity-60"
-                      key={i}
-                      to={link.link}
-                    >
-                      <p>{link.name}</p>
-                    </Link>
-                  )
-                )}
+            <div className="w-[180px] space-y-8">
+              <p className="text-20">Products</p>
+              <div className="flex flex-col gap-5 text-14">
+                {/* Predictive AI */}
+                <div className="flex flex-col gap-2">
+                  <p className="opacity-60">Predictive AI models</p>
+                  <Link to={"/products/predictive-ai-models/for-enterprises"}>
+                    For enterprises
+                  </Link>
+                  <Link
+                    to={"/products/predictive-ai-models/for-vcs-and-investors"}
+                  >
+                    For VCs & investors
+                  </Link>
+                </div>
+                {/* Generative AI */}
+                <div className="flex flex-col gap-2">
+                  <p className="opacity-60">Generative AI</p>
+                  <Link to={"/products/generative-ai/horion-for-sales"}>
+                    Horion for sales
+                  </Link>
+                  <Link to={"/products/generative-ai/horion-for-hr"}>
+                    Horion for HR
+                  </Link>
+                </div>
+                {/* Agentic AI */}
+                <div className="flex flex-col gap-2">
+                  <p className="opacity-60">Agentic AI</p>
+                  <Link to={"/products/agentic-ai/ai-agents-for-enterprises"}>
+                    AI agents for enterprises
+                  </Link>
+                </div>
+                {/* AI for Retailers */}
+                <div className="flex flex-col gap-2">
+                  <p className="opacity-60">AI for retailers</p>
+                  <Link to={"/products/ai-for-retailers/awfarli-ai"}>
+                    Awfarli AI
+                  </Link>
+                </div>
               </div>
             </div>
             {/* col 2 */}
-            <div className="w-[182px]">
-              <p className="mb-6 font-ibm! text-[13px] text-light-blue">
-                SOLUTIONS
-              </p>
-              <div className="space-y-[20px] text-[14px] leading-[21px]">
-                {LINKS.find((l) => l.name == "Solutions")?.sublinks?.map(
-                  (link, i) => (
-                    <Link
-                      className="block cursor-pointer duration-200 ease-in-out hover:opacity-60"
-                      key={i}
-                      to={link.link}
-                    >
-                      <p>{link.name}</p>
-                    </Link>
-                  )
-                )}
-                <Link
-                  className="inline-block cursor-pointer duration-200 ease-in-out hover:opacity-60"
-                  to="/industries"
-                >
-                  <p>View All</p>
-                </Link>
+            <div className="w-[180px] space-y-8">
+              <p className="text-20">Solutions</p>
+              <div className="flex flex-col gap-5 text-14">
+                {GENERAL_DATA.INDUSTRIES.map((industry, i) => (
+                  <Link key={i} to={`/industries/${i + 1}`}>
+                    {industry.name}
+                  </Link>
+                ))}
               </div>
             </div>
             {/* col 3 */}
-            <div className="w-[72px] max-lg:hidden">
-              <p className="mb-6 font-ibm! text-[13px] text-light-blue">
-                COMPANY
-              </p>
-              <div className="space-y-[20px] text-[14px] leading-[21px]">
-                {LINKS.find((l) => l.name == "Company")?.sublinks?.map(
-                  (link, i) => (
-                    <Link
-                      className="block cursor-pointer duration-200 ease-in-out hover:opacity-60"
-                      key={i}
-                      to={link.link}
-                    >
-                      <p>{link.name}</p>
-                    </Link>
-                  )
-                )}
+            <div className="w-[180px] space-y-8">
+              <p className="text-20">Resources</p>
+              <div className="flex flex-col gap-5 text-14">
+                <p className="opacity-60">Case studies</p>
+                {GENERAL_DATA.CASE_STUDIES.map((caseStudy, i) => (
+                  <Link key={i} to={`/case-studies/${caseStudy.name}`}>
+                    {caseStudy.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            {/* col 4 */}
+            <div className="w-[180px] space-y-8">
+              <p className="text-20">Company</p>
+              <div className="flex flex-col gap-5 text-14">
+                <Link to="/about">About</Link>
+                <Link to="/careers">Careers</Link>
+                <Link to="/news">News</Link>
+                <Link to="/partners">Partners</Link>
+              </div>
+            </div>
+            {/* col 5-6 */}
+            <div className="w-[180px] space-y-8">
+              <p className="text-20">Initiatives</p>
+              <div className="flex flex-col gap-5 text-14">
+                <Link to="/initiatives/Code For Lebanon">Code For Lebanon</Link>
+              </div>
+            </div>
+
+            <div className="w-[180px] space-y-8">
+              <p className="text-20">Government</p>
+              <div className="flex flex-col gap-5 text-14">
+                <Link to="/initiatives/Code For Lebanon">Public Sector</Link>
               </div>
             </div>
           </div>
         </div>
 
         {/* copyright */}
-        <div className="side-padding my-container relative flex items-center gap-5 pt-12 max-md:flex-col md:justify-between">
+        <div className="my-container side-padding flex items-center gap-5 justify-between">
           {/* logo */}
-          <img
-            className="w-full max-w-[450px]"
-            src="/logos/gaiant-logo-gradient.svg"
-            alt="Gaiant Logo"
-          />
-          <p className="text-center text-[11px] leading-[31px] whitespace-pre md:text-end">
-            {"Gaiant © 2025       |       Powered by ®"}
-            <a
-              href="https://weareelites.com/"
-              className="not-hover:underline"
-              target="_blank"
-            >
-              Elites
-            </a>
+          <HtechLogoSvg color="white" className="w-24" />
+          <p
+            style={{ letterSpacing: "1px" }}
+            className="text-center font-light text-14"
+          >
+            HTECH © 2025
           </p>
         </div>
       </footer>

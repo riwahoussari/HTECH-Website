@@ -19,8 +19,6 @@ export default function IndustriesCards({
             fetchPriority={i < 3 ? "high" : undefined}
             className="aspect-11/9! w-full"
             title={industry.name}
-            text={industry.description}
-            button={!!industry.description}
             imgSrc={industry.img}
           />
         </SlideUpSelf>

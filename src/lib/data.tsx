@@ -92,6 +92,14 @@ export const GENERAL_DATA = {
       imgSrc: "/blogs/blog-4.webp",
     },
   ],
+
+  CASE_STUDIES: [
+    { name: "Lebanese Army SuperApp" },
+    { name: "Lebanses Army LLM" },
+    { name: "Military Tribunal AI Powered Internal System" },
+    { name: "Council of Ministers Internal Dashboard" },
+    { name: "Code For Lebanon" },
+  ],
 };
 
 export const LANDING_PAGE_DATA = {
@@ -270,21 +278,21 @@ export const INDUSTRIES_PAGE_DATA = {
       {
         text: "“Gaiant transformed how we work — reports that used to take days now take minutes. Accuracy is solid, integrations were painless, and our team actually trusts the insights. ROI within two months.”",
         name: "Maya Hage",
-        title: "Head of Operations",
+        position: "Head of Operations",
         company: "NovaHealth",
         image: "/images/woman-profile.webp",
       },
       {
         text: "“Since implementing Gaiant, our support response time dropped by 50%. The automation and AI suggestions are game-changers. Our customers notice the difference.”",
         name: "Jordan Lee",
-        title: "Customer Experience Manager",
+        position: "Customer Experience Manager",
         company: "BrightCom",
         image: "/images/woman-profile.webp",
       },
       {
         text: "“We tried multiple tools before, but none were as seamless and insightful as Gaiant. It adapts to our workflow and delivers exactly what we need — effortlessly.”",
         name: "Ava Patel",
-        title: "Operations Director",
+        position: "Operations Director",
         company: "FinSight",
         image: "/images/woman-profile.webp",
       },

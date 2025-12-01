@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import ArrowSvg from "./ArrowSvg";
 import Button from "./Button";
-import GradientCircle from "./GradientCircle";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "../../lib/utils";
 import { motion as m } from "motion/react";
 import { Link } from "react-router-dom";
 import { useSwipe } from "../../lib/useSwipe";
 import HtechLogoSvg from "./HtechLogoSvg";
+import NetBg from "./NetBg";
 
 export function IndustryCard({
   imgSrc,
@@ -29,7 +27,7 @@ export function IndustryCard({
         }
       >
         {/* image */}
-        <div className="absolute z-2 top-1/2 left-0 right-0 bottom-0 w-full bg-black-vertical-gradient" />
+        <div className="absolute z-2 top-0 left-0 right-0 bottom-0 w-full bg-black-vertical-gradient" />
         <div className="h-full relative z-1 group-hover:scale-110 duration-300 ease-in-out">
           <img
             fetchPriority={fetchPriority}
@@ -106,53 +104,43 @@ export function SimpleCard({
   );
 }
 
-const gradientCircleVariants = cva("absolute z-0 w-75/100 ", {
-  variants: {
-    position: {
-      tr: " top-0 -translate-y-1/3 right-0 translate-x-1/3",
-      tl: " top-0 -translate-y-1/3 left-0 -translate-x-1/3",
-      br: " bottom-0 translate-y-1/3 right-0 translate-x-1/3",
-    },
-  },
-  defaultVariants: {
-    position: "tr",
-  },
-});
-interface GradientProps
-  extends
-    React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof gradientCircleVariants> {}
-
 export function TestimonialCard({
-  logo,
   text,
+  name,
+  company,
+  position,
   className,
-  position = "tr",
 }: {
   text: string;
-  logo: ReactNode;
+  name: string;
+  position?: string;
+  company?: string;
   className?: string;
-} & GradientProps) {
+}) {
   return (
     <div
-      className={"group relative overflow-clip text-white " + (className || "")}
+      className={
+        "relative flex flex-col justify-between lg-rounded overflow-hidden w-full xl:min-h-[550px] gap-20 sm:gap-32 p-6 sm:p-10 sm:pb-6 lg:p-12 lg:pb-8 bg-blueish-gray/15 " +
+        className
+      }
     >
-      <div
-        className="flex h-full flex-col justify-end gap-2 bg-black"
-        style={{
-          clipPath: "polygon(0 0, 82% 0, 100% 20%, 100% 100%, 0 100%)",
-        }}
-      >
-        <div className={cn(gradientCircleVariants({ position }), className)}>
-          <GradientCircle className="blur-[max(6vw,60px)" colorr={"teal"} />
+      {/* content */}
+      <p className="relative z-1 text-32 max-w-[1000px] ">{text}</p>
+
+      <div className="relative z-1 flex justify-between gap-6 xs:items-end max-xs:flex-col max-w-[1000px] ">
+        <div className="space-y-1.5">
+          <p className="text-20 font-light uppercase">{name}</p>
+
+          <p className="text-20 font-light uppercase">— {position}</p>
         </div>
-        <div className="relative p-5 xs:p-6">
-          <p className="text-16">{text}</p>
-        </div>
-        <div className="relative left-0 flex h-[126px] items-center bg-white/25 p-5 xs:p-6">
-          {logo}
-        </div>
+        <p className="text-20 font-light uppercase">{company}</p>
       </div>
+
+      {/* bg */}
+      <NetBg
+        color="var(--color-gold)"
+        className="absolute z-0 opacity-60 origin-top w-[3000px] top-1/2 left-1/2 -translate-1/2"
+      />
     </div>
   );
 }

@@ -11,6 +11,8 @@ import OurProducts from "./components/OurProducts";
 import OurLatestNews from "./components/OurLatestNews";
 import { TrustedBy } from "../../components/sections/TrustedBy";
 import TestimonialSection from "../IndustriesPage/components/TestimonialsSection";
+import { INDUSTRIES_PAGE_DATA } from "../../lib/data";
+import { TitleBlock } from "../../components/ui/Titles";
 
 export default function LandingPage() {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
@@ -38,7 +40,10 @@ export default function LandingPage() {
         <WhatWeDo />
         <IndustriesWeEmpower />
         <OurProducts />
-        <TestimonialSection />
+        <TestimonialSection
+          testimonials={INDUSTRIES_PAGE_DATA.TESTIMONIALS_SECTION.testimonials}
+          titleBlock={<TitleBlock title="Why leaders trust us" />}
+        />
         <OurLatestNews />
       </main>
     </>

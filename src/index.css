@@ -93,8 +93,8 @@ body {
 .bg-black-vertical-gradient {
   background-image: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(33, 33, 33, 0.4) 100%
+    rgba(33, 33, 33, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
 
@@ -123,7 +123,11 @@ body {
 }
 
 .text-16 {
-  @apply text-[15px] leading-[18px] xs:text-[16px] xs:leading-[21px];
+  @apply text-[14px] leading-[18px] xs:text-[16px] xs:leading-[21px];
+}
+
+.text-18 {
+  @apply text-[16px] leading-[21px] xs:text-[18px] xs:leading-[24px];
 }
 
 .text-20 {
