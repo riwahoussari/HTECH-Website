@@ -14,21 +14,21 @@ export default function NewsArticlesCarousel({
   return (
     <section
       ref={sectionRef}
-      className="my-container side-padding mt-[140px] overflow-x-hidden"
+      className="my-container side-padding overflow-x-hidden"
     >
       {/* title */}
       {titleBlock}
 
       {/* cards */}
-      <CardsSlider displaySlider={false}>
+      <CardsSlider displaySlider={true}>
         {GENERAL_DATA.ARTICLES.map((article, i) => (
           <SlideUpAnim
             isInView={isInView}
             transition={{ delay: 0.2 + 0.1 * i }}
+            className="w-[310px] xs:w-[480px] lg:w-[580px]"
           >
             <ArticleCard
               key={i}
-              className="aspcet-415/390! w-[300px] xs:w-[360px] lg:w-[410px]"
               {...article}
             />
           </SlideUpAnim>

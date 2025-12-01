@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import ArrowSvg from "../../../components/ui/ArrowSvg";
 import { motion as m, AnimatePresence, useInView } from "motion/react";
 import GradientCircle from "../../../components/ui/GradientCircle";
-import { CenteredTitleBlock } from "../../../components/ui/Titles";
+import { CenteredTitleBlock, TitleBlock } from "../../../components/ui/Titles";
 import { SlideUpAnim } from "../../../components/ui/Anims";
 import { INDUSTRIES_PAGE_DATA } from "../../../lib/data";
 
@@ -29,21 +29,14 @@ export default function TestimonialSection() {
   return (
     <section
       ref={sectionRef}
-      className="my-container side-padding relative mt-[130px]"
+      className="my-container side-padding relative"
     >
-      {/* background gradient */}
-      <div className="absolute top-1/2 left-1/2 z-0 -translate-1/2 opacity-40">
-        <GradientCircle
-          className="scale-y-200 -rotate-90 blur-[max(3vw,30px)]! max-sm:scale-x-200"
-          colorr="teal"
-        />
-      </div>
+      
 
       {/* section title */}
       <div className="relative mb-8">
-        <CenteredTitleBlock
-          title={INDUSTRIES_PAGE_DATA.TESTIMONIALS_SECTION.title}
-          text={INDUSTRIES_PAGE_DATA.TESTIMONIALS_SECTION.text}
+        <TitleBlock
+          title="Why leading teams trust us"
         />
       </div>
 

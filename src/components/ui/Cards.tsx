@@ -7,79 +7,46 @@ import { cn } from "../../lib/utils";
 import { motion as m } from "motion/react";
 import { Link } from "react-router-dom";
 import { useSwipe } from "../../lib/useSwipe";
+import HtechLogoSvg from "./HtechLogoSvg";
 
 export function IndustryCard({
   imgSrc,
   title,
-  text,
-  button = false,
   className,
   fetchPriority,
 }: {
   imgSrc: string;
   title: string;
-  text?: string;
-  button?: boolean;
   className?: string;
   fetchPriority?: "high" | "low" | "auto" | undefined;
 }) {
-  const contentRef = useRef<HTMLDivElement>(null); // to calculate height for animation to work
-  const [hovering, setHovering] = useState(false);
   return (
-    <div
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-      className={"group relative overflow-clip text-white " + (className || "")}
-    >
+    <Link to={`/industries/${title}`}>
       <div
-        className="h-full bg-black/25 transition-all duration-300 ease-in-out"
-        style={{
-          clipPath: hovering
-            ? "polygon(0 0, 82% 0, 100% 20%, 100% 100%, 0 100%)"
-            : "polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%)",
-        }}
+        className={
+          "relative cursor-pointer group overflow-clip text-white lg-rounded " +
+          (className || "")
+        }
       >
-        <img
-          fetchPriority={fetchPriority}
-          className="w-full object-cover"
-          src={imgSrc}
-          alt={`Image representing ${title} industry`}
-        />
-      </div>
+        {/* image */}
+        <div className="absolute z-2 top-1/2 left-0 right-0 bottom-0 w-full bg-black-vertical-gradient" />
+        <div className="h-full relative z-1 group-hover:scale-110 duration-300 ease-in-out">
+          <img
+            fetchPriority={fetchPriority}
+            className="w-full object-cover"
+            src={imgSrc}
+            alt={`Image representing ${title} industry`}
+          />
+        </div>
 
-      {/* content */}
-      <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-tr from-black/0 to-black/15 p-3 py-4 backdrop-blur-md xs:p-6">
-        <p className="text-25">{title}</p>
-
-        {(text || button) && (
-          <div
-            style={{
-              height: hovering ? contentRef.current?.clientHeight || 0 : 0,
-            }}
-            className={
-              "overflow-y-hidden text-xl transition-all duration-400 ease-in-out"
-            }
-          >
-            <div ref={contentRef}>
-              {text && <p className="text-16 max-w-[180px] py-2">{text}</p>}
-              {button && (
-                <div className="flex justify-end">
-                  <Link
-                    aria-label={`Read more about ${title} industry`}
-                    to={`/industries/${title}`}
-                  >
-                    <Button>
-                      READ MORE
-                      <span className="hidden"> about {title} industry</span>
-                    </Button>
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
+        {/* title */}
+        <div className="absolute z-3 right-0 top-0 left-0 p-3 py-4 xs:p-8">
+          <p className="text-22 font-light" style={{ letterSpacing: "0.5px" }}>
+            {title}
+          </p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -129,7 +96,7 @@ export function SimpleCard({
   return (
     <div
       className={
-        "flex w-full flex-col justify-between gap-8 bg-white/50 px-3 py-5 text-black xs:px-5 xs:py-8 " +
+        "flex w-full flex-col justify-between gap-8 bg-white/50 px-3 py-5  xs:px-5 xs:py-8 " +
         (className || "")
       }
     >
@@ -152,7 +119,8 @@ const gradientCircleVariants = cva("absolute z-0 w-75/100 ", {
   },
 });
 interface GradientProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof gradientCircleVariants> {}
 
 export function TestimonialCard({
@@ -202,42 +170,67 @@ export function ArticleCard({
   className?: string;
   fetchPriority?: "high" | "low" | "auto" | undefined;
 }) {
+  const [hovering, setHovering] = useState(false);
   return (
     <Link
       to={`/news/${title}`}
-      className="group w-full cursor-pointer"
+      className={
+        "group flex flex-col justify-between bg-[#EAEDF1] lg-rounded overflow-hidden h-full w-[310px] xs:w-[480px] lg:w-[580px] " +
+        className
+      }
       aria-label={`Read more about ${title}`}
+      onMouseEnter={() => {
+        setHovering(true);
+      }}
+      onMouseLeave={() => {
+        setHovering(false);
+      }}
     >
-      <div className={"relative overflow-clip text-white " + (className || "")}>
-        <div
-          className="h-full bg-black/25"
-          style={{
-            clipPath: "polygon(0 0, 100% 0, 100% 82%, 82% 100%, 0 100%)",
-          }}
-        >
+      <div className="p-4  ">
+        {/* image */}
+        <div className="aspect-2/1 xs:aspect-33/10 rounded-lg overflow-hidden relative">
           <img
             fetchPriority={fetchPriority}
-            className="w-full object-cover duration-200 ease-in-out group-hover:scale-110"
+            className="w-full h-full object-cover duration-200 ease-in-out group-hover:scale-110"
             src={imgSrc}
             alt={`Image representing ${title}`}
           />
+          <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/20" />
+          <HtechLogoSvg
+            className="absolute bottom-1/2 right-1/2 translate-1/2 w-1/4"
+            color="white"
+          />
         </div>
 
-        {/* content */}
-        <div className="bg-linear-white-transparent-70 absolute top-0 right-0 left-0 p-6 py-4 backdrop-blur-[1000px]">
-          <p className="font-ibm! text-[12px] leading-[31px]">{subtitle}</p>
-          <p className="text-25">{title}</p>
+        {/* text */}
+        <div className="mt-6 space-y-4">
+          <p className="opacity-70">{subtitle}</p>
+          <p className="text-22">{title}</p>
         </div>
+      </div>
 
-        {/* button */}
-        <Button className="absolute bottom-1 left-2" variant={"ghost"}>
-          READ MORE
+      {/* read more  */}
+      <div className="flex relative justify-between items-center bg-white  py-6 pt-9 p-4 ">
+        <Button variant={"outline"} size={"sm"} className="relative z-1">
+          Read more
         </Button>
-        {/* arrow */}
-        <ArrowSvg
-          className="absolute right-0 bottom-1 z-1 w-6 -translate-x-1 stroke-[1px] duration-200 ease-in-out group-hover:translate-x-0 xs:w-8"
-          color="black"
-        />
+        <ArrowSvg className="w-5 relative z-1 group-hover:-rotate-45 duration-200 ease-in-out group-hover:scale-125" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 670 111"
+          preserveAspectRatio="none"
+          className="absolute top-0 bottom-0 right-0 left-0 h-full w-full z-0"
+        >
+          <m.path
+            className="w-full transition-all duration-300 ease-in-out"
+            fill="#EAEDF1"
+            d={
+              hovering
+                ? "M670 0H0V91C0 102.046 8.9543 111 20 111H518.641C526.216 111 533.14 111 536.529 111L570.988 111C574.377 111 581.301 111 588.875 111H650C661.046 111 670 102.046 670 91Z"
+                : "M670 0H0V91C0 102.046 8.9543 111 20 111H518.641C526.216 111 533.14 106.721 536.529 99.9469L570.988 31.0531C574.377 24.2789 581.301 20 588.875 20H650C661.046 20 670 11.0457 670 0Z"
+            }
+          ></m.path>
+        </svg>
       </div>
     </Link>
   );
@@ -283,7 +276,10 @@ export function CardsSlider({
 
     const totalCards = cards.childElementCount;
     const cardWidth = cards.clientWidth / totalCards;
-    const visibleCards = Math.floor(container.clientWidth / cardWidth);
+    const visibleCards = Math.max(
+      Math.floor(container.clientWidth / cardWidth),
+      1
+    );
     const hiddenCards = totalCards - visibleCards;
     const cardsToSlide = visibleCards;
     const slideDifference =
@@ -305,6 +301,8 @@ export function CardsSlider({
   const slidedCards =
     (Math.max(0, Math.min(slidePercent, 1)) / slideDifference) * cardsToSlide;
   const progressBarWidth = ((visibleCards + slidedCards) / totalCards) * 100;
+
+  console.log(slideDifference);
 
   const handleLeft = () => {
     setSlidePercent((prev) =>
@@ -331,27 +329,29 @@ export function CardsSlider({
   return (
     <>
       {/* cards */}
-      <div {...swipeHandlers} ref={cardsContainerRef} className="mt-[40px]">
+      <div {...swipeHandlers} ref={cardsContainerRef}>
         <m.div
           animate={{
             x: `-${slideValue}px`,
           }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className="flex w-max items-start gap-5 overflow-y-clip"
+          className="flex w-max items-stretch gap-5 overflow-y-clip"
           ref={cardsRef}
         >
           {children}
         </m.div>
       </div>
+
       {/* slider */}
       {displaySlider && (
         <div className="mx-auto mt-10 flex w-9/10 max-w-[580px] items-center justify-center gap-3 sm:gap-5 lg:w-1/2 lg:min-w-[580px]">
           {/* left arrow */}
           <div onClick={handleLeft}>
             <ArrowSvg
-              color="var(--color-teal)"
+              strokeWidth={2}
+              color="var(--color-light-black)"
               className={
-                "w-6 rotate-y-180 cursor-pointer 2xl:-translate-y-[1px] " +
+                "w-5 rotate-y-180 cursor-pointer " +
                 (slidePercent - slideDifference < 0
                   ? " cursor-not-allowed! opacity-50!"
                   : "")
@@ -363,7 +363,7 @@ export function CardsSlider({
           <div className="flex w-full items-center justify-center gap-1.5 sm:gap-3">
             <m.div
               animate={{ width: `${progressBarWidth}%` }}
-              className="bg-dark-green-blue-gradient h-1 rounded-full"
+              className="bg-blueish-gray-gold-gradient h-1 rounded-full"
             />
             <m.div
               animate={{ width: `${100 - progressBarWidth}%` }}
@@ -374,9 +374,9 @@ export function CardsSlider({
           {/* right arrow */}
           <div onClick={handleRight}>
             <ArrowSvg
-              color="var(--color-teal)"
+              color="var(--color-light-black)"
               className={
-                "w-6 cursor-pointer 2xl:-translate-y-[1px]" +
+                "w-5 cursor-pointer " +
                 (slidePercent >= 1 ? " cursor-not-allowed! opacity-50!" : "")
               }
             />

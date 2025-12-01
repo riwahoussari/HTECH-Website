@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import ArcheCallToAction from "./components/ArcheCallToAction";
 import ArcheIndustries from "./components/ArcheIndustries";
-import AccelerateImpact from "./components/AccelerateImpact";
+import AccelerateImpact from "../LandingPage/components/WhatWeDo";
 import TheArcheModel from "./components/TheArcheModel";
 import Navbar from "../../components/sections/navbar/Navbar";
 import { useMotionValueEvent, useScroll } from "motion/react";

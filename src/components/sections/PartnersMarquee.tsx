@@ -1,65 +1,37 @@
-import { useEffect, useRef, useState } from "react";
 import { useAnimationFrame } from "motion/react";
-import GradientCircle from "../../../components/ui/GradientCircle";
-import { CenteredTitleBlock } from "../../../components/ui/Titles";
-import { LANDING_PAGE_DATA } from "../../../lib/data";
+import { useEffect, useRef, useState } from "react";
 
-const ICONS = [
-  "/tools/Rectangle%20100.webp",
-  "/tools/Rectangle%20101.webp",
-  "/tools/Rectangle%2099.webp",
-  "/tools/Rectangle%2098.webp",
-  "/tools/Rectangle%20104.webp",
-  "/tools/Rectangle%20108.webp",
-  "/tools/Rectangle%20106.webp",
-  "/tools/Rectangle%20103.webp",
-  "/tools/Rectangle%20107.webp",
-  "/tools/Rectangle%20102.webp",
-  "/tools/Rectangle%20105.webp",
-  "/tools/Rectangle%20109.webp",
-];
 
-export default function Tools() {
+
+export default function PartnersMarquee() {
   return (
-    <section className="relative mt-[120px] flex flex-col items-center overflow-x-clip">
-      {/* background blur */}
-      <div className="absolute top-1/2 left-0 -z-1 w-[40vw] -translate-1/2 opacity-70">
-        <GradientCircle blur="lg" />
+    <>
+      <div className="bg-light-black flex items-center justify-center overflow-hidden">
+        <MarqueeLogos />
       </div>
-
-      {/* titles */}
-      <CenteredTitleBlock
-        className="max-w-[766px]"
-        big={true}
-        title={LANDING_PAGE_DATA.TOOLS.title}
-        subtitle={LANDING_PAGE_DATA.TOOLS.subtitle}
-      />
-
-      {/* ICONS */}
-      {/* <div className="my-container relative mt-16 w-full overflow-x-clip">
-        <div className="absolute right-1/2 flex w-max translate-x-1/2 items-center justify-between gap-[min(18px,2.5vw)]">
-
-          {ICONS.map((src, i) => {
-            return (
-              <SlideUpAnim
-                key={i}
-                isInView={isInView}
-                transition={{
-                  delay: 0.3 + 0.1 * Math.abs(ICONS.length / 2 - i),
-                }}
-              >
-                <Icon className={OPACITIES[i]} src={src} />
-              </SlideUpAnim>
-            );
-          })}
-        </div>
-      </div> */}
-      <MarqueeIcons />
-    </section>
+    </>
   );
 }
 
-function MarqueeIcons() {
+const LOGOS = [
+  {
+    src: "/assets/logos/lebanese-military-logo.svg",
+    alt: "Lebanese Military Logo",
+  },
+  {
+    src: "/assets/logos/berytech-logo.png",
+    alt: "Berytech Logo",
+    className: " invert-100 ",
+  },
+  { src: "/assets/logos/usj-logo.png", alt: "USJ Logo" },
+  { src: "/assets/logos/unicef-logo.svg", alt: "Unicef Logo" },
+  {
+    src: "/assets/logos/military-tribunal-logo.svg",
+    alt: "Military Tribunal Logo",
+  },
+];
+
+function MarqueeLogos() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [contentWidth, setContentWidth] = useState<number>(0);
   const [iconWidth, setIconWidth] = useState<number>(0);
@@ -79,7 +51,7 @@ function MarqueeIcons() {
     const gapValue = Math.abs(second.left - (first.left + first.width));
     setGap(gapValue);
     setIconWidth(first.width);
-    setContentWidth((iconWidth + gapValue) * ICONS.length);
+    setContentWidth((iconWidth + gapValue) * LOGOS.length);
   };
 
   useEffect(() => {
@@ -123,14 +95,14 @@ function MarqueeIcons() {
     else if (rightIconEdge > fadeEnd)
       opacity = Math.max(0, (rightContainerEdge - rightIconEdge) / distance);
 
-    return opacity;
+    return opacity * 0.7;
   };
 
   return (
-    <div className="relative mt-16 flex justify-center gap-[min(18px,2.5vw)] overflow-hidden">
+    <div className="relative flex justify-center 2xl:py-8 py-6  2xl:gap-32 lg:gap-20 gap-12 overflow-hidden">
       {/* main icons that start on screen */}
       <div
-        className="absolute flex items-center gap-[min(18px,2.5vw)] pr-[min(18px,2.5vw)]"
+        className="absolute flex items-center 2xl:gap-32 lg:gap-20 gap-12  2xl:pr-32 lg:pr-20 pr-12"
         style={{
           transform: `translateX(${-translateX + contentWidth}px)`,
           width: "max-content",
@@ -138,14 +110,20 @@ function MarqueeIcons() {
         ref={scrollRef}
         aria-hidden
       >
-        {[...ICONS].map((src, i) => {
-          return <Icon key={i} src={src} opacity={calculateOpacity(i)} />;
-        })}
+        {[...LOGOS].map(({ src, alt, className }, i) => (
+          <Logo
+            key={i}
+            src={src}
+            alt={alt}
+            className={className}
+            opacity={calculateOpacity(i)}
+          />
+        ))}
       </div>
 
       {/* icons that start out of screen (to the right) */}
       <div
-        className="absolute flex items-center gap-[min(18px,2.5vw)] pr-[min(18px,2.5vw)]"
+        className="absolute flex items-center 2xl:gap-32 lg:gap-20 gap-12 2xl:pr-32 lg:pr-20 pr-12 "
         style={{
           transform: `translateX(-${translateX}px)`,
           width: "max-content",
@@ -153,34 +131,42 @@ function MarqueeIcons() {
         ref={scrollRef}
         aria-hidden
       >
-        {[...ICONS].map((src, i) => {
-          return <Icon key={i} src={src} opacity={calculateOpacity(i)} />;
-        })}
+        {[...LOGOS].map(({ src, alt, className }, i) => (
+          <Logo
+            key={i}
+            src={src}
+            alt={alt}
+            className={className}
+            opacity={calculateOpacity(i)}
+          />
+        ))}
       </div>
 
       {/* placeholder for width and height */}
       <div
-        className="relative flex items-center gap-[min(18px,2.5vw)]"
+        className="relative flex items-center  2xl:gap-32 lg:gap-20 gap-12"
         style={{
           transform: `translateX(-${translateX}px)`,
           width: "max-content",
         }}
         ref={scrollRef}
       >
-        {[...ICONS].map((src, i) => (
-          <Icon key={i} src={src} opacity={0} />
+        {[...LOGOS].map(({ src, alt, className }, i) => (
+          <Logo key={i} src={src} alt={alt} className={className} opacity={0} />
         ))}
       </div>
     </div>
   );
 }
 
-function Icon({
+function Logo({
   src,
+  alt,
   opacity,
   className = "",
 }: {
   src: string;
+  alt: string;
   opacity: number;
   className?: string;
 }) {
@@ -188,11 +174,8 @@ function Icon({
     <img
       src={src}
       style={{ opacity }}
-      className={
-        "aspect-square w-[16vw] max-w-[120px] rounded-lg xs:rounded-xl sm:w-[7.5vw] sm:min-w-[90px] " +
-        className
-      }
-      alt="Icon for a tool"
+      className={"2xl:w-44 lg:w-32 w-26 " + className}
+      alt={alt}
     />
   );
 }

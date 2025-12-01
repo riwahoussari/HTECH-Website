@@ -85,7 +85,7 @@ function Tab({
       onClick={onClick}
       className={
         "cursor-pointer rounded-full hover:bg-black hover:text-white px-5 py-2 text-[16px] duration-200 ease-in-out max-sm:border-1 xs:text-[17px] " +
-        (active ? " bg-black text-white" : " bg-transparent text-black")
+        (active ? " bg-black text-white" : " bg-transparent")
       }
     >
       {children}

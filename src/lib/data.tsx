@@ -20,27 +20,31 @@ export const GENERAL_DATA = {
 
   INDUSTRIES: [
     {
+      name: "Technology",
+      img: "/industries/Industries-tech.webp",
+    },
+    {
       name: "Banking & Financial Services",
       img: "/industries/Industries-banking.webp",
-      description: "Advancing patient care and biological research",
+      // description: "Advancing patient care and biological research",
     },
     {
       name: "Insurance",
       img: "/industries/Industries-insurance.webp",
-      description: "Advancing patient care and biological research",
+      // description: "Advancing patient care and biological research",
     },
     {
-      name: "Healthcare & Life Sciences",
+      name: "Logistics & Transportation",
       img: "/industries/Industries-healthcare.webp",
-      description: "Advancing patient care and biological research",
+      // description: "Advancing patient care and biological research",
     },
     {
-      name: "Technology, Media & Telecommunications (TMT)",
+      name: "Retail",
       img: "/industries/Industries-tech.webp",
-      description: "Advancing patient care and biological research",
+      // description: "Advancing patient care and biological research",
     },
     {
-      name: "Public Sector & Government",
+      name: "Manufacturing",
       img: "/industries/Industries-government.webp",
       description: "Advancing patient care and biological research",
     },
@@ -55,23 +59,13 @@ export const GENERAL_DATA = {
       description: "Advancing patient care and biological research",
     },
     {
-      name: "Real Estate & Construction",
-      img: "/industries/Industries-real-estate.webp",
-      description: "Advancing patient care and biological research",
-    },
-    {
-      name: "Retail & Consumer Goods",
-      img: "/industries/Industries-retail.webp",
-      description: "Advancing patient care and biological research",
-    },
-    {
-      name: "Hopitality & Leisure",
-      img: "/industries/Industries-hospitality.webp",
-      description: "Advancing patient care and biological research",
-    },
-    {
       name: "Education",
       img: "/industries/Industries-education.webp",
+      description: "Advancing patient care and biological research",
+    },
+    {
+      name: "Hopitality",
+      img: "/industries/Industries-hospitality.webp",
       description: "Advancing patient care and biological research",
     },
   ],

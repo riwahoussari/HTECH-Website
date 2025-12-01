@@ -12,7 +12,7 @@ export default function AboutHero({
 }) {
   return (
     <Hero
-      className="text-black!"
+      className=""
       spacing="max"
       titleWidth="lg:min-w-[560px] lg:max-w-[560px] xl:min-w-[660px] xl:max-w-[660px]"
       textWidth="max-w-[440px] xl:max-w-[550px]"

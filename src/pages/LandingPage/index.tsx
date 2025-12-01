@@ -1,22 +1,23 @@
-import CallToAction from "../../components/sections/CallToAction";
-import ArcheSection from "./components/ArcheSection";
-import IndustriesWeEmpower from "./components/IndustriesWeEmpower";
-import Tools from "./components/Tools";
-import WhatMakesUsDifferent from "./components/WhatMakesUsDifferent";
 import Navbar from "../../components/sections/navbar/Navbar";
 import { useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
-import LandingHero from "./components/LandingHero";
-import WhatThisMeans from "./components/WhatThisMeans";
-import OurLatestThinking from "./components/OurLatestThinking";
 import { PageMeta } from "../../components/ui/PageMeta";
+import LandingHero from "./components/LandingHero";
+import PartnersMarquee from "../../components/sections/PartnersMarquee";
+import WhatThisMeans from "./components/WhatThisMeans";
+import WhatWeDo from "./components/WhatWeDo";
+import IndustriesWeEmpower from "./components/IndustriesWeEmpower";
+import OurProducts from "./components/OurProducts";
+import OurLatestNews from "./components/OurLatestNews";
+import { TrustedBy } from "../../components/sections/TrustedBy";
+import TestimonialSection from "../IndustriesPage/components/TestimonialsSection";
 
 export default function LandingPage() {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
   const navbarBgTrigger = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: navbarBgTrigger,
-    offset: ["end end", "start start"],
+    offset: ["end end", "end start"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (val) =>
@@ -25,20 +26,20 @@ export default function LandingPage() {
 
   return (
     <>
-      <PageMeta
-        title="Gaiant | One AI Work Platform for Any Kind of Work"
-        description="Gaiant combines powerful AI with practical business solutions — helping teams work smarter, automate faster, and make better decisions through secure, scalable AI systems."
-      />
+      <PageMeta title="HTECH | Landing Page" description="lorem ipsum" />
       <Navbar transparentBg={transparentNavbar} />
-      <main>
-        <LandingHero navbarTriggerRef={navbarBgTrigger} />
-        <WhatMakesUsDifferent />
-        <IndustriesWeEmpower />
-        <Tools />
-        <ArcheSection />
+      <main className="main-flex">
+        {/* Hero */}
+        <div>
+          <LandingHero navbarTriggerRef={navbarBgTrigger} />
+          <PartnersMarquee />
+        </div>
         <WhatThisMeans />
-        <OurLatestThinking />
-        <CallToAction />
+        <WhatWeDo />
+        <IndustriesWeEmpower />
+        <OurProducts />
+        <TestimonialSection />
+        <OurLatestNews />
       </main>
     </>
   );

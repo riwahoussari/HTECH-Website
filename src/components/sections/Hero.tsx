@@ -1,216 +1,140 @@
-import { useInView } from "motion/react";
-import { useRef } from "react";
-import { AnimatedText, SlideUpAnim } from "../ui/Anims";
-
-// interface HeroProps {
-//   title: string;
-//   subtitle?: string;
-//   text: string;
-//   spacing?: "min" | "max";
-//   titleWidths?: { lg: string; xl: string };
-//   button: React.ReactNode;
-//   background?: React.ReactNode;
-//   children?: React.ReactNode;
-//   className?: string;
-// }
-
-// export default function Hero({
-//   title,
-//   subtitle,
-//   text,
-//   spacing = "min",
-//   titleWidths,
-//   button,
-//   background,
-//   className,
-//   children,
-// }: HeroProps) {
-//   const heroRef = useRef<HTMLDivElement>(null);
-//   const isInView = useInView(heroRef, { once: true });
-
-//   return (
-//     <section
-//       ref={heroRef}
-//       className={"relative text-white " + (className || "")}
-//     >
-//       {/* gradients bg */}
-//       <div className="absolute top-0 right-0 bottom-0 left-0 z-0 overflow-x-clip">
-//         {background}
-//       </div>
-
-//       {/* text content */}
-//       <div className="side-padding my-container relative pt-[200px] pb-[140px] xl:pt-[280px]">
-//         {subtitle && (
-//           <p className="mb-5 font-ibm! text-[16px] xs:text-[18px]">
-//             <AnimatedText transition={{ delay: 0.8 }} isInView={isInView}>
-//               {subtitle}
-//             </AnimatedText>
-//           </p>
-//         )}
-//         <div
-//           className={
-//             "flex flex-col lg:flex-row max-lg:max-w-[600px] " +
-//             (spacing === "min"
-//               ? " lg:gap-[40px] xl:gap-[56px]"
-//               : " lg:gap-[20px] xl:gap-[70px]")
-//           }
-//         >
-//           <h1
-//             className={
-//               "text-[min(12vw,50px)] leading-[calc(min(12vw,50px)+7px)] xs:text-[58px] xs:leading-[65px] xl:text-[69px] xl:leading-[76px] " +
-//               (spacing === "min"
-//                 ? " max-w-[580px] lg:w-6/10 xl:max-w-[680px]"
-//                 : ` xl:min-w-[${titleWidths?.xl || "800px"}] xl:max-w-[${titleWidths?.xl || "800px"}] lg:min-w-[${titleWidths?.lg || "600px"}] lg:max-w-[${titleWidths?.lg || "600px"}] `)
-//             }
-//           >
-//             <AnimatedText transition={{ duration: 0.4 }} isInView={isInView}>
-//               {title}
-//             </AnimatedText>
-//           </h1>
-//           <div>
-//             <SlideUpAnim
-//               transition={{ duration: 0.5, delay: 0.7 }}
-//               isInView={isInView}
-//             >
-//               <p
-//                 className={
-//                   "mt-[18px] text-[min(4.3vw,18px)] leading-[calc(min(4.3vw,18px)+6px)] xs:text-[20px] xs:leading-[28px] xl:text-[23px] xl:leading-[31px] " +
-//                   (spacing === "min"
-//                     ? " max-w-[324px] xl:max-w-[370px]"
-//                     : " max-w-[440px] xl:max-w-[500px]")
-//                 }
-//               >
-//                 {text.split(" ").map((word, i) => {
-//                   if (word === "<br>") {
-//                     return <br key={i} />;
-//                   } else if (word == "<sm:br>") {
-//                     return <br key={i} className="max-sm:hidden" />;
-//                   }
-//                   return word + " ";
-//                 })}
-//               </p>
-//             </SlideUpAnim>
-//             <SlideUpAnim isInView={isInView} transition={{ delay: 1 }}>
-//               <div className="mt-[80px] xl:mt-[110px]">{button}</div>
-//             </SlideUpAnim>
-//           </div>
-//         </div>
-//       </div>
-
-//       {children}
-//     </section>
-//   );
-// }
+import TexturedBg from "../ui/TexturedBg";
 
 interface HeroProps {
   title: string;
   subtitle?: string;
   text: string;
-  button: React.ReactNode;
-  background?: React.ReactNode;
-  children?: React.ReactNode;
+  buttons: React.ReactNode;
+  background?: "none" | React.ReactNode;
+  image?: React.ReactNode;
   className?: string;
 
   // Layout control
-  gap?: string; // e.g. "lg:gap-[40px] xl:gap-[56px]"
-  titleWidth?: string; // e.g. "max-w-[580px] lg:w-6/10 xl:max-w-[680px]"
-  textWidth?: string; // e.g. "max-w-[324px] xl:max-w-[370px]"
-
-  // Default spacing options (for backward compatibility)
-  spacing?: "min" | "max";
+  size?: "md" | "lg";
+  align?: "left" | "center";
+  textSizing?: string;
 }
 
 export default function Hero({
   title,
   subtitle,
   text,
-  button,
+  buttons,
   background,
-  children,
+  image,
   className,
-  spacing = "min",
-  gap,
-  titleWidth,
-  textWidth,
-}: HeroProps) {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(heroRef, { once: true });
-
-  // Default values (preserving old behavior)
-  const defaultGaps =
-    spacing === "min"
-      ? "lg:gap-[40px] xl:gap-[56px]"
-      : "lg:gap-[30px] xl:gap-[50px] justify-between";
-
-  const defaultTitleWidth =
-    spacing === "min"
-      ? "max-w-[580px] lg:w-6/10 xl:max-w-[680px]"
-      : "lg:min-w-[550px] lg:max-w-[550px] xl:min-w-[800px] xl:max-w-[800px]";
-
-  const defaultTextWidth =
-    spacing === "min"
-      ? "max-w-[324px] xl:max-w-[370px]"
-      : "max-w-[440px] xl:max-w-[500px]";
-
+  size = "md",
+  align = "center",
+  textSizing = " ",
+  ref
+}: HeroProps & {ref?: React.RefObject<HTMLDivElement | null>}) {
   return (
-    <section ref={heroRef} className={`relative text-white ${className || ""}`}>
-      {/* background */}
-      <div className="absolute inset-0 z-0 overflow-x-clip">{background}</div>
+    <section ref={ref} className={"relative overflow-hidden "}>
+      {/* bg */}
+      {(image === undefined || align !== "center") &&
+        (background === undefined ? (
+          <TexturedBg color="var(--color-gold)" />
+        ) : (
+          background !== "none" && background
+        ))}
 
-      {/* content */}
-      <div className="side-padding my-container relative pt-[200px] pb-[140px] xl:pt-[280px]">
-        {subtitle && (
-          <p className="mb-5 font-ibm! text-[16px] xs:text-[18px]">
-            <AnimatedText transition={{ delay: 0.8 }} isInView={isInView}>
-              {subtitle}
-            </AnimatedText>
-          </p>
-        )}
-
+      {/* container */}
+      <div
+        className={
+          "flex items-center " +
+          (className || "") +
+          (align === "center"
+            ? " flex-col "
+            : " max-xl:flex-col max-xl:items-stretch! ") +
+          (image !== undefined && align === "center"
+            ? " "
+            : " my-container side-padding gap-14 lg:gap-20 xs:py-24 xs:pt-32 py-18 pt-28 lg:py-32 lg:pt-44 ") 
+        }
+      >
+        {/* content */}
         <div
-          className={`flex flex-col lg:flex-row max-lg:max-w-[660px] ${
-            gap || defaultGaps
-          }`}
+          className={
+            "flex flex-col  " +
+            (size === "lg" ? " gap-10 lg:gap-17 " : " gap-7 lg:gap-10 ") +
+            (align === "center" ? " items-center " : " max-xl:max-w-[700px] ") +
+            (image !== undefined && align === "center"
+              ? " py-32 pb-40 lg:py-44 lg:pb-52 relative overflow-hidden w-full side-padding "
+              : ` ${textSizing} `)
+          }
         >
-          {/* Title */}
-          <h1
-            className={`text-[min(12vw,50px)] leading-[calc(min(12vw,50px)+7px)] xs:text-[58px] xs:leading-[65px] xl:text-[69px] xl:leading-[76px] ${
-              titleWidth || defaultTitleWidth
-            }`}
+          {image !== undefined && align === "center" && (
+            <TexturedBg color="var(--color-gold)" />
+          )}
+          {/* text */}
+          <div
+            className={
+              "relative flex flex-col " +
+              (align == "center" ? " items-center text-center " : " ") +
+              (size === "lg" ? " gap-5 sm:gap-7 " : " gap-4 sm:gap-5 ")
+            }
           >
-            <AnimatedText transition={{ duration: 0.4 }} isInView={isInView}>
-              {title}
-            </AnimatedText>
-          </h1>
-
-          {/* Text */}
-          <div>
-            <SlideUpAnim
-              transition={{ duration: 0.5, delay: 0.7 }}
-              isInView={isInView}
+            <h1
+              className={
+                "leading-none " +
+                (size == "lg"
+                  ? " text-[max(8.4vw,50px)] lg:text-[clamp(88px,7.5vw,144px)] "
+                  : align == "left"
+                    ? " text-[max(5.6vw,44px)] lg:text-[clamp(48.8px,4.16vw,80px)] "
+                    : " text-[max(5.6vw,44px)] lg:text-[clamp(58.6px,5vw,96px)] ")
+              }
             >
-              <p
-                className={`mt-[18px] text-[min(4.3vw,18px)] leading-[calc(min(4.3vw,18px)+6px)] xs:text-[20px] xs:leading-[28px] xl:text-[23px] xl:leading-[31px] ${
-                  textWidth || defaultTextWidth
-                }`}
-              >
-                {text.split(" ").map((word, i) => {
-                  if (word === "<br>") return <br key={i} />;
-                  if (word === "<sm:br>")
-                    return <br key={i} className="max-sm:hidden" />;
-                  return word + " ";
-                })}
-              </p>
-            </SlideUpAnim>
+              {title}
+            </h1>
+            <p
+              className={
+                " leading-[1.3] max-w-[700px] xs:w-4/5 " +
+                (size == "lg"
+                  ? " text-24 "
+                  : " text-20 ")
+              }
+            >
+              {text}
+            </p>
+          </div>
 
-            <SlideUpAnim isInView={isInView} transition={{ delay: 1 }}>
-              <div className="mt-[80px] xl:mt-[110px]">{button}</div>
-            </SlideUpAnim>
+          {/* buttons */}
+          <div
+            className={
+              "relative flex gap-4 lg:gap-8 items-center max-xs:flex-wrap " +
+              (align == "center" ? " justify-center " : "")
+            }
+          >
+            {buttons}
           </div>
         </div>
-      </div>
 
-      {children}
+        {/* image */}
+        {image}
+      </div>
     </section>
   );
+}
+
+{
+  /* <Hero
+    align="center"
+    size="md"
+    image={
+      <div className="relative w-9/10 lg:w-1/2 max-w-[970px] aspect-2/1 -translate-y-32 rounded-2xl overflow-hidden">
+        <TexturedBg />
+      </div>
+    }
+  /> */
+}
+
+{
+  /* <Hero
+    align="left"
+    size="md"
+    image={
+      <div className="relative xl:w-1/2 max-xl:max-w-[700px] aspect-5/3 rounded-2xl overflow-hidden">
+        <TexturedBg />
+      </div>
+    }
+  /> */
 }

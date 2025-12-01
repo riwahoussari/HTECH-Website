@@ -12,15 +12,7 @@ export function SectionTitle({
   big?: boolean;
 }) {
   return (
-    <h2
-      className={
-        (big
-          ? "text-[42px] leading-[44px] xs:text-[69px] xs:leading-[76px]"
-          : "text-[32px] leading-[39px] xs:text-[40px] xs:leading-[47px]") +
-        " " +
-        className
-      }
-    >
+    <h2 className={(big ? " text-64 " : " text-40 ") + " " + className}>
       {children}
     </h2>
   );
@@ -33,7 +25,7 @@ export function SectionSubTitle({
   className?: string;
 }) {
   return (
-    <p className={"font-ibm! text-[11px] xs:text-[12px]" + " " + className}>
+    <p className={"font-light text-body text-gold" + " " + className}>
       {children}
     </p>
   );
@@ -42,17 +34,20 @@ export function SectionSubTitle({
 export function TitleBlock({
   title,
   subtitle,
-  button,
+  text,
 }: {
   title: string;
   subtitle?: string;
-  button?: ReactNode;
+  text?: string;
 }) {
   const titleBlockRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(titleBlockRef, { once: true, margin: "-5%" });
   return (
-    <div ref={titleBlockRef} className="items-start justify-between sm:flex">
-      <div className="space-y-2 max-sm:mb-6">
+    <div
+      ref={titleBlockRef}
+      className="items-start justify-start lg:flex mb-10 lg:mb-14"
+    >
+      <div className="space-y-2 max-lg:mb-6 max-sm:mb-4 lg:w-1/2 pr-4">
         {subtitle && (
           <SectionSubTitle>
             <AnimatedText isInView={isInView}>{subtitle}</AnimatedText>
@@ -62,9 +57,8 @@ export function TitleBlock({
           <AnimatedText isInView={isInView}>{title}</AnimatedText>
         </SectionTitle>
       </div>
-      <SlideUpAnim transition={{ delay: 0.4 }} isInView={isInView}>
-        {button}
-      </SlideUpAnim>
+
+      {text && <p className="lg:w-1/2 text-20 leading-[1.25]! max-w-[600px]">{text}</p>}
     </div>
   );
 }

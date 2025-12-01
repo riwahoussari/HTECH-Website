@@ -6,7 +6,7 @@ import { INDUSTRIES_PAGE_DATA } from "../../../lib/data";
 export default function IndustriesHero() {
   return (
     <Hero
-      className="text-black!"
+      className=""
       spacing="max"
       titleWidth="lg:min-w-[570px] lg:max-w-[570px] xl:min-w-[670px] xl:max-w-[670px]"
       textWidth="max-w-[460px] xl:max-w-[530px]"

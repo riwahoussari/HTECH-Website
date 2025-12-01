@@ -138,7 +138,7 @@ export function ProductsFlyoutContent() {
 export function SolutionsFlyoutContent() {
   return (
     <div className="grid xl:grid-cols-2 gap-10">
-      <div className="flex flex-col gap-5 text-black">
+      <div className="flex flex-col gap-5">
         <FTitle text="INDUSTRIES" />
         <div className="flex flex-col">
           {GENERAL_DATA.INDUSTRIES.slice(0, 8).map((industry, i) => (
@@ -163,7 +163,7 @@ export function SolutionsFlyoutContent() {
 
 export function CompanyFlyoutContent() {
   return (
-    <div className="flex xl:min-w-[320px] flex-col gap-4 text-black">
+    <div className="flex xl:min-w-[320px] flex-col gap-4">
       <FTitle text="COMPANY" />
       <div className="flex flex-col ">
         <FLink link="/about" text="About" />
@@ -177,7 +177,7 @@ export function CompanyFlyoutContent() {
 
 export function ResourcesFlyoutContent() {
   return (
-    <div className="flex xl:min-w-[320px] flex-col gap-5 text-black">
+    <div className="flex xl:min-w-[320px] flex-col gap-5 ">
       <FTitle text="CASE STUDIES" />
       <div className="flex flex-col">
         <FLink text="Lebanese Army SupreApp" link="/case-studies/Lebanese-Army-SupreApp" />
@@ -192,7 +192,7 @@ export function ResourcesFlyoutContent() {
 
 export function InitiativesFlyoutContent() {
   return (
-    <div className="flex xl:w-[480px] flex-col gap-5 text-black">
+    <div className="flex xl:w-[480px] flex-col gap-5 ">
       {/* <FTitle text="INITIATIVES" /> */}
       <Link className="group/link" to="/initiatives/code-for-lebanon" >
         <div className="min-w-full rounded-[10px] overflow-hidden relative aspect-square px-4 py-6 xl:p-9 flex justify-end flex-col gap-2">
@@ -216,7 +216,7 @@ export function InitiativesFlyoutContent() {
 
 export function GovernmentFlyoutContent() {
   return (
-    <div className="flex xl:w-[480px] flex-col gap-5 text-black">
+    <div className="flex xl:w-[480px] flex-col gap-5 ">
       {/* <FTitle text="GOVERNMENT" /> */}
       <Link className="group/link" to="/government/public-sector" >
         <div className="min-w-full rounded-[10px] overflow-hidden relative aspect-square px-4 py-6 xl:p-9 flex justify-end flex-col gap-2">

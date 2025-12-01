@@ -63,108 +63,102 @@ export default function Navbar({
 
   return (
     <>
-    <m.header
-      initial={{ y: "-100%" }}
-      animate={{
-        y: hideNavOnScroll && !mobileMenuOpen && !hovering ? "-100%" : "0%",
-      }}
-      style={{
-        backgroundColor: (transparentBg && !mobileMenuOpen)
-          ? "transparent"
-          : "white",
-      }}
-      transition={{
-        ease: "easeInOut",
-        duration: hasMounted ? 0.3 : 0.7,
-        delay: hasMounted ? 0 : 0.3,
-      }}
-      className="fixed top-0 right-0 left-0 z-100 duration-500 ease-in-out text-light-black"
-    >
-      
-      {/* Navbar Content */}
-      <div className="my-container side-padding relative z-100 flex items-center justify-between py-3">
-        {/* logo */}
-        <Link to="/" aria-label="homepage">
-          <span className="hidden">Homepage</span>
-          <div className="w-24 translate-y-1 xs:w-32 lg:min-w-[160px]">
-            <HtechLogoSvg
-              color={"var(--color-light-black)"}
-              className="duration-500 ease-in-out w-16 xs:w-20"
-            />
+      <m.header
+        initial={{ y: "-100%" }}
+        animate={{
+          y: hideNavOnScroll && !mobileMenuOpen && !hovering ? "-100%" : "0%",
+        }}
+        style={{
+          backgroundColor:
+            transparentBg && !mobileMenuOpen ? "transparent" : "white",
+        }}
+        transition={{
+          ease: "easeInOut",
+          duration: hasMounted ? 0.3 : 0.7,
+          delay: hasMounted ? 0 : 0.3,
+        }}
+        className="fixed top-0 right-0 left-0 z-100 duration-500 ease-in-out text-light-black"
+      >
+        {/* Navbar Content */}
+        <div className="my-container side-padding relative z-100 flex items-center justify-between py-3">
+          {/* logo */}
+          <Link to="/" aria-label="homepage">
+            <span className="hidden">Homepage</span>
+            <div className="w-24 translate-y-1 xs:w-32 lg:min-w-[160px]">
+              <HtechLogoSvg
+                color={"var(--color-light-black)"}
+                className="duration-500 ease-in-out w-16 xs:w-20"
+              />
+            </div>
+          </Link>
+
+          {/* Flyout Links (large screens) */}
+          <div className="hidden relative items-center justify-between gap-16 xl:flex">
+            <FlyoutLink
+              setHovering={setHovering}
+              FlyoutContent={<ProductsFlyoutContent />}
+            >
+              <p className="min-w-16 text-start text-sm">Products</p>
+            </FlyoutLink>
+            <FlyoutLink
+              setHovering={setHovering}
+              FlyoutContent={<SolutionsFlyoutContent />}
+            >
+              <p className="min-w-20 text-center text-sm">Solutions</p>
+            </FlyoutLink>
+            <FlyoutLink
+              setHovering={setHovering}
+              FlyoutContent={<ResourcesFlyoutContent />}
+            >
+              <p className="min-w-20 text-end text-sm">Resources</p>
+            </FlyoutLink>
+            <FlyoutLink
+              setHovering={setHovering}
+              FlyoutContent={<CompanyFlyoutContent />}
+            >
+              <p className="min-w-20 text-end text-sm">Company</p>
+            </FlyoutLink>
+            <FlyoutLink
+              setHovering={setHovering}
+              FlyoutContent={<InitiativesFlyoutContent />}
+              to="/initiatives/code-for-lebanon"
+            >
+              <p className="min-w-20 text-end text-sm">Initiatives</p>
+            </FlyoutLink>
+            <FlyoutLink
+              setHovering={setHovering}
+              FlyoutContent={<GovernmentFlyoutContent />}
+              to="/government/public-sector"
+            >
+              <p className="min-w-20 text-end text-sm">Government</p>
+            </FlyoutLink>
           </div>
-        </Link>
 
-        {/* Flyout Links (large screens) */}
-        <div className="hidden relative items-center justify-between gap-16 xl:flex">
-          <FlyoutLink
-            setHovering={setHovering}
-            FlyoutContent={<ProductsFlyoutContent />}
-          >
-            <p className="min-w-16 text-start text-sm">Products</p>
-          </FlyoutLink>
-          <FlyoutLink
-            setHovering={setHovering}
-            FlyoutContent={<SolutionsFlyoutContent />}
-          >
-            <p className="min-w-20 text-center text-sm">Solutions</p>
-          </FlyoutLink>
-          <FlyoutLink
-            setHovering={setHovering}
-            FlyoutContent={<ResourcesFlyoutContent />}
-          >
-            <p className="min-w-20 text-end text-sm">Resources</p>
-          </FlyoutLink>
-          <FlyoutLink
-            setHovering={setHovering}
-            FlyoutContent={<CompanyFlyoutContent />}
-          >
-            <p className="min-w-20 text-end text-sm">Company</p>
-          </FlyoutLink>
-          <FlyoutLink
-            setHovering={setHovering}
-            FlyoutContent={<InitiativesFlyoutContent />}
-            to="/initiatives/code-for-lebanon"
-          >
-            <p className="min-w-20 text-end text-sm">Initiatives</p>
-          </FlyoutLink>
-          <FlyoutLink
-            setHovering={setHovering}
-            FlyoutContent={<GovernmentFlyoutContent />}
-            to="/government/public-sector"
-          >
-            <p className="min-w-20 text-end text-sm">Government</p>
-          </FlyoutLink>
-        </div>
+          {/* CTA - Mobile Menu Trigger Btn */}
+          <div className="relative z-1 flex items-center justify-end gap-5 xl:min-w-[160px]">
+            <Button size={"sm"} variant={"fill"}>
+              Book a demo
+            </Button>
 
-        {/* CTA - Mobile Menu Trigger Btn */}
-        <div className="relative z-1 flex items-center justify-end gap-5 xl:min-w-[160px]">
-          <Button
-            variant={"black"}
-          >
-            REQUEST A DEMO
-          </Button>
-
-          <div
-            ref={burgerBtnRef}
-            className="w-7 xl:hidden"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-          >
-            <BurgerMenuSvg
-              isOpen={mobileMenuOpen}
-            />
+            <div
+              ref={burgerBtnRef}
+              className="w-7 xl:hidden"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+            >
+              <BurgerMenuSvg isOpen={mobileMenuOpen} />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Nav Menu */}
-      <MobileNavMenu
-        ref={mobileMenuRef}
-        isOpen={mobileMenuOpen}
-        setIsOpen={setMobileMenuOpen}
-      />
-    </m.header>
+        {/* Mobile Nav Menu */}
+        <MobileNavMenu
+          ref={mobileMenuRef}
+          isOpen={mobileMenuOpen}
+          setIsOpen={setMobileMenuOpen}
+        />
+      </m.header>
 
-    {/* blurred overlay */}
+      {/* blurred overlay */}
       <AnimatePresence>
         {(hovering || mobileMenuOpen) && (
           <m.div
@@ -177,6 +171,5 @@ export default function Navbar({
         )}
       </AnimatePresence>
     </>
-
   );
 }
