@@ -14,6 +14,7 @@ import ArticlePage from "./pages/ArticlePage";
 import CareersPage from "./pages/CareersPage";
 import IndustriesPage from "./pages/IndustriesPage";
 import IndustryPage from "./pages/IndustryPage";
+import CaseStudyPage from "./pages/CaseStudyPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,7 +25,12 @@ const router = createBrowserRouter(
         </>
       }
     >
+      {/* Homepage */}
       <Route path="/" element={<LandingPage />} />
+
+      {/* Case Study */}
+      <Route path="/case-studies/:title" element={<CaseStudyPage />} />
+
       <Route path="/arche" element={<ArchePage />} />
       <Route path="/industries" element={<IndustriesPage />} />
       <Route path="/industries/:id" element={<IndustryPage />} />

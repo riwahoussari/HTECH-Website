@@ -8,10 +8,24 @@ import MainIcon from "../../../assets/mail-icon.svg";
 import FacebookIcon from "../../../assets/facebook-icon.svg";
 import XIcon from "../../../assets/x-icon.svg";
 import LinkedinIcon from "../../../assets/linkedin-icon.svg";
+import Markdown from "react-markdown";
 
 export default function ArticleSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-5%" });
+
+  const articleMarkdown = `
+  ### Overview
+
+  If you ask a lawyer, “What is the most rewarding aspect of contract creation?” they’ll tell you that it’s the chance to be creative and offer the client novel strategic advice. Ask them where they spend most of their time, and the script flips. “Lawyers I talk to often refer to themselves as ‘cut-and-paste drones,’” says James Ding, Co-Founder and CEO of Draftwise, an AI contract drafting, review, and negotiation platform powered by customers’ legal expertise.
+
+As a software engineer, James has led teams across multiple industries where privacy, data security, and advanced search capability are crucial. So, he knew that the legal profession could create a sea change by implementing state-of-the-art generative and search AI models to draft higher-quality contracts faster and reduce time-consuming, mundane work. To realize this vision, James and the Draftwise team turned to Cohere models available through Microsoft Azure AI Foundry.
+
+“Cohere models deliver the security, reliability, and performance that lawyers need to draft complex legal contracts. Integrating Cohere into Draftwise boosted the quality of search results by 30%.”
+– James Ding, Co-Founder and CEO
+
+![this is an image](http://localhost:5173/assets/case-studies/leb-army.jpg)
+  `;
 
   return (
     <section
@@ -26,9 +40,9 @@ export default function ArticleSection() {
         >
           <Link to="/news">
             <Button
-              arrow={"back"}
+              arrow={"normal"}
               className="bg-transparent! px-0!"
-              variant={"secondary"}
+              variant={"outline"}
             >
               BACK TO BLOG
             </Button>
@@ -83,8 +97,9 @@ export default function ArticleSection() {
 
           {/* article */}
           <SlideUpAnim isInView={isInView} transition={{ delay: 0.5 }}>
-            <article className="mt-8 text-[17px] leading-[26px] xs:text-[19px] xl:leading-[28px]">
-              For decades, business intelligence has been about crunching
+            <article className="prose lg:prose-xl mt-8 text-[17px] leading-[26px] xs:text-[19px] xl:leading-[28px]">
+              <Markdown>{articleMarkdown}</Markdown>
+              {/* For decades, business intelligence has been about crunching
               numbers—sales figures, operational metrics, financial forecasts.
               But numbers without words miss the human dimension. Every email,
               call transcript, customer review, or policy document contains
@@ -140,7 +155,7 @@ export default function ArticleSection() {
               of KPIs. They’ll listen to the language running through every
               corner of their organization. That’s the real frontier of
               intelligence—where data meets dialogue, and where business finally
-              begins to sound human.
+              begins to sound human. */}
             </article>
           </SlideUpAnim>
         </div>

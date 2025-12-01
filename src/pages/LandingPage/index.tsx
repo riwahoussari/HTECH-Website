@@ -9,7 +9,6 @@ import WhatWeDo from "./components/WhatWeDo";
 import IndustriesWeEmpower from "./components/IndustriesWeEmpower";
 import OurProducts from "./components/OurProducts";
 import OurLatestNews from "./components/OurLatestNews";
-import { TrustedBy } from "../../components/sections/TrustedBy";
 import TestimonialSection from "../IndustriesPage/components/TestimonialsSection";
 import { INDUSTRIES_PAGE_DATA } from "../../lib/data";
 import { TitleBlock } from "../../components/ui/Titles";

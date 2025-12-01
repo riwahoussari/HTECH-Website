@@ -94,11 +94,206 @@ export const GENERAL_DATA = {
   ],
 
   CASE_STUDIES: [
-    { name: "Lebanese Army SuperApp" },
-    { name: "Lebanses Army LLM" },
-    { name: "Military Tribunal AI Powered Internal System" },
-    { name: "Council of Ministers Internal Dashboard" },
-    { name: "Code For Lebanon" },
+    {
+      name: "Lebanese Army SuperApp",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
+      img: "/assets/case-studies/leb-army.jpg",
+      markdown: `
+## Overview
+ 
+If you ask a lawyer, “What is the most rewarding aspect of contract creation?” they’ll tell you that it’s the chance to be creative and offer the client novel strategic advice. Ask them where they spend most of their time, and the script flips. “Lawyers I talk to often refer to themselves as ‘cut-and-paste drones,’” says James Ding, Co-Founder and CEO of Draftwise, an AI contract drafting, review, and negotiation platform powered by customers’ legal expertise.
+
+As a software engineer, James has led teams across multiple industries where privacy, data security, and advanced search capability are crucial. So, he knew that the legal profession could create a sea change by implementing state-of-the-art generative and search AI models to draft higher-quality contracts faster and reduce time-consuming, mundane work. To realize this vision, James and the Draftwise team turned to Cohere models available through Microsoft Azure AI Foundry.
+
+“Cohere models deliver the security, reliability, and performance that lawyers need to draft complex legal contracts. Integrating Cohere into Draftwise boosted the quality of search results by 30%.”
+– James Ding, Co-Founder and CEO
+
+## The Challenge
+
+The Draftwise developer team laid out their strategy for bringing Smart Draft, their AI-powered contract drafting product, to market. Because of their deep trust in Microsoft based on extensive experience with Microsoft Azure, the company founders researched large language models (LLMs) on Azure AI Foundry and discovered Cohere's set of models: Command for text generation, and Embed and Rerank for search and retrieval.
+
+“Once we knew that we could run Cohere models on Azure, we were sure we’d have the best of both worlds,” explains James Ding.
+The Draftwise team also went directly to prospective customers to fully grasp the needs and preferences of today’s lawyers, and they found a customer base committed to the ideals of their profession. “We knew we could provide the best experience for lawyers by aligning with the tools they use every day and deliver Draftwise convenience from within their current workflow,” says Will Seaton, Chief Customer Officer at Draftwise.
+
+![three soldiers holding and aiming their rifles](/assets/case-studies/leb-army.jpg)
+
+## The Solution
+
+When generating a legal agreement, lawyers seek specific information grounded in their clients' contracts, communications, and other documents. Draftwise needed a strong retrieval-augmented generation (RAG) system to power its contract generation tool, Smart Draft. Draftwise selected Cohere's models for their quality, accuracy, and search retrieval capabilities, and subsequently built its RAG system using three powerful Cohere models: Command, Embed, and Rerank.
+
+The Cohere Command model offers strong text generation capabilities with the ability to cite source documents, which provides a natural, approachable interface for Smart Draft. Cohere Embed, a multimodal embedding model, enables advanced search through any source document by semantic meaning rather than simple keywords. Embed can process all data, including images, diagrams, tables, and graphs, which means that Draftwise solutions aren’t limited to text searches only. Finally, Cohere Rerank ensures that only the most relevant results appear at the top.
+
+The three stacked models provide accurate information, with verifiable citations of source documents, to support complex legal cases. “We’ve built our models for real-world business use cases,” says Nicolás Morales, Head of Customer Experience and Partnerships at Cohere. “Cohere's secure, enterprise-focused generative and retrieval AI models seamlessly integrate into your workflows, delivering powerful results with broad multilingual support, high accuracy with citations, and cost-efficiency.”
+
+
+## The Impact
+
+Draftwise's Smart Draft solution gives lawyers more time for strategic client work by reducing the mundane aspects of drafting contracts. The company has seen impressive results by building a RAG-powered AI search system with Cohere.
+
+Since incorporating fine-tuned Cohere models into its solution, Draftwise’s internal benchmarks have shown a 30% improvement in search result quality. On the backend, a threefold increase in API calls made by Draftwise to models over just the first quarter of 2025 indicates spectacular growth in usage. That comes as no surprise to Chief Customer Officer of Draftwise Will Seaton. “We’re seeing tremendous excitement about AI in the legal profession,” he says. “In addition to the productivity boosts and faster new lawyer training our customers are experiencing, they’re advising their clients on how they can also use AI to improve their operations.”
+    `,
+    },
+    {
+      name: "Lebanese Army LLM",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
+      img: "/assets/case-studies/leb-army.jpg",
+      markdown: `
+## Overview
+ 
+If you ask a lawyer, “What is the most rewarding aspect of contract creation?” they’ll tell you that it’s the chance to be creative and offer the client novel strategic advice. Ask them where they spend most of their time, and the script flips. “Lawyers I talk to often refer to themselves as ‘cut-and-paste drones,’” says James Ding, Co-Founder and CEO of Draftwise, an AI contract drafting, review, and negotiation platform powered by customers’ legal expertise.
+
+As a software engineer, James has led teams across multiple industries where privacy, data security, and advanced search capability are crucial. So, he knew that the legal profession could create a sea change by implementing state-of-the-art generative and search AI models to draft higher-quality contracts faster and reduce time-consuming, mundane work. To realize this vision, James and the Draftwise team turned to Cohere models available through Microsoft Azure AI Foundry.
+
+“Cohere models deliver the security, reliability, and performance that lawyers need to draft complex legal contracts. Integrating Cohere into Draftwise boosted the quality of search results by 30%.”
+– James Ding, Co-Founder and CEO
+
+## The Challenge
+
+The Draftwise developer team laid out their strategy for bringing Smart Draft, their AI-powered contract drafting product, to market. Because of their deep trust in Microsoft based on extensive experience with Microsoft Azure, the company founders researched large language models (LLMs) on Azure AI Foundry and discovered Cohere's set of models: Command for text generation, and Embed and Rerank for search and retrieval.
+
+“Once we knew that we could run Cohere models on Azure, we were sure we’d have the best of both worlds,” explains James Ding.
+The Draftwise team also went directly to prospective customers to fully grasp the needs and preferences of today’s lawyers, and they found a customer base committed to the ideals of their profession. “We knew we could provide the best experience for lawyers by aligning with the tools they use every day and deliver Draftwise convenience from within their current workflow,” says Will Seaton, Chief Customer Officer at Draftwise.
+
+![three soldiers holding and aiming their rifles](/assets/case-studies/leb-army.jpg)
+
+## The Solution
+
+When generating a legal agreement, lawyers seek specific information grounded in their clients' contracts, communications, and other documents. Draftwise needed a strong retrieval-augmented generation (RAG) system to power its contract generation tool, Smart Draft. Draftwise selected Cohere's models for their quality, accuracy, and search retrieval capabilities, and subsequently built its RAG system using three powerful Cohere models: Command, Embed, and Rerank.
+
+The Cohere Command model offers strong text generation capabilities with the ability to cite source documents, which provides a natural, approachable interface for Smart Draft. Cohere Embed, a multimodal embedding model, enables advanced search through any source document by semantic meaning rather than simple keywords. Embed can process all data, including images, diagrams, tables, and graphs, which means that Draftwise solutions aren’t limited to text searches only. Finally, Cohere Rerank ensures that only the most relevant results appear at the top.
+
+The three stacked models provide accurate information, with verifiable citations of source documents, to support complex legal cases. “We’ve built our models for real-world business use cases,” says Nicolás Morales, Head of Customer Experience and Partnerships at Cohere. “Cohere's secure, enterprise-focused generative and retrieval AI models seamlessly integrate into your workflows, delivering powerful results with broad multilingual support, high accuracy with citations, and cost-efficiency.”
+
+
+## The Impact
+
+Draftwise's Smart Draft solution gives lawyers more time for strategic client work by reducing the mundane aspects of drafting contracts. The company has seen impressive results by building a RAG-powered AI search system with Cohere.
+
+Since incorporating fine-tuned Cohere models into its solution, Draftwise’s internal benchmarks have shown a 30% improvement in search result quality. On the backend, a threefold increase in API calls made by Draftwise to models over just the first quarter of 2025 indicates spectacular growth in usage. That comes as no surprise to Chief Customer Officer of Draftwise Will Seaton. “We’re seeing tremendous excitement about AI in the legal profession,” he says. “In addition to the productivity boosts and faster new lawyer training our customers are experiencing, they’re advising their clients on how they can also use AI to improve their operations.”
+    `,
+    },
+    {
+      name: "Military Tribunal AI Powered Internal System",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
+      img: "/assets/case-studies/leb-army.jpg",
+      markdown: `
+## Overview
+ 
+If you ask a lawyer, “What is the most rewarding aspect of contract creation?” they’ll tell you that it’s the chance to be creative and offer the client novel strategic advice. Ask them where they spend most of their time, and the script flips. “Lawyers I talk to often refer to themselves as ‘cut-and-paste drones,’” says James Ding, Co-Founder and CEO of Draftwise, an AI contract drafting, review, and negotiation platform powered by customers’ legal expertise.
+
+As a software engineer, James has led teams across multiple industries where privacy, data security, and advanced search capability are crucial. So, he knew that the legal profession could create a sea change by implementing state-of-the-art generative and search AI models to draft higher-quality contracts faster and reduce time-consuming, mundane work. To realize this vision, James and the Draftwise team turned to Cohere models available through Microsoft Azure AI Foundry.
+
+“Cohere models deliver the security, reliability, and performance that lawyers need to draft complex legal contracts. Integrating Cohere into Draftwise boosted the quality of search results by 30%.”
+– James Ding, Co-Founder and CEO
+
+## The Challenge
+
+The Draftwise developer team laid out their strategy for bringing Smart Draft, their AI-powered contract drafting product, to market. Because of their deep trust in Microsoft based on extensive experience with Microsoft Azure, the company founders researched large language models (LLMs) on Azure AI Foundry and discovered Cohere's set of models: Command for text generation, and Embed and Rerank for search and retrieval.
+
+“Once we knew that we could run Cohere models on Azure, we were sure we’d have the best of both worlds,” explains James Ding.
+The Draftwise team also went directly to prospective customers to fully grasp the needs and preferences of today’s lawyers, and they found a customer base committed to the ideals of their profession. “We knew we could provide the best experience for lawyers by aligning with the tools they use every day and deliver Draftwise convenience from within their current workflow,” says Will Seaton, Chief Customer Officer at Draftwise.
+
+![three soldiers holding and aiming their rifles](/assets/case-studies/leb-army.jpg)
+
+## The Solution
+
+When generating a legal agreement, lawyers seek specific information grounded in their clients' contracts, communications, and other documents. Draftwise needed a strong retrieval-augmented generation (RAG) system to power its contract generation tool, Smart Draft. Draftwise selected Cohere's models for their quality, accuracy, and search retrieval capabilities, and subsequently built its RAG system using three powerful Cohere models: Command, Embed, and Rerank.
+
+The Cohere Command model offers strong text generation capabilities with the ability to cite source documents, which provides a natural, approachable interface for Smart Draft. Cohere Embed, a multimodal embedding model, enables advanced search through any source document by semantic meaning rather than simple keywords. Embed can process all data, including images, diagrams, tables, and graphs, which means that Draftwise solutions aren’t limited to text searches only. Finally, Cohere Rerank ensures that only the most relevant results appear at the top.
+
+The three stacked models provide accurate information, with verifiable citations of source documents, to support complex legal cases. “We’ve built our models for real-world business use cases,” says Nicolás Morales, Head of Customer Experience and Partnerships at Cohere. “Cohere's secure, enterprise-focused generative and retrieval AI models seamlessly integrate into your workflows, delivering powerful results with broad multilingual support, high accuracy with citations, and cost-efficiency.”
+
+
+## The Impact
+
+Draftwise's Smart Draft solution gives lawyers more time for strategic client work by reducing the mundane aspects of drafting contracts. The company has seen impressive results by building a RAG-powered AI search system with Cohere.
+
+Since incorporating fine-tuned Cohere models into its solution, Draftwise’s internal benchmarks have shown a 30% improvement in search result quality. On the backend, a threefold increase in API calls made by Draftwise to models over just the first quarter of 2025 indicates spectacular growth in usage. That comes as no surprise to Chief Customer Officer of Draftwise Will Seaton. “We’re seeing tremendous excitement about AI in the legal profession,” he says. “In addition to the productivity boosts and faster new lawyer training our customers are experiencing, they’re advising their clients on how they can also use AI to improve their operations.”
+    `,
+    },
+    {
+      name: "Council of Ministers Internal Dashboard",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
+      img: "/assets/case-studies/leb-army.jpg",
+      markdown: `
+## Overview
+ 
+If you ask a lawyer, “What is the most rewarding aspect of contract creation?” they’ll tell you that it’s the chance to be creative and offer the client novel strategic advice. Ask them where they spend most of their time, and the script flips. “Lawyers I talk to often refer to themselves as ‘cut-and-paste drones,’” says James Ding, Co-Founder and CEO of Draftwise, an AI contract drafting, review, and negotiation platform powered by customers’ legal expertise.
+
+As a software engineer, James has led teams across multiple industries where privacy, data security, and advanced search capability are crucial. So, he knew that the legal profession could create a sea change by implementing state-of-the-art generative and search AI models to draft higher-quality contracts faster and reduce time-consuming, mundane work. To realize this vision, James and the Draftwise team turned to Cohere models available through Microsoft Azure AI Foundry.
+
+“Cohere models deliver the security, reliability, and performance that lawyers need to draft complex legal contracts. Integrating Cohere into Draftwise boosted the quality of search results by 30%.”
+– James Ding, Co-Founder and CEO
+
+## The Challenge
+
+The Draftwise developer team laid out their strategy for bringing Smart Draft, their AI-powered contract drafting product, to market. Because of their deep trust in Microsoft based on extensive experience with Microsoft Azure, the company founders researched large language models (LLMs) on Azure AI Foundry and discovered Cohere's set of models: Command for text generation, and Embed and Rerank for search and retrieval.
+
+“Once we knew that we could run Cohere models on Azure, we were sure we’d have the best of both worlds,” explains James Ding.
+The Draftwise team also went directly to prospective customers to fully grasp the needs and preferences of today’s lawyers, and they found a customer base committed to the ideals of their profession. “We knew we could provide the best experience for lawyers by aligning with the tools they use every day and deliver Draftwise convenience from within their current workflow,” says Will Seaton, Chief Customer Officer at Draftwise.
+
+![three soldiers holding and aiming their rifles](/assets/case-studies/leb-army.jpg)
+
+## The Solution
+
+When generating a legal agreement, lawyers seek specific information grounded in their clients' contracts, communications, and other documents. Draftwise needed a strong retrieval-augmented generation (RAG) system to power its contract generation tool, Smart Draft. Draftwise selected Cohere's models for their quality, accuracy, and search retrieval capabilities, and subsequently built its RAG system using three powerful Cohere models: Command, Embed, and Rerank.
+
+The Cohere Command model offers strong text generation capabilities with the ability to cite source documents, which provides a natural, approachable interface for Smart Draft. Cohere Embed, a multimodal embedding model, enables advanced search through any source document by semantic meaning rather than simple keywords. Embed can process all data, including images, diagrams, tables, and graphs, which means that Draftwise solutions aren’t limited to text searches only. Finally, Cohere Rerank ensures that only the most relevant results appear at the top.
+
+The three stacked models provide accurate information, with verifiable citations of source documents, to support complex legal cases. “We’ve built our models for real-world business use cases,” says Nicolás Morales, Head of Customer Experience and Partnerships at Cohere. “Cohere's secure, enterprise-focused generative and retrieval AI models seamlessly integrate into your workflows, delivering powerful results with broad multilingual support, high accuracy with citations, and cost-efficiency.”
+
+
+## The Impact
+
+Draftwise's Smart Draft solution gives lawyers more time for strategic client work by reducing the mundane aspects of drafting contracts. The company has seen impressive results by building a RAG-powered AI search system with Cohere.
+
+Since incorporating fine-tuned Cohere models into its solution, Draftwise’s internal benchmarks have shown a 30% improvement in search result quality. On the backend, a threefold increase in API calls made by Draftwise to models over just the first quarter of 2025 indicates spectacular growth in usage. That comes as no surprise to Chief Customer Officer of Draftwise Will Seaton. “We’re seeing tremendous excitement about AI in the legal profession,” he says. “In addition to the productivity boosts and faster new lawyer training our customers are experiencing, they’re advising their clients on how they can also use AI to improve their operations.”
+    `,
+    },
+    {
+      name: "Code For Lebanon",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
+      img: "/assets/case-studies/leb-army.jpg",
+      markdown: `
+## Overview
+ 
+If you ask a lawyer, “What is the most rewarding aspect of contract creation?” they’ll tell you that it’s the chance to be creative and offer the client novel strategic advice. Ask them where they spend most of their time, and the script flips. “Lawyers I talk to often refer to themselves as ‘cut-and-paste drones,’” says James Ding, Co-Founder and CEO of Draftwise, an AI contract drafting, review, and negotiation platform powered by customers’ legal expertise.
+
+As a software engineer, James has led teams across multiple industries where privacy, data security, and advanced search capability are crucial. So, he knew that the legal profession could create a sea change by implementing state-of-the-art generative and search AI models to draft higher-quality contracts faster and reduce time-consuming, mundane work. To realize this vision, James and the Draftwise team turned to Cohere models available through Microsoft Azure AI Foundry.
+
+“Cohere models deliver the security, reliability, and performance that lawyers need to draft complex legal contracts. Integrating Cohere into Draftwise boosted the quality of search results by 30%.”
+– James Ding, Co-Founder and CEO
+
+## The Challenge
+
+The Draftwise developer team laid out their strategy for bringing Smart Draft, their AI-powered contract drafting product, to market. Because of their deep trust in Microsoft based on extensive experience with Microsoft Azure, the company founders researched large language models (LLMs) on Azure AI Foundry and discovered Cohere's set of models: Command for text generation, and Embed and Rerank for search and retrieval.
+
+“Once we knew that we could run Cohere models on Azure, we were sure we’d have the best of both worlds,” explains James Ding.
+The Draftwise team also went directly to prospective customers to fully grasp the needs and preferences of today’s lawyers, and they found a customer base committed to the ideals of their profession. “We knew we could provide the best experience for lawyers by aligning with the tools they use every day and deliver Draftwise convenience from within their current workflow,” says Will Seaton, Chief Customer Officer at Draftwise.
+
+![three soldiers holding and aiming their rifles](/assets/case-studies/leb-army.jpg)
+
+## The Solution
+
+When generating a legal agreement, lawyers seek specific information grounded in their clients' contracts, communications, and other documents. Draftwise needed a strong retrieval-augmented generation (RAG) system to power its contract generation tool, Smart Draft. Draftwise selected Cohere's models for their quality, accuracy, and search retrieval capabilities, and subsequently built its RAG system using three powerful Cohere models: Command, Embed, and Rerank.
+
+The Cohere Command model offers strong text generation capabilities with the ability to cite source documents, which provides a natural, approachable interface for Smart Draft. Cohere Embed, a multimodal embedding model, enables advanced search through any source document by semantic meaning rather than simple keywords. Embed can process all data, including images, diagrams, tables, and graphs, which means that Draftwise solutions aren’t limited to text searches only. Finally, Cohere Rerank ensures that only the most relevant results appear at the top.
+
+The three stacked models provide accurate information, with verifiable citations of source documents, to support complex legal cases. “We’ve built our models for real-world business use cases,” says Nicolás Morales, Head of Customer Experience and Partnerships at Cohere. “Cohere's secure, enterprise-focused generative and retrieval AI models seamlessly integrate into your workflows, delivering powerful results with broad multilingual support, high accuracy with citations, and cost-efficiency.”
+
+
+## The Impact
+
+Draftwise's Smart Draft solution gives lawyers more time for strategic client work by reducing the mundane aspects of drafting contracts. The company has seen impressive results by building a RAG-powered AI search system with Cohere.
+
+Since incorporating fine-tuned Cohere models into its solution, Draftwise’s internal benchmarks have shown a 30% improvement in search result quality. On the backend, a threefold increase in API calls made by Draftwise to models over just the first quarter of 2025 indicates spectacular growth in usage. That comes as no surprise to Chief Customer Officer of Draftwise Will Seaton. “We’re seeing tremendous excitement about AI in the legal profession,” he says. “In addition to the productivity boosts and faster new lawyer training our customers are experiencing, they’re advising their clients on how they can also use AI to improve their operations.”
+    `,
+    },
   ],
 };
 
