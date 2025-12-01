@@ -2,9 +2,8 @@ import { useRef } from "react";
 import GradientCircle from "../../../components/ui/GradientCircle";
 import { useInView } from "motion/react";
 import { TitleBlock } from "../../../components/ui/Titles";
-import { SlideUpAnim, SlideUpSelf } from "../../../components/ui/Anims";
+import { SlideUpAnim } from "../../../components/ui/Anims";
 import Button from "../../../components/ui/Button";
-import { GlassCard } from "../../../components/ui/Cards";
 import { INDUSTRY_PAGE_DATA } from "../../../lib/data";
 
 export default function UseCases() {
@@ -45,11 +44,7 @@ export default function UseCases() {
 
       {/* cards */}
       <div className="relative mt-16 grid grid-cols-1 gap-5 max-md:max-w-[520px] md:grid-cols-2 md:gap-8 xl:grid-cols-3">
-        {INDUSTRY_PAGE_DATA.USE_CASES.cards.map((useCase, i) => (
-          <SlideUpSelf key={i}>
-            <GlassCard className="w-full" {...useCase} />
-          </SlideUpSelf>
-        ))}
+        {INDUSTRY_PAGE_DATA.USE_CASES.cards.map((useCase, i) => (<></>))}
       </div>
     </section>
   );

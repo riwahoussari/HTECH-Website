@@ -1,4 +1,4 @@
-import { TestimonialCard } from "../../../components/ui/Cards";
+import TestimonialCard from "../../../components/ui/cards/TestimonialCard";
 
 export default function CaseStudyTestimonial(testimonial: {
   name: string;

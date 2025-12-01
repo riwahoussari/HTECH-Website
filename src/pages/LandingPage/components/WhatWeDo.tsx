@@ -105,21 +105,30 @@ function Card({
         }
       >
         {/* bg */}
-        <img
-          src="/assets/textured-bg.png"
-          alt="Textured Background"
-          className={
-            "max-lg absolute object-cover left-1/2 -translate-x-1/2 min-h-full max-lg:top-0 min-w-full lg:scale-300 bg-blueish-gray " +
-            (index === 0 ? " lg:top-0 origin-top " : "") +
-            (index === 1 ? " lg:top-1/2 lg:-translate-y-1/2 origin-center " : "") +
-            (index === 2 ? " lg:bottom-0 origin-bottom " : "")
-          }
-        />
+        <div
+        className="absolute object-cover left-1/2 -translate-x-1/2 min-h-full max-lg:top-0 min-w-full bg-blueish-gray"
+          // className={
+          //   "absolute object-cover left-1/2 -translate-x-1/2 min-h-full max-lg:top-0 min-w-full lg:scale-300 bg-blueish-gray " +
+          //   (index === 0 ? " lg:top-0 origin-top " : "") +
+          //   (index === 1
+          //     ? " lg:top-1/2 lg:-translate-y-1/2 origin-center "
+          //     : "") +
+          //   (index === 2 ? " lg:bottom-0 origin-bottom " : "")
+          // }
+        >
+          <img
+            src="/assets/textured-bg.png"
+            alt="Textured Background"
+            className={"w-full h-full object-cover opacity-35"}
+          />
+        </div>
 
         {/* text */}
         <div className="relative lg:w-1/2 z-1 text-white max-lg:text-center flex flex-col lg:items-start items-center ">
           <SlideUpAnim isInView={isInView} transition={{ delay: 0.4 }}>
-            <p className="text-64 max-xs:text-[12vw]! leading-none! mb-4"> {content.title}</p>
+            <p className="text-58 max-xs:text-[12vw]! leading-none! mb-4">
+              {content.title}
+            </p>
           </SlideUpAnim>
           <SlideUpAnim isInView={isInView} transition={{ delay: 0.5 }}>
             <p className="text-20 leading-[1.2]! max-w-[550px] mb-8">

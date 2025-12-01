@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState, type ReactNode } from "react";
+import  { useEffect, useRef, useState, type ReactNode } from "react";
 import ArrowSvg from "../../../components/ui/ArrowSvg";
 import { motion as m, AnimatePresence, useInView } from "motion/react";
 import { SlideUpAnim } from "../../../components/ui/Anims";
-import NetBg from "../../../components/ui/NetBg";
-import { TestimonialCard } from "../../../components/ui/Cards";
+import TestimonialCard from "../../../components/ui/cards/TestimonialCard";
 
 export default function TestimonialSection({
   titleBlock,

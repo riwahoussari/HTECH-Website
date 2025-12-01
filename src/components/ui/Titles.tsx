@@ -47,7 +47,7 @@ export function TitleBlock({
       ref={titleBlockRef}
       className="items-start justify-start lg:flex mb-10 lg:mb-14"
     >
-      <div className="space-y-2 max-lg:mb-6 max-sm:mb-4 lg:w-1/2 pr-4">
+      <div className="space-y-2 max-lg:mb-6 max-sm:mb-4 lg:w-1/2 pr-10">
         {subtitle && (
           <SectionSubTitle>
             <AnimatedText isInView={isInView}>{subtitle}</AnimatedText>

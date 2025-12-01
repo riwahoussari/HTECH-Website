@@ -15,6 +15,7 @@ import CareersPage from "./pages/CareersPage";
 import IndustriesPage from "./pages/IndustriesPage";
 import IndustryPage from "./pages/IndustryPage";
 import CaseStudyPage from "./pages/CaseStudyPage";
+import PredictiveAIModelPage from "./pages/PredictiveAIModelPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +28,14 @@ const router = createBrowserRouter(
     >
       {/* Homepage */}
       <Route path="/" element={<LandingPage />} />
+
+      {/* PRODUCTS */}
+      <Route path="/products">
+        <Route
+          path="predictive-ai-models/:slug"
+          element={<PredictiveAIModelPage />}
+        />
+      </Route>
 
       {/* Case Study */}
       <Route path="/case-studies/:title" element={<CaseStudyPage />} />

@@ -3,7 +3,7 @@ import { cn } from "../../lib/utils";
 import ArrowSvg from "./ArrowSvg";
 
 const buttonVariants = cva(
-  "group inline-flex items-center justify-center duration-200 cursor-pointer ease-in-out overflow-clip",
+  "group inline-flex items-center justify-center duration-200 cursor-pointer ease-in-out overflow-clip leadin-none ",
   {
     variants: {
       variant: {
@@ -15,9 +15,9 @@ const buttonVariants = cva(
         white: "bg-white border-white ",
       },
       size: {
-        sm: " text-[14px] lg:text-[15px] ",
-        md: " text-[15px] lg:text-[17px] ",
-        lg: " text-[16px] xs:text-[18px] xl:text-[20px] ",
+        sm: " text-[12px] lg:text-[14px] ",
+        md: " text-[14px] lg:text-[16px] ",
+        lg: " text-[16px] lg:text-[18px] ",
       },
       arrow: {
         none: "",
@@ -51,32 +51,32 @@ const buttonVariants = cva(
       {
         variant: "fill",
         size: "sm",
-        class: " px-[15px] py-[7px] lg:px-[17px] lg:py-[10px] ",
+        class: " px-[14px] py-[7px] lg:px-[16px] lg:py-[8px] ",
       },
       {
         variant: "outline",
         size: "sm",
-        class: " p-[3px] lg:p-[4px] ",
+        class: " p-[3px] xl:p-[4px] ",
       },
       {
         variant: "fill",
         size: "md",
-        class: " px-[17px] py-[10px] lg:px-[19px] lg:py-[12px] ",
+        class: " px-[16px] py-[8px] lg:px-[20px] lg:py-[10px] ",
       },
       {
         variant: "outline",
         size: "md",
-        class: " p-[4px] lg:p-[5px] ",
+        class: " p-[3.5px] xl:p-[5px] ",
       },
       {
         variant: "fill",
         size: "lg",
-        class: " px-[20px] py-[10px] xs:px-[24px] xs:py-[13px] xl:px-[29px] xl:py-[17px] ",
+        class: " px-[20px] py-[10px] lg:px-[24px] lg:py-[12px] ",
       },
       {
         variant: "outline",
         size: "lg",
-        class: " px-[5px] py-[6px] xl:px-[7px] xl:py-[10px] ",
+        class: " p-[4px] xl:p-[6px] ",
       },
     ],
     defaultVariants: {
@@ -109,7 +109,7 @@ export default function Button({
       <span className="w-max">{props.children}</span>
       {arrow && arrow !== "none" && (
         <ArrowSvg
-          strokeWidth={2}
+          strokeWidth={1.5}
           color={
             clr == "white"
               ? variant == "outline"
@@ -122,10 +122,10 @@ export default function Button({
           className={
             "group-hover:rotate-0 ease-in-out duration-200 -rotate-45 " +
             (size == "sm"
-              ? " w-[17px] lg:w-[19px] "
+              ? " w-[17px] lg:w-[18px] "
               : size == "md"
-                ? " w-[20px] lg:w-[22px] "
-                : " w-[20px] xs:w-[22px] xl:w-[25px] ")
+                ? " w-[18px] lg:w-[20px] "
+                : " w-[18px] xl:w-[22px] ")
           }
         />
       )}

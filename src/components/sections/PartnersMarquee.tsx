@@ -24,11 +24,13 @@ const LOGOS = [
     className: " invert-100 ",
   },
   { src: "/assets/logos/usj-logo.png", alt: "USJ Logo" },
-  { src: "/assets/logos/unicef-logo.svg", alt: "Unicef Logo" },
+  { src: "/assets/logos/lau-white-logo.svg", alt: "LAU Logo" },
+  { src: "/assets/logos/aub-logo.svg", alt: "AUB Logo" },
   {
     src: "/assets/logos/military-tribunal-logo.svg",
     alt: "Military Tribunal Logo",
   },
+  { src: "/assets/logos/unicef-logo.svg", alt: "Unicef Logo" },
 ];
 
 function MarqueeLogos() {
@@ -65,7 +67,7 @@ function MarqueeLogos() {
   // Animate marquee
   useAnimationFrame((_, delta) => {
     if (!contentWidth) return;
-    xRef.current -= (delta / 1000) * iconWidth; // speed in px/s (1 iconWidth per second)
+    xRef.current -= (delta / 1000) * iconWidth * 0.5; // speed in px/s (1 iconWidth per second)
     const newX = ((xRef.current % contentWidth) + contentWidth) % contentWidth;
     setTranslateX(newX);
   });
@@ -174,7 +176,7 @@ function Logo({
     <img
       src={src}
       style={{ opacity }}
-      className={"2xl:w-44 lg:w-32 w-26 " + className}
+      className={"2xl:w-48 lg:w-36 w-32 " + className}
       alt={alt}
     />
   );

@@ -3,7 +3,7 @@ import { useRef } from "react";
 import GradientCircle from "../../../components/ui/GradientCircle";
 import { SectionTitle } from "../../../components/ui/Titles";
 import { AnimatedText, SlideUpSelf } from "../../../components/ui/Anims";
-import { SimpleCard } from "../../../components/ui/Cards";
+// import { SimpleCard } from "../../../components/ui/Cards";
 import { CAREERS_PAGE_DATA } from "../../../lib/data";
 
 export default function OpenRoles() {
@@ -36,14 +36,8 @@ export default function OpenRoles() {
         </div>
 
         <div className="relative grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
-          {CAREERS_PAGE_DATA.OPEN_ROLES.cards.map((role, i) => (
-            <SlideUpSelf>
-              <SimpleCard
-                {...role}
-                key={i}
-                className="min-h-[180px] max-md:max-w-[424px] xs:min-h-[250px]"
-              />
-            </SlideUpSelf>
+          {CAREERS_PAGE_DATA.OPEN_ROLES.cards.map((role, i) => (<></>
+           
           ))}
         </div>
       </div>

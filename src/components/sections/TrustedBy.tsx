@@ -1,9 +1,10 @@
 import { useRef } from "react";
 import { GENERAL_DATA } from "../../lib/data";
 import { SlideUpAnim } from "../ui/Anims";
-import { CardsSlider, TestimonialCard } from "../ui/Cards";
+import CardsSlider from "../ui/cards/CardsSlider";
 import { TitleBlock } from "../ui/Titles";
 import { useInView } from "motion/react";
+import TestimonialCard from "../ui/cards/TestimonialCard";
 
 export function TrustedBy({ className }: { className?: string }) {
   const sectionRef = useRef<HTMLDivElement>(null);

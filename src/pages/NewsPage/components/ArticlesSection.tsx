@@ -8,7 +8,7 @@ import {
 import GradientCircle from "../../../components/ui/GradientCircle";
 import Button from "../../../components/ui/Button";
 import { GENERAL_DATA } from "../../../lib/data";
-import { ArticleCard } from "../../../components/ui/Cards";
+import NewsCard from "../../../components/ui/cards/NewsCard";
 
 export default function ArticlesSection({
   withBall = false,
@@ -110,7 +110,7 @@ export default function ArticlesSection({
         {GENERAL_DATA.ARTICLES.slice(0, 3).map((article, i) => (
           <div>
             <SlideUpSelf className="w-full max-w-[550px] lg:max-w-none">
-              <ArticleCard
+              <NewsCard
                 className="w-full"
                 fetchPriority={fetchPriority}
                 key={i}

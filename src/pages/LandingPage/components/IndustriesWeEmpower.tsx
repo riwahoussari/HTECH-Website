@@ -1,9 +1,10 @@
 import { TitleBlock } from "../../../components/ui/Titles";
-import { CardsSlider, IndustryCard } from "../../../components/ui/Cards";
+import CardsSlider from "../../../components/ui/cards/CardsSlider";
 import { SlideUpAnim } from "../../../components/ui/Anims";
 import { useRef } from "react";
 import { useInView } from "motion/react";
 import { GENERAL_DATA, LANDING_PAGE_DATA } from "../../../lib/data";
+import IndustryCard from "../../../components/ui/cards/IndustryCard";
 
 export default function IndustriesWeEmpower() {
   const sectionRef = useRef<HTMLDivElement>(null);

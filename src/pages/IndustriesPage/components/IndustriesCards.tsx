@@ -1,6 +1,6 @@
 import type { RefObject } from "react";
 import { SlideUpSelf } from "../../../components/ui/Anims";
-import { IndustryCard } from "../../../components/ui/Cards";
+import IndustryCard from "../../../components/ui/cards/IndustryCard";
 import { GENERAL_DATA } from "../../../lib/data";
 
 export default function IndustriesCards({

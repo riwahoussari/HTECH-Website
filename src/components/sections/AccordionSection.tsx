@@ -75,7 +75,6 @@ function AccordionItem({
       if (contentRef.current) {
         setAccItemHeight(contentRef.current.offsetHeight);
       }
-      console.log(contentRef.current?.offsetHeight);
     };
 
     setHeight();
@@ -114,7 +113,7 @@ function AccordionItem({
           <div ref={contentRef}>
             {subtitle && (
               <p
-                className="pb-10 pt-2 text-20 text-blueish-gray font-light"
+                className="pb-10 pt-2 text-16 text-blueish-gray font-light"
                 style={{ letterSpacing: "1px" }}
               >
                 {subtitle}

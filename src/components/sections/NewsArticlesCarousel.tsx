@@ -1,8 +1,9 @@
-import { ArticleCard, CardsSlider } from "../ui/Cards";
+import CardsSlider from "../ui/cards/CardsSlider";
 import { useRef, type ReactNode } from "react";
 import { useInView } from "motion/react";
 import { SlideUpAnim } from "../ui/Anims";
 import { GENERAL_DATA } from "../../lib/data";
+import NewsCard from "../ui/cards/NewsCard";
 
 export default function NewsArticlesCarousel({
   titleBlock,
@@ -25,12 +26,8 @@ export default function NewsArticlesCarousel({
           <SlideUpAnim
             isInView={isInView}
             transition={{ delay: 0.2 + 0.1 * i }}
-            className="w-[310px] xs:w-[480px] lg:w-[580px]"
           >
-            <ArticleCard
-              key={i}
-              {...article}
-            />
+            <NewsCard key={i} {...article} />
           </SlideUpAnim>
         ))}
       </CardsSlider>

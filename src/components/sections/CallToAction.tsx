@@ -1,7 +1,6 @@
 import { useInView } from "motion/react";
 import { SlideUpAnim } from "../ui/Anims";
 import Button from "../ui/Button";
-import { CenteredTitleBlock } from "../ui/Titles";
 import { useRef } from "react";
 
 export default function CallToAction() {
