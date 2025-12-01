@@ -8,32 +8,22 @@ export default function CallToAction() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-10%" });
   return (
-    <section ref={sectionRef} className="my-container side-padding mt-[120px]">
-      {/* titles */}
-      <CenteredTitleBlock
-        className=""
-        big={true}
-        title="See how simple AI can really be"
-        subtitle="ARE YOU READY?"
+    <section ref={sectionRef} className=" relative bg-gold">
+      <img
+        src="/assets/textured-bg.png"
+        alt="Textured background"
+        className="absolute top-0 left-0 right-0 bottom-0 w-full h-full z-0"
       />
 
-      {/* circle */}
       <SlideUpAnim
         isInView={isInView}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        className="my-container side-padding py-60 relative flex flex-col items-center gap-10"
       >
-        <div className="mx-auto my-12 aspect-square w-[90%] max-w-[310px] rounded-full border-2 border-red-500" />
+        {/* text */}
+        <p className="text-64 text-center">Ready to put AI to work?</p>
+        <Button size={"lg"}>Request a demo</Button>
+        {/* form */}
       </SlideUpAnim>
-
-      {/* button */}
-      <div className="flex justify-center">
-        <SlideUpAnim
-          isInView={isInView}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <Button variant={"black"}>REQUEST A DEMO</Button>
-        </SlideUpAnim>
-      </div>
     </section>
   );
 }

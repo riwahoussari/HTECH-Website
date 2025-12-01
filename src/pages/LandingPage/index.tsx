@@ -13,6 +13,7 @@ import { TrustedBy } from "../../components/sections/TrustedBy";
 import TestimonialSection from "../IndustriesPage/components/TestimonialsSection";
 import { INDUSTRIES_PAGE_DATA } from "../../lib/data";
 import { TitleBlock } from "../../components/ui/Titles";
+import CallToAction from "../../components/sections/CallToAction";
 
 export default function LandingPage() {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
@@ -45,6 +46,7 @@ export default function LandingPage() {
           titleBlock={<TitleBlock title="Why leaders trust us" />}
         />
         <OurLatestNews />
+        <CallToAction />
       </main>
     </>
   );

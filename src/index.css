@@ -48,7 +48,7 @@ body {
 }
 
 .main-flex {
-  @apply flex flex-col gap-32 sm:gap-44 lg:gap-52 pb-32 sm:pb-44 lg:pb-52 ;
+  @apply flex flex-col gap-32 sm:gap-44 lg:gap-52  ;
 }
 
 .lg-rounded {
