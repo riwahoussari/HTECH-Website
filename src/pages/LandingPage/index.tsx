@@ -38,7 +38,7 @@ export default function LandingPage() {
         <WhatWeDo />
         <IndustriesWeEmpower />
         <OurProducts />
-        {/* <TestimonialSection /> */}
+        <TestimonialSection />
         <OurLatestNews />
       </main>
     </>
