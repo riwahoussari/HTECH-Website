@@ -6,9 +6,9 @@ import { useScroll } from "motion/react";
 import { useParams } from "react-router-dom";
 import { GENERAL_DATA } from "../../lib/data";
 import NotFoundPage from "../NotFoundPage";
-import CaseStudyHero from "./components/CaseStudyHero";
-import CaseStudyArticle from "./components/CaseStudyArticle";
-import CaseStudyTestimonial from "./components/CaseStudyTestimonial";
+import PHero from "./components/Hero";
+import Article from "./components/Article";
+import Testimonial from "./components/Testimonial";
 
 export default function CaseStudyPage() {
   const { title } = useParams();
@@ -16,16 +16,20 @@ export default function CaseStudyPage() {
   const CASE_STUDY = GENERAL_DATA.CASE_STUDIES.find(
     (cs) => cs.name.toLowerCase() === title?.toLowerCase()
   );
-  if (!CASE_STUDY) return <NotFoundPage />
-  return <Page CASE_STUDY={CASE_STUDY} />
+  if (!CASE_STUDY) return <NotFoundPage />;
+  return <Page CASE_STUDY={CASE_STUDY} />;
 }
 
-function Page({CASE_STUDY}: {CASE_STUDY: {
+function Page({
+  CASE_STUDY,
+}: {
+  CASE_STUDY: {
     name: string;
     description: string;
-    img: string;
+    img: {src: string; alt: string;};
     markdown: string;
-}}) {
+  };
+}) {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
   const navbarBgTrigger = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -45,19 +49,20 @@ function Page({CASE_STUDY}: {CASE_STUDY: {
       />
       <Navbar transparentBg={transparentNavbar} />
       <main>
-        <CaseStudyHero
+        <PHero
           text={CASE_STUDY.description}
           title={CASE_STUDY.name}
-          imgSrc={CASE_STUDY.img}
+          img={CASE_STUDY.img}
           navbarTriggerRef={navbarBgTrigger}
         />
-        <CaseStudyArticle content={CASE_STUDY.markdown} />
-        <CaseStudyTestimonial
+        <Article content={CASE_STUDY.markdown} />
+        <Testimonial
           text="“Cohere boosted search quality by 30%, giving lawyers the right proprietary data at their fingertips.”"
           name="James Ding"
           position="Co-founded and CEO"
           company="Draftwise"
         />
       </main>
-    </>)
+    </>
+  );
 }

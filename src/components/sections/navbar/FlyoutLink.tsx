@@ -163,19 +163,25 @@ export function ProductsFlyoutContent() {
 }
 
 export function SolutionsFlyoutContent() {
+  const industries = GENERAL_DATA.INDUSTRIES;
+  const halfPoint = Math.ceil(industries.length / 2);
+  const left = industries.slice(0, halfPoint);
+  const right = industries.slice(halfPoint, industries.length);
+
   return (
-    <div className="grid xl:grid-cols-2 gap-10">
-      <div className="flex flex-col gap-5">
-        <FTitle text="INDUSTRIES" />
-        <div className="flex flex-col">
-          {GENERAL_DATA.INDUSTRIES.map((industry, i) => (
+    <div className="flex flex-col gap-5">
+      <FTitle text="INDUSTRIES" />
+      <div className="grid grid-cols-2 gap-10">
+        <div className="flex flex-col ">
+          {left.map((industry, i) => (
             <FLink key={i} text={industry.name} link={`/industries/${i + 1}`} />
           ))}
         </div>
-      </div>
-
-      <div className="relative max-xl:hidden rounded-[10px] overflow-clip aspect-square w-full">
-        <TexturedBg />
+        <div className="flex flex-col ">
+          {right.map((industry, i) => (
+            <FLink key={i} text={industry.name} link={`/industries/${i + 1}`} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -214,19 +220,17 @@ export function ResourcesFlyoutContent() {
 
 export function InitiativesFlyoutContent() {
   return (
-    <div className="flex xl:w-[480px] flex-col gap-5 ">
+    <div className="flex flex-col gap-5 ">
       {/* <FTitle text="INITIATIVES" /> */}
       <Link className="group/link" to="/initiatives/code-for-lebanon">
-        <div className="min-w-full rounded-[10px] overflow-hidden relative aspect-square px-4 py-6 xl:p-9 flex justify-end flex-col gap-2">
+        <div className="min-w-full rounded-[10px] overflow-hidden relative  px-4 py-6 xl:p-8 xl:pt-32 flex justify-end flex-col gap-2">
           <TexturedBg
             color="var(--color-gold)"
             className="group-hover/link:scale-110 ease-in-out duration-300"
           />
 
           <div className="flex gap-6 xl:gap-8 items-center relative">
-            <p className="text-[26px] xl:text-[32px] max-xl:leading-[1.1]">
-              Code For Lebanon
-            </p>
+            <p className="text-32 max-xl:leading-[1.1]">Code For Lebanon</p>
             <div className="xl:w-8 w-6 aspect-square group-hover/link:translate-x-3 ease-in-out delay-50 duration-150">
               <ArrowSvg className="-rotate-45 group-hover/link:rotate-0 duration-100 ease-in-out" />
             </div>
@@ -244,19 +248,17 @@ export function InitiativesFlyoutContent() {
 
 export function GovernmentFlyoutContent() {
   return (
-    <div className="flex xl:w-[480px] flex-col gap-5 ">
-      {/* <FTitle text="GOVERNMENT" /> */}
+    <div className="flex flex-col gap-5 ">
+      {/* <FTitle text="INITIATIVES" /> */}
       <Link className="group/link" to="/government/public-sector">
-        <div className="min-w-full rounded-[10px] overflow-hidden relative aspect-square px-4 py-6 xl:p-9 flex justify-end flex-col gap-2">
+        <div className="min-w-full rounded-[10px] overflow-hidden relative  px-4 py-6 xl:p-8 xl:pt-32 flex justify-end flex-col gap-2">
           <TexturedBg
             color="var(--color-gold)"
             className="group-hover/link:scale-110 ease-in-out duration-300"
           />
 
           <div className="flex gap-6 xl:gap-8 items-center relative">
-            <p className="text-[26px] xl:text-[32px] max-xl:leading-[1.1]">
-              Public Sector
-            </p>
+            <p className="text-32 max-xl:leading-[1.1]">Public Sector</p>
             <div className="xl:w-8 w-6 aspect-square group-hover/link:translate-x-3 ease-in-out delay-50 duration-150">
               <ArrowSvg className="-rotate-45 group-hover/link:rotate-0 duration-100 ease-in-out" />
             </div>

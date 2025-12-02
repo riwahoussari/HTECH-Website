@@ -43,22 +43,28 @@ export function TitleBlock({
   const titleBlockRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(titleBlockRef, { once: true, margin: "-5%" });
   return (
-    <div
-      ref={titleBlockRef}
-      className="items-start justify-start lg:flex mb-10 lg:mb-14"
-    >
-      <div className="space-y-2 max-lg:mb-6 max-sm:mb-4 lg:w-1/2 pr-10">
-        {subtitle && (
-          <SectionSubTitle>
-            <AnimatedText isInView={isInView}>{subtitle}</AnimatedText>
-          </SectionSubTitle>
-        )}
-        <SectionTitle>
-          <AnimatedText isInView={isInView}>{title}</AnimatedText>
-        </SectionTitle>
-      </div>
+    <div className="space-y-2" ref={titleBlockRef}>
+      {subtitle && (
+        <SectionSubTitle>
+          <AnimatedText isInView={isInView}>{subtitle}</AnimatedText>
+        </SectionSubTitle>
+      )}
 
-      {text && <p className="lg:w-1/2 text-20 leading-[1.25]! max-w-[600px]">{text}</p>}
+      <div className="items-start justify-start lg:flex mb-10 lg:mb-14">
+        <div className="space-y-2 max-lg:mb-6 max-sm:mb-4 lg:w-1/2 pr-10">
+          <SectionTitle>
+            <AnimatedText isInView={isInView}>{title}</AnimatedText>
+          </SectionTitle>
+        </div>
+
+        {text && (
+          <div className="lg:w-1/2">
+            <p className=" text-20 leading-[1.25]! max-w-[600px]">
+              {text}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

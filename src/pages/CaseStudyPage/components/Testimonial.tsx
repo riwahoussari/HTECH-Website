@@ -1,6 +1,6 @@
 import TestimonialCard from "../../../components/ui/cards/TestimonialCard";
 
-export default function CaseStudyTestimonial(testimonial: {
+export default function Testimonial(testimonial: {
   name: string;
   position?: string;
   company?: string;

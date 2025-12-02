@@ -1,3 +1,5 @@
+import { Subtitles } from "lucide-react";
+
 export const ICONS = {
   SHIELD: (
     <svg viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -252,7 +254,10 @@ export const GENERAL_DATA = {
       name: "Lebanese Army SuperApp",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
-      img: "/assets/case-studies/leb-army.jpg",
+      img: {
+        src: "/assets/case-studies/leb-army.jpg",
+        alt: "three soldiers holding their rifles.",
+      },
       markdown: `
 ## Overview
  
@@ -292,7 +297,10 @@ Since incorporating fine-tuned Cohere models into its solution, Draftwise’s in
       name: "Lebanese Army LLM",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
-      img: "/assets/case-studies/leb-army.jpg",
+      img: {
+        src: "/assets/case-studies/leb-army.jpg",
+        alt: "three soldiers holding their rifles.",
+      },
       markdown: `
 ## Overview
  
@@ -332,7 +340,10 @@ Since incorporating fine-tuned Cohere models into its solution, Draftwise’s in
       name: "Military Tribunal AI Powered Internal System",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
-      img: "/assets/case-studies/leb-army.jpg",
+      img: {
+        src: "/assets/case-studies/leb-army.jpg",
+        alt: "three soldiers holding their rifles.",
+      },
       markdown: `
 ## Overview
  
@@ -372,7 +383,10 @@ Since incorporating fine-tuned Cohere models into its solution, Draftwise’s in
       name: "Council of Ministers Internal Dashboard",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
-      img: "/assets/case-studies/leb-army.jpg",
+      img: {
+        src: "/assets/case-studies/leb-army.jpg",
+        alt: "three soldiers holding their rifles.",
+      },
       markdown: `
 ## Overview
  
@@ -412,7 +426,10 @@ Since incorporating fine-tuned Cohere models into its solution, Draftwise’s in
       name: "Code For Lebanon",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit.",
-      img: "/assets/case-studies/leb-army.jpg",
+      img: {
+        src: "/assets/case-studies/leb-army.jpg",
+        alt: "three soldiers holding their rifles.",
+      },
       markdown: `
 ## Overview
  
@@ -937,7 +954,7 @@ export const LINKS: TLinkRecord[] = [
 export const PREDICTIVE_AI_MODELS_DATA = [
   {
     slug: "for-enterprise",
-    title: "Predictive AI Models for Enterprises",
+    title: "Predictive AI Models <br> for Enterprises",
     description:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
     section1: {
@@ -1086,6 +1103,213 @@ export const PREDICTIVE_AI_MODELS_DATA = [
       name: "James Ding",
       position: "Co-founder and CEO",
       company: "Draftwise",
+    },
+  },
+];
+
+export const AGENTIC_AI_DATA = [
+  {
+    slug: "ai-agents-for-enterprise",
+    title: "AI agents for enterprises",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.",
+    img: {
+      src: "/assets/products/horion-for-sales.jpg",
+      alt: "this is the alt tag",
+    },
+    testimonial: {
+      text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+      name: "James Ding",
+      position: "Co-founder and CEO",
+      company: "Draftwise",
+    },
+    features: [
+      {
+        title: "Achieve high-quality results",
+        text: "Maestro agents deliver high-quality results through advanced retrieval, dynamic reasoning and rigorous self-validation against your requirements.",
+        img: {
+          src: "/assets/products/horion-for-sales.jpg",
+          alt: "This is the alt tag",
+        },
+      },
+      {
+        title: "Adapts to your data environment",
+        text: "Maestro agents learn your data environment through offline simulations and automatically customize performance to your specific use case at run time.",
+        img: {
+          src: "/assets/products/horion-for-hr.jpg",
+          alt: "This is the alt tag",
+        },
+      },
+      {
+        title: "Accelerate time to production",
+        text: "Maestro agents automatically create tailored plans to solve each task. Simply connect your data and tools, set your budget, and let Maestro handle the rest.",
+        img: {
+          src: "/assets/products/predictive-ai.jpg",
+          alt: "This is the alt tag",
+        },
+      },
+      {
+        title: "Gain full transparency into workflows",
+        text: "Get full visibility into workflows with visual execution graphs, confidence scores, and detailed validation reports.",
+        img: {
+          src: "/assets/products/horion-for-sales.jpg",
+          alt: "This is the alt tag",
+        },
+      },
+    ],
+    useCases: {
+      title: "Use cases",
+      cards: [
+        {
+          title: "Finance",
+          icon: ICONS.SPARKLE,
+          text: "Automate complex document analysis to ensure compliance, streamline decision-making, and unlock investment insights.",
+          list: [
+            "Compliance & Regulatory Monitoring ",
+            "Loan Application Processing ",
+            "Earning Call Summary",
+          ],
+        },
+        {
+          title: "Tech",
+          icon: ICONS.LOADING,
+          text: "Accelerate workflows across engineering, sales, and customer support by turning unstructured data into instant, actionable answers.",
+          list: [
+            "RFI Response Automation",
+            "Customer Support Assistant ",
+            "Documentation QA",
+          ],
+        },
+        {
+          title: "Legal",
+          icon: ICONS.EYE,
+          text: "Transform legal operations with AI agents that rapidly assess risk, review contracts, and support due diligence at scale.",
+          list: ["M&A Due Diligence", "Vendor Risk Assessment ", "eDiscovery"],
+        },
+        {
+          title: "Manufacturing",
+          icon: ICONS.GEAR,
+          text: "Empower operators with intelligent agents that accelerate troubleshooting, quality control, and system upgrades.",
+          list: ["Equipment Troubleshooting", "Legacy System Data Migration "],
+        },
+      ],
+    },
+  },
+];
+
+export const AI_FOR_RETAILERS_DATA = [
+  {
+    slug: "awfarli-ai",
+    title: "Awfarli AI",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.",
+    img: {
+      src: "/assets/products/horion-for-sales.jpg",
+      alt: "this is the alt tag",
+    },
+    theChallenge: {
+      title: "Lack of trust stalls <br> enterprises AI adoption",
+      subtitle: "THE CHALLENGE",
+      text: "Only 10% of enterprises have Gen AI in production, and more than 30% of Gen AI projects are abandoned after POC. The number one reason why companies stall is a lack of trust stemming from:",
+      cards: [
+        {
+          icon: ICONS.GEAR,
+          title: "Build AI agents",
+          text: "Develop AI agents that truly understand your business.",
+        },
+        {
+          icon: ICONS.GRAPH,
+          title: "Anchor RAG applications",
+          text: "Integrate retrieval-augmented generation (RAG) applications seamlessly with your internal knowledge stores.",
+        },
+        {
+          icon: ICONS.EYE,
+          title: "Consolidate knowledge",
+          text: "Combine all your business knowledge into a single, end-to-end search system for streamlined access and management.",
+        },
+      ],
+    },
+    theSolution: {
+      title: "Bridge the trust gap <br> for enterprises gen AI",
+      text: "The path to deploying with confidence in production is to systematically evaluate, improve and monitor GenAI systems for performance, safety, and reliability.",
+      subtitle: "THE SOLUTION",
+      accordion: {
+        img: {
+          src: "/assets/products/predictive-ai.jpg",
+          alt: "this is the alt tag",
+        },
+        content: [
+          {
+            title: "Unmateched accuracy",
+            subtitle: "WHERE WE MAKE A DIFFERENCE",
+            list: [
+              "Turns complex data into clear, actionable insights",
+              "Adapts to the tools and systems you already use",
+              "Supports collaboration across teams and departments",
+              "Scales with your projects as they grow",
+            ],
+          },
+          {
+            title: "Universal data compatibility",
+            subtitle: "WHERE WE MAKE A DIFFERENCE",
+            list: [
+              "Turns complex data into clear, actionable insights",
+              "Adapts to the tools and systems you already use",
+              "Supports collaboration across teams and departments",
+              "Scales with your projects as they grow",
+            ],
+          },
+          {
+            title: "Complete security",
+            subtitle: "WHERE WE MAKE A DIFFERENCE",
+            list: [
+              "Turns complex data into clear, actionable insights",
+              "Adapts to the tools and systems you already use",
+              "Supports collaboration across teams and departments",
+              "Scales with your projects as they grow",
+            ],
+          },
+        ],
+      },
+    },
+    howItWorks: {
+      title: "How Awfarli AI platorm <br> evaluates applications",
+      subtitle: "HOW IT WORKS",
+      text: "Trust in AI is earned through better data. Scale GenAI Platform combines automated evaluations with an expert workforce for human evaluations to build a “Trust Feedback Loop” of evaluation, improvement and monitoring.",
+      features: [
+        {
+          title: "Achieve high-quality results",
+          text: "Maestro agents deliver high-quality results through advanced retrieval, dynamic reasoning and rigorous self-validation against your requirements.",
+          img: {
+            src: "/assets/products/horion-for-sales.jpg",
+            alt: "This is the alt tag",
+          },
+        },
+        {
+          title: "Adapts to your data environment",
+          text: "Maestro agents learn your data environment through offline simulations and automatically customize performance to your specific use case at run time.",
+          img: {
+            src: "/assets/products/horion-for-hr.jpg",
+            alt: "This is the alt tag",
+          },
+        },
+        {
+          title: "Accelerate time to production",
+          text: "Maestro agents automatically create tailored plans to solve each task. Simply connect your data and tools, set your budget, and let Maestro handle the rest.",
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "This is the alt tag",
+          },
+        },
+        {
+          title: "Gain full transparency into workflows",
+          text: "Get full visibility into workflows with visual execution graphs, confidence scores, and detailed validation reports.",
+          img: {
+            src: "/assets/products/horion-for-sales.jpg",
+            alt: "This is the alt tag",
+          },
+        },
+      ],
     },
   },
 ];

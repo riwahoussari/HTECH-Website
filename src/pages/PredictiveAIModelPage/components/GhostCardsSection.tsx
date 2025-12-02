@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import GhostCard from "../../../components/ui/cards/GhostCard";
 import NetBg from "../../../components/ui/NetBg";
 
-export default function PredictiveAIModelGhostCardsSection({
+export default function GhostCardsSection({
   cards,
 }: {
   cards: { title: string; text: string; icon: ReactNode }[];

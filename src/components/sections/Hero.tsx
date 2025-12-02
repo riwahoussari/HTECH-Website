@@ -1,4 +1,7 @@
+import { useRef } from "react";
+import { AnimatedText, SlideUpAnim } from "../ui/Anims";
 import TexturedBg from "../ui/TexturedBg";
+import { useInView } from "motion/react";
 
 interface HeroProps {
   title: string;
@@ -26,10 +29,13 @@ export default function Hero({
   size = "md",
   align = "center",
   textSizing = " ",
-  ref
-}: HeroProps & {ref?: React.RefObject<HTMLDivElement | null>}) {
+  ref,
+}: HeroProps & { ref?: React.RefObject<HTMLDivElement | null> }) {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref || heroRef, { once: true });
+
   return (
-    <section ref={ref} className={"relative overflow-hidden "}>
+    <section ref={ref || heroRef} className={"relative overflow-hidden "}>
       {/* bg */}
       {(image === undefined || align !== "center") &&
         (background === undefined ? (
@@ -48,7 +54,7 @@ export default function Hero({
             : " max-xl:flex-col max-xl:items-stretch! ") +
           (image !== undefined && align === "center"
             ? " "
-            : " my-container side-padding gap-14 lg:gap-20 xs:py-24 xs:pt-32 py-18 pt-28 lg:py-32 lg:pt-44 ") 
+            : " my-container side-padding gap-14 lg:gap-20 xs:py-24 xs:pt-32 py-18 pt-28 lg:py-32 lg:pt-44 ")
         }
       >
         {/* content */}
@@ -83,29 +89,39 @@ export default function Hero({
                     : " text-[max(5.6vw,44px)] lg:text-[clamp(58.6px,5vw,96px)] ")
               }
             >
-              {title}
+              <AnimatedText transition={{ duration: 0.4 }} isInView={isInView}>
+                {title}
+              </AnimatedText>
             </h1>
-            <p
-              className={
-                " leading-[1.3] max-w-[700px] xs:w-4/5 " +
-                (size == "lg"
-                  ? " text-24 "
-                  : " text-20 ")
-              }
+            <SlideUpAnim
+              transition={{ duration: 0.5, delay: 0.4 }}
+              isInView={isInView}
+              className=" max-w-[700px] xs:w-4/5"
             >
-              {text}
-            </p>
+              <p
+                className={
+                  " leading-[1.3] " + (size == "lg" ? " text-24 " : " text-20 ")
+                }
+              >
+                {text.split(" ").map((word, i) => {
+                  if (word === "<br>") return <br key={i} />;
+                  return word + " ";
+                })}
+              </p>
+            </SlideUpAnim>
           </div>
 
           {/* buttons */}
-          <div
-            className={
-              "relative flex gap-4 lg:gap-8 items-center max-xs:flex-wrap " +
-              (align == "center" ? " justify-center " : "")
-            }
-          >
-            {buttons}
-          </div>
+          <SlideUpAnim isInView={isInView} transition={{ delay: 0.6 }}>
+            <div
+              className={
+                "relative flex gap-4 lg:gap-8 items-center max-xs:flex-wrap " +
+                (align == "center" ? " justify-center " : "")
+              }
+            >
+              {buttons}
+            </div>
+          </SlideUpAnim>
         </div>
 
         {/* image */}

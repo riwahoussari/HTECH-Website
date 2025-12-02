@@ -56,7 +56,7 @@ body {
 }
 
 .lg-rounded {
-  @apply rounded-[10px] xs:rounded-[14px] lg:rounded-[20px];
+  @apply rounded-[10px] xs:rounded-[14px] lg:rounded-[16px] xl:rounded-[18px] 2xl:rounded-[20px];
 }
 
 /* backgrounds and gradients */

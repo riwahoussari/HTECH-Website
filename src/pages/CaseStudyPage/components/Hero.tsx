@@ -1,17 +1,18 @@
 import type { RefObject } from "react";
 import Hero from "../../../components/sections/Hero";
 import Button from "../../../components/ui/Button";
+import { SlideUpSelf } from "../../../components/ui/Anims";
 
-export default function CaseStudyHero({
+export default function PHero({
   navbarTriggerRef,
   title,
   text,
-  imgSrc
+  img,
 }: {
   navbarTriggerRef: RefObject<HTMLDivElement | null>;
   title: string;
   text: string;
-  imgSrc: string;
+  img: { src: string; alt: string };
 }) {
   return (
     <Hero
@@ -25,9 +26,9 @@ export default function CaseStudyHero({
       text={text}
       size="md"
       image={
-        <div className="relative w-9/10 lg:w-1/2 max-w-[970px]  -translate-y-32 rounded-2xl overflow-hidden">
-          <img src={imgSrc} />
-        </div>
+        <SlideUpSelf className="relative w-9/10 lg:w-1/2 max-w-[970px] -translate-y-32 overflow-hidden">
+          <img className=" lg-rounded " {...img} />
+        </SlideUpSelf>
       }
     />
   );

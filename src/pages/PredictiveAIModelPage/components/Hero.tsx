@@ -2,7 +2,7 @@ import type { RefObject } from "react";
 import Hero from "../../../components/sections/Hero";
 import Button from "../../../components/ui/Button";
 
-export default function PredictiveAIModelHero({
+export default function PHero({
   navbarTriggerRef,
   title,
   description,
@@ -14,12 +14,14 @@ export default function PredictiveAIModelHero({
   return (
     <Hero
       ref={navbarTriggerRef}
-      size="lg"
       title={title}
       text={description}
+      size="md"
+      textSizing=" max-w-[900px] "
+      align="center"
       buttons={
         <>
-          <Button size={"lg"}>Request a demo</Button>
+          <Button arrow={"normal"} size={"lg"}>Request a demo</Button>
         </>
       }
     />

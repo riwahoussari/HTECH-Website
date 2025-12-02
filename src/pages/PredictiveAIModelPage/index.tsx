@@ -3,16 +3,16 @@ import Navbar from "../../components/sections/navbar/Navbar";
 import { PageMeta } from "../../components/ui/PageMeta";
 import { useRef, useState } from "react";
 import { useScroll } from "motion/react";
-import PredictiveAIModelHero from "./components/PredictiveAIModelHero";
+import PHero from "./components/Hero";
 import { useParams } from "react-router-dom";
 import { PREDICTIVE_AI_MODELS_DATA } from "../../lib/data";
 import NotFoundPage from "../NotFoundPage";
-import PredictiveAIModelCardsSection from "./components/PredictiveAIModelCardsSection";
-import PredictiveAIModelFeaturesScrollSection from "./components/PredictiveAIModelFeaturesScrollSection";
-import PredictiveAIModelGhostCardsSection from "./components/PredictiveAIModelGhostCardsSection";
+import FeaturesScrollSection from "./components/FeaturesScrollSection";
+import GhostCardsSection from "./components/GhostCardsSection";
 import IndustriesWeEmpower from "../LandingPage/components/IndustriesWeEmpower";
 import TestimonialCard from "../../components/ui/cards/TestimonialCard";
 import OurLatestNews from "../../components/sections/OurLatestNews";
+import ThreeOutlineCardsSection from "../../components/sections/ThreeOutlineCardsSection";
 
 export default function PredictiveAIModelPage() {
   const { slug } = useParams();
@@ -50,13 +50,10 @@ function Page({
       />
       <Navbar transparentBg={transparentNavbar} />
       <main className="main-flex main-pb">
-        <PredictiveAIModelHero
-          navbarTriggerRef={navbarBgTrigger}
-          {...PRODUCT}
-        />
-        <PredictiveAIModelCardsSection content={PRODUCT.section1} />
-        <PredictiveAIModelFeaturesScrollSection content={PRODUCT.section2} />
-        <PredictiveAIModelGhostCardsSection cards={PRODUCT.section3} />
+        <PHero navbarTriggerRef={navbarBgTrigger} {...PRODUCT} />
+        <ThreeOutlineCardsSection content={PRODUCT.section1} />
+        <FeaturesScrollSection content={PRODUCT.section2} />
+        <GhostCardsSection cards={PRODUCT.section3} />
         <IndustriesWeEmpower />
         <section className="my-container side-padding">
           <TestimonialCard {...PRODUCT.testimonial} />

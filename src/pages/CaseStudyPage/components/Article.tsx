@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
 
-export default function CaseStudyArticle({ content }: { content: string }) {
+export default function Article({ content }: { content: string }) {
   return (
     <section className="my-container side-padding">
       <article className="prose lg:prose-xl mx-auto">

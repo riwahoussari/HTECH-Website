@@ -1,7 +1,7 @@
 import { motion as m, useMotionValueEvent, useScroll } from "motion/react";
 import { useRef, useState } from "react";
 
-export default function PredictiveAIModelFeaturesScrollSection({
+export default function FeaturesScrollSection({
   content,
 }: {
   content: {
