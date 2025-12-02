@@ -25,15 +25,13 @@ export default function NewsPage() {
         description="Stay up to date with the latest from Gaiant. Explore articles and insights on AI innovation, automation, and how intelligent systems are transforming modern industries."
       />
       <Navbar transparentBg={transparentNavbar} />
-      <main>
+      <main className="main-flex">
         <ArticlesSection
           navbarTriggerRef={navbarBgTrigger}
           className="mt-[200px]!"
           withBall
           fetchPriority="high"
         />
-        <NewsCtaSection />
-        <ArticlesSection className="mt-[140px]" />
         <CallToAction />
       </main>
     </>

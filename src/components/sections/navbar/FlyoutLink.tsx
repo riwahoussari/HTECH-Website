@@ -174,12 +174,12 @@ export function SolutionsFlyoutContent() {
       <div className="grid grid-cols-2 gap-10">
         <div className="flex flex-col ">
           {left.map((industry, i) => (
-            <FLink key={i} text={industry.name} link={`/industries/${i + 1}`} />
+            <FLink key={i} text={industry.name} link={`/solutions/${industry.name}`} />
           ))}
         </div>
         <div className="flex flex-col ">
           {right.map((industry, i) => (
-            <FLink key={i} text={industry.name} link={`/industries/${i + 1}`} />
+            <FLink key={i} text={industry.name} link={`/solutions/${industry.name}`} />
           ))}
         </div>
       </div>

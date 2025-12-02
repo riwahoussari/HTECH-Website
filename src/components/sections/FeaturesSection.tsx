@@ -6,6 +6,7 @@ export default function FeaturesSection({
   text,
   subtitle,
   features,
+  background = true
 }: {
   title?: string;
   text?: string;
@@ -15,6 +16,7 @@ export default function FeaturesSection({
     text: string;
     img: { src: string; alt: string };
   }[];
+  background?: boolean;
 }) {
   return (
     <section>
@@ -26,7 +28,7 @@ export default function FeaturesSection({
       {features.map((f, i) => (
         <FeatureCard
           reverse={i % 2 !== 0}
-          background={i % 2 !== 0}
+          background={background ? i % 2 !== 0 : false}
           className={""}
           {...f}
           key={i}

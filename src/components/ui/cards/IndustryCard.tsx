@@ -12,7 +12,7 @@ export default function IndustryCard({
   fetchPriority?: "high" | "low" | "auto" | undefined;
 }) {
   return (
-    <Link to={`/industries/${title}`}>
+    <Link to={`/solutions/${title}`}>
       <div
         className={
           "relative cursor-pointer group overflow-clip text-white lg-rounded " +

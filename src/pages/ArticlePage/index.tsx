@@ -12,7 +12,7 @@ export default function ArticlePage() {
         description="Read Gaiant’s take on Language in Business Intelligence. Explore how AI is redefining work, accelerating decisions, and driving real-world impact across industries."
       />
       <Navbar transparentBg={false} />
-      <main>
+      <main className="main-flex">
         <ArticleSection />
         <NextRead />
         <CallToAction />

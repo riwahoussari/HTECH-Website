@@ -59,6 +59,12 @@ body {
   @apply rounded-[10px] xs:rounded-[14px] lg:rounded-[16px] xl:rounded-[18px] 2xl:rounded-[20px];
 }
 
+@media screen and (min-width: 1940px) {
+  .rounded-on-max {
+    @apply rounded-[20px];
+  }
+}
+
 /* backgrounds and gradients */
 .bg-blueish-gray-gold-gradient {
   @apply bg-[linear-gradient(90deg,#CE9C35_0%,#7286A0_100%)];

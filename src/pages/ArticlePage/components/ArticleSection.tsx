@@ -40,11 +40,10 @@ As a software engineer, James has led teams across multiple industries where pri
         >
           <Link to="/news">
             <Button
-              arrow={"normal"}
-              className="bg-transparent! px-0!"
+              className="bg-transparent! px-0! whitespace-pre"
               variant={"outline"}
             >
-              BACK TO BLOG
+             {"<  Back to blog"}
             </Button>
           </Link>
         </SlideUpAnim>

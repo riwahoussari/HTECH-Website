@@ -57,8 +57,8 @@ export default function Footer() {
                 {/* Predictive AI */}
                 <div className="flex flex-col gap-2">
                   <p className="opacity-60">Predictive AI models</p>
-                  <Link to={"/products/predictive-ai-models/for-enterprises"}>
-                    For enterprises
+                  <Link to={"/products/predictive-ai-models/for-enterprise"}>
+                    For enterprise
                   </Link>
                   <Link
                     to={"/products/predictive-ai-models/for-vcs-and-investors"}
@@ -79,8 +79,8 @@ export default function Footer() {
                 {/* Agentic AI */}
                 <div className="flex flex-col gap-2">
                   <p className="opacity-60">Agentic AI</p>
-                  <Link to={"/products/agentic-ai/ai-agents-for-enterprises"}>
-                    AI agents for enterprises
+                  <Link to={"/products/agentic-ai/ai-agents-for-enterprise"}>
+                    AI agents for enterprise
                   </Link>
                 </div>
                 {/* AI for Retailers */}
@@ -97,7 +97,7 @@ export default function Footer() {
               <p className="text-20">Solutions</p>
               <div className="flex flex-col gap-5 text-14">
                 {GENERAL_DATA.INDUSTRIES.map((industry, i) => (
-                  <Link key={i} to={`/industries/${i + 1}`}>
+                  <Link key={i} to={`/solutions/${industry.name}`}>
                     {industry.name}
                   </Link>
                 ))}

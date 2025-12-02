@@ -1,5 +1,3 @@
-import { Subtitles } from "lucide-react";
-
 export const ICONS = {
   SHIELD: (
     <svg viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,52 +175,1093 @@ export const GENERAL_DATA = {
   INDUSTRIES: [
     {
       name: "Technology",
-      img: "/industries/Industries-tech.webp",
+      img: {
+        src: "/industries/Industries-tech.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Banking & Financial Services",
-      img: "/industries/Industries-banking.webp",
-      // description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-banking.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Insurance",
-      img: "/industries/Industries-insurance.webp",
-      // description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-insurance.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Logistics & Transportation",
-      img: "/industries/Industries-healthcare.webp",
-      // description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/logistics.jpg",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Retail",
-      img: "/industries/Industries-tech.webp",
-      // description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-tech.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Manufacturing",
-      img: "/industries/Industries-government.webp",
-      description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-government.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Energy & Utilities",
-      img: "/industries/Industries-energy.webp",
-      description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-energy.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Legal Services",
-      img: "/industries/Industries-legal.webp",
-      description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-legal.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Education",
-      img: "/industries/Industries-education.webp",
-      description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-education.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
     {
       name: "Hopitality",
-      img: "/industries/Industries-hospitality.webp",
-      description: "Advancing patient care and biological research",
+      img: {
+        src: "/industries/Industries-hospitality.webp",
+        alt: "this is the alt tag",
+      },
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.",
+      outlineCardsSection: {
+        title: "Download the predictive AI models",
+        text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+        cards: [
+          {
+            title: "Jamba Reasoning 3B",
+            text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+            icon: ICONS.GRAPH,
+          },
+          {
+            title: "Jamba Mini",
+            text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+            icon: ICONS.HEXAGON,
+          },
+          {
+            title: "Jamba Large",
+            text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+            icon: ICONS.MASK,
+          },
+        ],
+      },
+      ghostCardsSection: [
+        {
+          title: "Self-hosted",
+          text: "Run models on your own terms. Your data, your infra — your rules.",
+          icon: ICONS.KEY,
+        },
+        {
+          title: "In the cloud",
+          text: "Deploy securely and enjoy managed deployment support with one of our trusted technology partners.",
+          icon: ICONS.GRAPH,
+        },
+        {
+          title: "Private by design",
+          text: "Purpose-built systems that keep your proprietary data locked down.",
+          icon: ICONS.SHIELD,
+        },
+      ],
+      accordionSection: {
+        title: "This is the section title",
+        accordion: {
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
+            alt: "this is the alt tag",
+          },
+          content: [
+            {
+              title: "Unmatched accuracy",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Universal data compatibility",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+            {
+              title: "Complete security",
+              subtitle: "WHERE WE MAKE A DIFFERENCE",
+              list: [
+                "Turns complex data into clear, actionable insights",
+                "Adapts to the tools and systems you already use",
+                "Supports collaboration across teams and departments",
+                "Scales with your projects as they grow",
+              ],
+            },
+          ],
+        },
+      },
+      featureSection: {
+        img: {
+          src: "/industries/logistics.jpg",
+          alt: "this is the alt tag",
+        },
+        feature: {
+          img: {
+            src: "/industries/logistics.jpg",
+            alt: "this is the alt tag",
+          },
+          title:
+            "Private deployments for ultimate security and data sovereignty ",
+          text: "Deploy Cohere privately for maximum data control, security, and compliance. We can bring our models to your virtual private cloud (VPC) or on-premises environment so your data never leaves your systems.",
+        },
+      },
+      testimonial: {
+        text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+        name: "James Ding",
+        position: "Co-founder and CEO",
+        company: "Draftwise",
+      },
     },
   ],
 
@@ -567,204 +1606,6 @@ export const LANDING_PAGE_DATA = {
   },
 };
 
-export const ARCHE_PAGE_DATA = {
-  HERO: {
-    title: "AI for business that turns complexity into clarity",
-    subtitle: "ARCHĒ",
-    text: "Archē sets the standard for business performance by helping teams automate work and accelerate decisions that drive results — all in one scalable, secure workspace.",
-  },
-
-  THE_ARCHE_MODEL: {
-    title: "More mindspace, <br> less mayhem",
-    subtitle: "THE ARCHĒ MODEL",
-    text: "No matter the industry, Archē handles the repetitive work so your people can focus on the big picture.",
-    img1: {
-      src: "/images/woman-on-laptop.webp",
-      alt: "A woman working on her laptop",
-    },
-    img2: {
-      src: "/images/watered-leaf.webp",
-      alt: "A green true leaf with drops of water",
-    },
-  },
-
-  ACCELERATE_IMPACT: {
-    title: "Accelerate impact <br> and outcomes",
-    subtitle: "",
-    text: "Enable seamless human-agent collaboration, automate routine tasks, and transform fragmented data into actionable insights.",
-    cards: [
-      {
-        subtitle: "ADVANCED SEARCH & RETRIEVAL",
-        title: "Discover",
-        text: "From basic Q&A to complex decision making, Archē surfaces verifiable insights grounded in your data.",
-        img: {
-          src: "/demos/patient-history-dashboard-beige.svg",
-          alt: "Image of the Patient History Dashboard",
-        },
-      },
-      {
-        subtitle: "GENERATIVE AI",
-        title: "Create",
-        text: "Co-create documents, generate summaries, and produce tables and charts instantly.",
-        img: {
-          src: "/demos/ai-chat-demo-3.svg",
-          alt: "Image of the Patient History Dashboard",
-        },
-      },
-      {
-        subtitle: "WORKFLOW AUTOMATION",
-        title: "Discover",
-        text: "Deploy AI agents across teams to eliminate tedious tasks and accelerate complex workflows.",
-        img: {
-          src: "/demos/ai-chat-demo-2.svg",
-          alt: "Image of the Patient History Dashboard",
-        },
-      },
-    ],
-  },
-
-  ARCHE_INDUSTRIES: {
-    title: "Make AI work for you",
-    text: "No matter the role or industry, Archē handles the repetitive work so your people can focus on the big picture",
-    tabs: ["Vault", "Legal", "Sales", "Finance", "Operations", "HR"],
-  },
-};
-
-export const INDUSTRIES_PAGE_DATA = {
-  HERO: {
-    subtitle: "INDUSTRIES",
-    title: "Solutions designed <sm:br> for any industry need",
-    text: "Every organization faces unique challenges. <br> Our AI adapts, scales, and delivers value across fields — streamlining operations and enabling smarter decisions, all while fitting the way you work.",
-  },
-
-  TESTIMONIALS_SECTION: {
-    title: "Hear from our customers",
-    text: "Industry leaders trust Gaiant to deliver better customer experiences",
-    testimonials: [
-      {
-        text: "“Gaiant transformed how we work — reports that used to take days now take minutes. Accuracy is solid, integrations were painless, and our team actually trusts the insights. ROI within two months.”",
-        name: "Maya Hage",
-        position: "Head of Operations",
-        company: "NovaHealth",
-        image: "/images/woman-profile.webp",
-      },
-      {
-        text: "“Since implementing Gaiant, our support response time dropped by 50%. The automation and AI suggestions are game-changers. Our customers notice the difference.”",
-        name: "Jordan Lee",
-        position: "Customer Experience Manager",
-        company: "BrightCom",
-        image: "/images/woman-profile.webp",
-      },
-      {
-        text: "“We tried multiple tools before, but none were as seamless and insightful as Gaiant. It adapts to our workflow and delivers exactly what we need — effortlessly.”",
-        name: "Ava Patel",
-        position: "Operations Director",
-        company: "FinSight",
-        image: "/images/woman-profile.webp",
-      },
-    ],
-  },
-};
-
-export const INDUSTRY_PAGE_DATA = {
-  HERO: {
-    title: "AI for faster decisions <sm:br> and lower risk",
-    subtitle: "BANKING & FINANCIAL SERVICES",
-    text: "Speed decision-making, detect fraud, and automate reporting with secure, scalable AI — cutting costs while surfacing high-value insights.",
-  },
-
-  FEATURES_SECTION: {
-    title: "Smarter moves with fewer resources",
-    subtitle: "TRUSTED BY FINANCIAL LEADERS",
-    text: "AI often adds people and process. Done right, it finds fraud, streamlines ops, and makes services human — real impact without the extra overhead.",
-    img1: {
-      src: "/images/man-on-laptop.webp",
-      alt: "A man in a suit working on his laptop",
-    },
-    img2: { src: "/demos/ai-prompt.svg", alt: "" },
-    accordionContent: [
-      {
-        title: "Improve knowledge management",
-        subtitle: "STRENGTHEM TRUST AND EFFICIENCY",
-        list: [
-          "Detect fraud and protect sensitive data",
-          "Automate reporting with precision and speed",
-          "Ensure compliance across every transaction",
-          "Deliver clear insights for smarter decisions",
-        ],
-      },
-      {
-        title: "Reduce busywork",
-        subtitle: "STRENGTHEM TRUST AND EFFICIENCY",
-        list: [
-          "Detect fraud and protect sensitive data",
-          "Automate reporting with precision and speed",
-          "Ensure compliance across every transaction",
-          "Deliver clear insights for smarter decisions",
-        ],
-      },
-      {
-        title: "Automate common support tickets",
-        subtitle: "STRENGTHEM TRUST AND EFFICIENCY",
-        list: [
-          "Detect fraud and protect sensitive data",
-          "Automate reporting with precision and speed",
-          "Ensure compliance across every transaction",
-          "Deliver clear insights for smarter decisions",
-        ],
-      },
-    ],
-  },
-
-  USE_CASES: {
-    title: "Use Cases",
-    subtitle: "BANKING & FINANCIAL SERVICES",
-    text: "See how leading firms are streamlining operations and scaling insight.",
-    cards: [
-      {
-        title: "Transparency",
-        subtitle: "WE BUILD AI YOU CAN TRUST.",
-        text: "Clear processes, explainable outcomes, and full visibility at every stage",
-      },
-      {
-        title: "Transparency",
-        subtitle: "WE BUILD AI YOU CAN TRUST.",
-        text: "Clear processes, explainable outcomes, and full visibility at every stage",
-      },
-      {
-        title: "Transparency",
-        subtitle: "WE BUILD AI YOU CAN TRUST.",
-        text: "Clear processes, explainable outcomes, and full visibility at every stage",
-      },
-      {
-        title: "Transparency",
-        subtitle: "WE BUILD AI YOU CAN TRUST.",
-        text: "Clear processes, explainable outcomes, and full visibility at every stage",
-      },
-      {
-        title: "Transparency",
-        subtitle: "WE BUILD AI YOU CAN TRUST.",
-        text: "Clear processes, explainable outcomes, and full visibility at every stage",
-      },
-      {
-        title: "Transparency",
-        subtitle: "WE BUILD AI YOU CAN TRUST.",
-        text: "Clear processes, explainable outcomes, and full visibility at every stage",
-      },
-    ],
-  },
-
-  OUR_APPROACH: {
-    title: "Our Approach",
-    subtitle: "SYSTEMS THAT FIT, NOT FORCE",
-    text: "We embed with your team, observe how work flows, and build systems that align with what’s already in motion.",
-    img: {
-      src: "/images/video-screenshot.webp",
-      alt: "screenshot of a videoplayer",
-    },
-  },
-};
-
 export const ABOUT_PAGE_DATA = {
   HERO: {
     title: "We’re building the <sm:br> future of language AI",
@@ -922,6 +1763,42 @@ export const CAREERS_PAGE_DATA = {
   },
 };
 
+export const INDUSTRIES_PAGE_DATA = {
+  HERO: {
+    subtitle: "INDUSTRIES",
+    title: "Solutions designed <sm:br> for any industry need",
+    text: "Every organization faces unique challenges. <br> Our AI adapts, scales, and delivers value across fields — streamlining operations and enabling smarter decisions, all while fitting the way you work.",
+  },
+
+  TESTIMONIALS_SECTION: {
+    title: "Hear from our customers",
+    text: "Industry leaders trust Gaiant to deliver better customer experiences",
+    testimonials: [
+      {
+        text: "“Gaiant transformed how we work — reports that used to take days now take minutes. Accuracy is solid, integrations were painless, and our team actually trusts the insights. ROI within two months.”",
+        name: "Maya Hage",
+        position: "Head of Operations",
+        company: "NovaHealth",
+        image: "/images/woman-profile.webp",
+      },
+      {
+        text: "“Since implementing Gaiant, our support response time dropped by 50%. The automation and AI suggestions are game-changers. Our customers notice the difference.”",
+        name: "Jordan Lee",
+        position: "Customer Experience Manager",
+        company: "BrightCom",
+        image: "/images/woman-profile.webp",
+      },
+      {
+        text: "“We tried multiple tools before, but none were as seamless and insightful as Gaiant. It adapts to our workflow and delivers exactly what we need — effortlessly.”",
+        name: "Ava Patel",
+        position: "Operations Director",
+        company: "FinSight",
+        image: "/images/woman-profile.webp",
+      },
+    ],
+  },
+};
+
 export type TLinkRecord = {
   name: string;
   link: string;
@@ -937,7 +1814,7 @@ export const LINKS: TLinkRecord[] = [
     name: "Solutions",
     link: "/industries",
     sublinks: GENERAL_DATA.INDUSTRIES.map((industry) => {
-      return { link: `/industries/${industry.name}`, name: industry.name };
+      return { link: `/solutions/${industry.name}`, name: industry.name };
     }),
   },
   {
@@ -1240,7 +2117,7 @@ export const AI_FOR_RETAILERS_DATA = [
         },
         content: [
           {
-            title: "Unmateched accuracy",
+            title: "Unmatched accuracy",
             subtitle: "WHERE WE MAKE A DIFFERENCE",
             list: [
               "Turns complex data into clear, actionable insights",
@@ -1306,6 +2183,138 @@ export const AI_FOR_RETAILERS_DATA = [
           text: "Get full visibility into workflows with visual execution graphs, confidence scores, and detailed validation reports.",
           img: {
             src: "/assets/products/horion-for-sales.jpg",
+            alt: "This is the alt tag",
+          },
+        },
+      ],
+    },
+  },
+];
+
+export const GENERATIVE_AI_DATA = [
+  {
+    slug: "horion-for-hr",
+    title: "Horion For HR",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.",
+    img: {
+      src: "/assets/products/horion-for-hr.jpg",
+      alt: "this is the alt tag",
+    },
+    intelligentSearch: {
+      title: "Intelligent search and discovery",
+
+      accordion: {
+        img: {
+          src: "/assets/products/predictive-ai.jpg",
+          alt: "this is the alt tag",
+        },
+        content: [
+          {
+            title: "Unmatched accuracy",
+            subtitle: "WHERE WE MAKE A DIFFERENCE",
+            list: [
+              "Turns complex data into clear, actionable insights",
+              "Adapts to the tools and systems you already use",
+              "Supports collaboration across teams and departments",
+              "Scales with your projects as they grow",
+            ],
+          },
+          {
+            title: "Universal data compatibility",
+            subtitle: "WHERE WE MAKE A DIFFERENCE",
+            list: [
+              "Turns complex data into clear, actionable insights",
+              "Adapts to the tools and systems you already use",
+              "Supports collaboration across teams and departments",
+              "Scales with your projects as they grow",
+            ],
+          },
+          {
+            title: "Complete security",
+            subtitle: "WHERE WE MAKE A DIFFERENCE",
+            list: [
+              "Turns complex data into clear, actionable insights",
+              "Adapts to the tools and systems you already use",
+              "Supports collaboration across teams and departments",
+              "Scales with your projects as they grow",
+            ],
+          },
+        ],
+      },
+    },
+
+    putDataToWork: {
+      title: "Put your data to work",
+      cards: [
+        {
+          icon: ICONS.GEAR,
+          title: "Build AI agents",
+          text: "Develop AI agents that truly understand your business.",
+        },
+        {
+          icon: ICONS.GRAPH,
+          title: "Anchor RAG applications",
+          text: "Integrate retrieval-augmented generation (RAG) applications seamlessly with your internal knowledge stores.",
+        },
+        {
+          icon: ICONS.EYE,
+          title: "Consolidate knowledge",
+          text: "Combine all your business knowledge into a single, end-to-end search system for streamlined access and management.",
+        },
+      ],
+      img: {
+        src: "/assets/products/horion-for-sales.jpg",
+        alt: "this is the alt tag",
+      },
+    },
+
+    underTheHood: {
+      title: "What's under the hood",
+      cards: [
+        {
+          icon: ICONS.KEY,
+          title: "Retrieval models",
+          text: "Compass is built upon our best-in-class advanced retrieval models — including Embed and Rerank — to deliver intelligent search.",
+        },
+        {
+          icon: ICONS.GRAPH,
+          title: "Document Parsing",
+          text: "Compass pre-processes your documents for you, supporting formats like PDFs, PPTs, DOCX, and XLSX.",
+        },
+        {
+          icon: ICONS.SHIELD,
+          title: "Managed Index",
+          text: "Compass manages your index so you don’t have to. No need to host or scale your own vector database.",
+        },
+      ],
+    },
+
+    searchFunctionality: {
+      title: "Modern search functionality in <br> just a few clicks",
+
+      features: [
+        {
+          title: "Achieve high-quality results",
+          text: "Maestro agents deliver high-quality results through advanced retrieval, dynamic reasoning and rigorous self-validation against your requirements.",
+          img: {
+            src: "/assets/products/horion-for-sales.jpg",
+            alt: "This is the alt tag",
+          },
+        },
+        {
+          title: "Adapts to your data environment",
+          text: "Maestro agents learn your data environment through offline simulations and automatically customize performance to your specific use case at run time.",
+          img: {
+            src: "/assets/products/horion-for-hr.jpg",
+            alt: "This is the alt tag",
+          },
+        },
+        {
+          title: "Accelerate time to production",
+          text: "Maestro agents automatically create tailored plans to solve each task. Simply connect your data and tools, set your budget, and let Maestro handle the rest.",
+          img: {
+            src: "/assets/products/predictive-ai.jpg",
             alt: "This is the alt tag",
           },
         },

@@ -5,7 +5,7 @@ import { useInView } from "motion/react";
 
 interface HeroProps {
   title: string;
-  subtitle?: string;
+  // subtitle?: string;
   text: string;
   buttons: React.ReactNode;
   background?: "none" | React.ReactNode;
@@ -20,7 +20,6 @@ interface HeroProps {
 
 export default function Hero({
   title,
-  subtitle,
   text,
   buttons,
   background,

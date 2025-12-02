@@ -5,13 +5,11 @@ import {
   SlideUpAnim,
   SlideUpSelf,
 } from "../../../components/ui/Anims";
-import GradientCircle from "../../../components/ui/GradientCircle";
 import Button from "../../../components/ui/Button";
 import { GENERAL_DATA } from "../../../lib/data";
 import NewsCard from "../../../components/ui/cards/NewsCard";
 
 export default function ArticlesSection({
-  withBall = false,
   className,
   navbarTriggerRef,
   fetchPriority,
@@ -56,24 +54,10 @@ export default function ArticlesSection({
                 fetchPriority={fetchPriority}
                 src="/images/people-walking.webp"
                 alt="two people walking together in a hallway"
-                className="h-full w-full object-cover"
-                style={{
-                  clipPath: "polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%)",
-                }}
+                className="h-full w-full object-cover lg-rounded"
+                
               />
             </SlideUpAnim>
-
-            {withBall && (
-              <SlideUpAnim
-                isInView={isInView}
-                className="absolute w-1/3 -translate-x-1/4 translate-y-1/2 max-lg:bottom-0 max-lg:left-0 max-lg:opacity-90 lg:top-0 lg:right-0 lg:translate-x-1/2 lg:-translate-y-1/3"
-              >
-                <GradientCircle
-                  className="blur-[max(2.5vw,25px)]!"
-                  colorr={"teal"}
-                />
-              </SlideUpAnim>
-            )}
           </div>
 
           {/* text */}
@@ -96,9 +80,9 @@ export default function ArticlesSection({
               <Button
                 arrow={"normal"}
                 className="gap-4! bg-transparent! pl-0! backdrop-blur-[0px]!"
-                variant={"secondary"}
+                variant={"outline"}
               >
-                READ FULL ARTICLE
+                Read full article
               </Button>
             </div>
           </SlideUpAnim>
@@ -107,7 +91,7 @@ export default function ArticlesSection({
 
       {/* other articles */}
       <div className="mt-11 grid grid-cols-1 gap-5 gap-y-10! xs:gap-8 sm:gap-5 lg:grid-cols-2 xl:grid-cols-3">
-        {GENERAL_DATA.ARTICLES.slice(0, 3).map((article, i) => (
+        {GENERAL_DATA.ARTICLES.map((article, i) => (
           <div>
             <SlideUpSelf className="w-full max-w-[550px] lg:max-w-none">
               <NewsCard
