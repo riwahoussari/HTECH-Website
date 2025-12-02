@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 export default function IndustryCard({
-  imgSrc,
+  img,
   title,
   className,
   fetchPriority,
 }: {
-  imgSrc: string;
+  img: { src: string; alt: string };
   title: string;
   className?: string;
   fetchPriority?: "high" | "low" | "auto" | undefined;
@@ -25,8 +25,7 @@ export default function IndustryCard({
           <img
             fetchPriority={fetchPriority}
             className="w-full object-cover"
-            src={imgSrc}
-            alt={`Image representing ${title} industry`}
+            {...img}
           />
         </div>
 

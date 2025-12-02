@@ -50,7 +50,7 @@ export default function Hero({
           (className || "") +
           (align === "center"
             ? " flex-col "
-            : " max-xl:flex-col max-xl:items-stretch! ") +
+            : " max-xl:flex-col max-xl:items-stretch! xl:justify-between ") +
           (image !== undefined && align === "center"
             ? " "
             : " my-container side-padding gap-14 lg:gap-20 xs:py-24 xs:pt-32 py-18 pt-28 lg:py-32 lg:pt-44 ")
@@ -68,7 +68,7 @@ export default function Hero({
           }
         >
           {image !== undefined && align === "center" && (
-            <TexturedBg color="var(--color-gold)" />
+            background || <TexturedBg color="var(--color-gold)" />
           )}
           {/* text */}
           <div
@@ -95,7 +95,7 @@ export default function Hero({
             <SlideUpAnim
               transition={{ duration: 0.5, delay: 0.4 }}
               isInView={isInView}
-              className=" max-w-[700px] xs:w-4/5"
+              className=" max-w-[700px] xs:w-4/5 "
             >
               <p
                 className={

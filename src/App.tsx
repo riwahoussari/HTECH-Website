@@ -17,6 +17,8 @@ import PredictiveAIModelPage from "./pages/PredictiveAIModelPage";
 import AgenticAIPage from "./pages/AgenticAIPage";
 import AIForRetailersPage from "./pages/AIForRetailersPage";
 import GenerativeAIPage from "./pages/GenerativeAIPage";
+import HorionForSalesPage from "./pages/HorionForSalesPage";
+import PublicSectorPage from "./pages/PublicSectorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,6 +38,10 @@ const router = createBrowserRouter(
           path="predictive-ai-models/:slug"
           element={<PredictiveAIModelPage />}
         />
+        <Route
+          path="generative-ai/horion-for-sales"
+          element={<HorionForSalesPage />}
+        />
         <Route path="generative-ai/:slug" element={<GenerativeAIPage />} />
         <Route path="agentic-ai/:slug" element={<AgenticAIPage />} />
         <Route path="ai-for-retailers/:slug" element={<AIForRetailersPage />} />
@@ -52,6 +58,11 @@ const router = createBrowserRouter(
       <Route path="/news" element={<NewsPage />} />
       <Route path="/news/:id" element={<ArticlePage />} />
       <Route path="/careers" element={<CareersPage />} />
+
+      {/* Initiatives */}
+
+      {/* Governement */}
+      <Route path="/government/public-sector" element={<PublicSectorPage />} />
 
       <Route path="*" element={<NotFoundPage />} />
     </Route>

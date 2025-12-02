@@ -16,9 +16,7 @@ export default function IndustriesWeEmpower() {
       className="side-padding my-container overflow-x-hidden"
     >
       {/* title */}
-      <TitleBlock
-        {...LANDING_PAGE_DATA.INDUSTRIES_WE_EMPOWER}
-      />
+      <TitleBlock {...LANDING_PAGE_DATA.INDUSTRIES_WE_EMPOWER} />
 
       <CardsSlider>
         {GENERAL_DATA.INDUSTRIES.map((industry, i) => (
@@ -30,7 +28,7 @@ export default function IndustriesWeEmpower() {
             <IndustryCard
               className="aspect-41/39! w-[300px] xs:w-[360px] lg:w-[410px]"
               title={industry.name}
-              imgSrc={industry.img}
+              img={industry.img}
             />
           </SlideUpAnim>
         ))}

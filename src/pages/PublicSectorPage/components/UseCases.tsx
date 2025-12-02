@@ -40,7 +40,7 @@ function Card({
   return (
     <div
       className={
-        "group relative overflow-hidden bg-blueish-gray text-white cursor-pointer w-full p-4 md:p-4 xl:p-6 h-full lg-rounded border border-blueish-gray gap-y-6 flex flex-col justify-between " +
+        "group relative cursor-pointer w-full p-4 md:p-4 xl:p-6 h-full gap-y-6 flex flex-col lg-rounded border border-light-black justify-between " +
         className
       }
     >
@@ -59,15 +59,6 @@ function Card({
           <li key={i}>{s}</li>
         ))}
       </ul>
-
-      {/* bg */}
-      <div className="absolute z-0 object-cover top-0 bottom-0 left-0 right-0  min-h-full min-w-full">
-        <img
-          src="/assets/textured-bg.png"
-          alt="Textured Background"
-          className={"w-full h-full object-cover opacity-35"}
-        />
-      </div>
     </div>
   );
 }

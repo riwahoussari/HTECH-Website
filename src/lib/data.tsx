@@ -2330,3 +2330,129 @@ export const GENERATIVE_AI_DATA = [
     },
   },
 ];
+
+export const PUBLIC_SECTOR_PAGE_DATA = {
+  title: "Public Sector",
+  description:
+    "Scale powers key computer vision and agentic GenAI programs across the Department of Defense, Intelligence Community, and Federal Civilian agencies.",
+  img: {
+    src: "/assets/products/horion-for-sales.jpg",
+    alt: "this is the alt tag",
+  },
+  outlineCardsSection: {
+    title: "Download the predictive AI models",
+    text: "AI21 builds language models specifically designed to solve the enterprise AI trade offs between quality, latency, cost, and privacy. Our Jamba family of open foundation models delivers reliable outputs at top speed, while guaranteeing your enterprise AI workflows stay secure.",
+    cards: [
+      {
+        title: "Jamba Reasoning 3B",
+        text: "Our most lightweight model, packing record latency and context window length into a compact build.",
+        icon: ICONS.GRAPH,
+      },
+      {
+        title: "Jamba Mini",
+        text: "Optimized for efficiency, it deftly balances speed and quality with a smaller footprint.",
+        icon: ICONS.HEXAGON,
+      },
+      {
+        title: "Jamba Large",
+        text: "Our most powerful and advanced model, designed for handling enterprise tasks with superior performance.",
+        icon: ICONS.MASK,
+      },
+    ],
+  },
+  testimonial: {
+    text: "“With Cohere's latest highly secure enterprise LLMs, we aim to provide businesses with powerful and adaptable AI solutions that address specific needs and accelerate the adoption of generative AI globally.”",
+    name: "James Ding",
+    position: "Co-founder and CEO",
+    company: "Draftwise",
+  },
+  AISolutionsSection: {
+    title: "Advanced, Mission- <br> Ready AI Solutions",
+    text: "Commercially-proven, government tested capabilities to power AI Agents and Computer Vision models",
+    subtitle: "CAPABILITIES",
+    features: [
+      {
+        title: "AI Agents",
+        link: "/products/agentic-ai/ai-agents-for-enterprise",
+        list: [
+          "Mission-built to support every level of operations for dominant decision advantage with minimal intervention",
+          "Designed to interact and scale with one another, including decomposable reasoning and integration with external data and systems.",
+          "Access leading commercial and fine-tuned models on CUI, SIPR, and TS",
+        ],
+        img: {
+          src: "/assets/products/predictive-ai.jpg",
+          alt: "This is the alt tag",
+        },
+      },
+      {
+        title: "Generative AI",
+        link: "/products/agentic-ai/ai-agents-for-enterprise",
+        list: [
+          "Advanced AI Software: Unified platform for end-to-end ML Ops.",
+          "State-of-the-Art Machine Learning: Leverage machine learning strategies to accelerate and strategically approach data annotation.",
+          "Human-in-the-Loop Expertise: Leverage subject matter experts with decades of experience and clearance for annotation strategies.",
+        ],
+        img: {
+          src: "/assets/products/horion-for-sales.jpg",
+          alt: "This is the alt tag",
+        },
+      },
+    ],
+  },
+  useCases: {
+    subtitle: "USE CASES",
+    title: "Transforming public <br> service with AI",
+    text: "Scale provides solutions to fine-tune computer vision algorithms and deploy AI agents designed for public sector missions.",
+    cards: [
+      {
+        title: "Finance",
+        icon: ICONS.SPARKLE,
+        text: "Automate complex document analysis to ensure compliance, streamline decision-making, and unlock investment insights.",
+        list: [
+          "Compliance & Regulatory Monitoring ",
+          "Loan Application Processing ",
+          "Earning Call Summary",
+        ],
+      },
+      {
+        title: "Tech",
+        icon: ICONS.LOADING,
+        text: "Accelerate workflows across engineering, sales, and customer support by turning unstructured data into instant, actionable answers.",
+        list: [
+          "RFI Response Automation",
+          "Customer Support Assistant ",
+          "Documentation QA",
+        ],
+      },
+      {
+        title: "Legal",
+        icon: ICONS.EYE,
+        text: "Transform legal operations with AI agents that rapidly assess risk, review contracts, and support due diligence at scale.",
+        list: ["M&A Due Diligence", "Vendor Risk Assessment ", "eDiscovery"],
+      },
+      {
+        title: "Manufacturing",
+        icon: ICONS.GEAR,
+        text: "Empower operators with intelligent agents that accelerate troubleshooting, quality control, and system upgrades.",
+        list: ["Equipment Troubleshooting", "Legacy System Data Migration "],
+      },
+    ],
+  },
+  partners: [
+    {
+      src: "/assets/logos/berytech-logo.png",
+      alt: "Berytech Logo",
+      className: " invert-0! scale-85 ",
+    },
+    { src: "/assets/logos/usj-logo.png", alt: "USJ Logo" },
+    { src: "/assets/logos/unicef-logo.svg", alt: "Unicef Logo" },
+    {
+      src: "/assets/logos/military-tribunal-logo.svg",
+      alt: "Military Tribunal Logo",
+    },
+    {
+      src: "/assets/logos/lebanese-military-logo.svg",
+      alt: "Lebanese Military Logo",
+    },
+  ],
+};
