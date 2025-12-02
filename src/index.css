@@ -48,6 +48,10 @@ body {
   @apply mx-3 xs:mx-5 md:mx-10;
 }
 
+.cards-gap {
+  @apply gap-6 sm:gap-4 lg:gap-6
+}
+
 .main-flex {
   @apply flex flex-col gap-24 sm:gap-32 lg:gap-44;
 }

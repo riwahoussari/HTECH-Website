@@ -20,7 +20,7 @@ export default function ThreeOutlineCardsSection({
         subtitle={content.subtitle}
       />
 
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-10">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 cards-gap">
         {content.cards.map((card, i) => (
           <OutlineCard
             className={

@@ -1,7 +1,7 @@
 export default function Partners({
   images,
 }: {
-  images: { src: string; alt: "" }[];
+  images: { src: string; alt: string }[];
 }) {
   const midPoint = Math.ceil(images.length / 2);
   const half1 = images.slice(0, midPoint);

@@ -1644,123 +1644,52 @@ export const ABOUT_PAGE_DATA = {
 };
 
 export const CAREERS_PAGE_DATA = {
-  HERO: {
-    title: "Work with us, change business forever",
-    subtitle: "WORKING AT GAIANT",
-    text: "Join a team of thinkers and doers pushing the boundaries to reshape what's possible.",
-  },
-
-  LIFE_AT_GAIANT: {
-    title: "Life At Gaiant",
-    subtitle: "WHAT SHOULD YOU EXPECT?",
-    cards: [
-      {
-        title: "A mission with meaning",
-        subtitle: "SHAPE THE FUTURE OF LANGUAGE INTELLIGENCE",
-        text: "Every project contributes to redefining how businesses understand people.",
-      },
-      {
-        title: "A team that listens",
-        subtitle: "COLLABORATION ROOTED IN TRUST AND RESPECT",
-        text: "Your ideas guide decisions in a culture of open dialogue.",
-      },
-      {
-        title: "A place to grow",
-        subtitle: "CONTINUOUS LEARNING, MENTORSHIP & CAREER EVOLUTION",
-        text: "We invest in your growth with guidance, opportunities, and freedom.",
-      },
-    ],
-  },
-
-  DO_YOU_FIT: {
-    subtitle: "DO YOU FIT?",
-    title:
-      "We want Gaiant to be the place where everyone does the best work of their career.",
-    text: " So we make thoughtful decisions about how we work, the perks we provide, and how we create a diverse and inclusive work environment. We also foster technical creativity and innovation through internal hackathons, demos, tech talks, and achievement recognition programs that form a cornerstone of our culture at Gaiant. <br> <br> Join us and work alongside some of the world’s best talent from the likes of Apple, Meta AI, Amazon and Google Brain, as well as full-time staff adjunct professors from Stanford, Oxford, University of Toronto, and UCL London.",
-  },
-
-  WHATS_IN_IT_FOR_YOU: {
-    title: "What's in it for you?",
-    subtitle: "PERKS AND BENEFITS",
-    img: {
-      src: "/images/man-in-online-meeting.webp",
-      alt: "A man in an online meeting",
+  title: "Dream big, build bigger",
+  description: "At Htech, we’re transforming ideas into reality. Let’s write the next chapter of your career together.",
+  currentOpenings: [
+    {
+      category: "Development",
+      title: "Algorithm Developer",
+      type: "Full-time",
+      location: "Beirut",
+      link: "https://www.google.com",
     },
-    accordionContent: [
-      {
-        title: "Work Flexibility",
-        subtitle: "ON YOUR OWN TERMS",
-        list: [
-          "We proudly support a remote work culture worldwide",
-          "We offer centralized hubs to give teams a place to meet and innovate",
-          "We respect that life gets busy – no penalties or apologies ",
-          "Quality work matters most, whether it’s from a desk or the Bahamas",
-        ],
-      },
-      {
-        title: "Bonuses and Equity",
-        subtitle: "ON YOUR OWN TERMS",
-        list: [
-          "We proudly support a remote work culture worldwide",
-          "We offer centralized hubs to give teams a place to meet and innovate",
-          "We respect that life gets busy – no penalties or apologies ",
-          "Quality work matters most, whether it’s from a desk or the Bahamas",
-        ],
-      },
-      {
-        title: "Health Coverage",
-        subtitle: "ON YOUR OWN TERMS",
-        list: [
-          "We proudly support a remote work culture worldwide",
-          "We offer centralized hubs to give teams a place to meet and innovate",
-          "We respect that life gets busy – no penalties or apologies ",
-          "Quality work matters most, whether it’s from a desk or the Bahamas",
-        ],
-      },
-    ],
-  },
-
-  OPEN_ROLES: {
-    title: "Open roles at Gaiant",
-    cards: [
-      {
-        title: "Enterprise Solutions Associate",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "Quality Manager",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "SVP of Sales, Enterprise, Technology - Banking",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "Director of Quality",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "SVP of Sales, Enterprise, Technology - Healthcare",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "Senior Front-End Engineer",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "Procurement Analyst",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "AI Data Trainer, Arabic",
-        text: "(Beirut - Remote)",
-      },
-      {
-        title: "Research Internship",
-        text: "(Beirut - Remote)",
-      },
-    ],
-  },
+    {
+      category: "Development",
+      title: "Frontend Developer",
+      type: "Full-time",
+      location: "Remote",
+      link: "https://www.google.com",
+    },
+    {
+      category: "Development",
+      title: "Backend Developer",
+      type: "Part-time",
+      location: "Remote",
+      link: "https://www.google.com",
+    },
+    {
+      category: "Business",
+      title: "Enterprise Account Developer",
+      type: "Full-time",
+      location: "Beirut",
+      link: "https://www.google.com",
+    },
+    {
+      category: "Business",
+      title: "HR",
+      type: "Full-time",
+      location: "Beirut",
+      link: "https://www.google.com",
+    },
+    {
+      category: "Marketing",
+      title: "Content Creator",
+      type: "Full-time",
+      location: "Beirut",
+      link: "https://www.google.com",
+    },
+  ],
 };
 
 export const INDUSTRIES_PAGE_DATA = {

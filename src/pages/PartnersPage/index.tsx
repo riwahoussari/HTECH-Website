@@ -32,10 +32,10 @@ export default function PartnersPage() {
       <Navbar transparentBg={transparentNavbar} />
       <main className="main-flex">
         <div>
-        <PHero navbarTriggerRef={navbarBgTrigger} {...PARTNERS_DATA} />
-        <PartnersMarquee />
+          <PHero navbarTriggerRef={navbarBgTrigger} {...PARTNERS_DATA} />
+          <PartnersMarquee />
         </div>
-            
+
         <CloudPartners content={PARTNERS_DATA.cloudPartners} />
         <SystemPartners content={PARTNERS_DATA.systemPartners} />
         <WhyHtech content={PARTNERS_DATA.whyHtech} />

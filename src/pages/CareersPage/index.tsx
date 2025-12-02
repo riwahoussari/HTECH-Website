@@ -1,27 +1,33 @@
-import CallToAction from "../../components/sections/CallToAction";
 import Navbar from "../../components/sections/navbar/Navbar";
-import CareersHero from "./components/CareersHero";
-import LifeAtGaiant from "./components/LifeAtGaiant";
-import DoYouFit from "./components/DoYouFit";
-import WhatsInItForYou from "./components/WhatsInItForYou";
-import OpenRoles from "./components/OpenRoles";
 import { PageMeta } from "../../components/ui/PageMeta";
+import { useMotionValueEvent, useScroll } from "motion/react";
+import { useRef, useState } from "react";
+import { CAREERS_PAGE_DATA } from "../../lib/data";
+import PHero from "./components/Hero";
+import CurrentOpenings from "./components/CurrentOpenings";
 
 export default function CareersPage() {
+  const [transparentNavbar, setTransparentNavbar] = useState(true);
+  const navbarBgTrigger = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: navbarBgTrigger,
+    offset: ["end end", "end start"],
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (val) =>
+    setTransparentNavbar(val >= 1 ? false : true)
+  );
+
   return (
     <>
       <PageMeta
-        title="Careers at Gaiant | Build the Future of Intelligent Work"
-        description="Join Gaiant and help shape the next generation of enterprise AI. We’re looking for curious minds and ambitious builders to create secure, scalable systems that empower people and transform industries."
+        title={`Htech Partners`}
+        description={CAREERS_PAGE_DATA.description}
       />
-      <Navbar transparentBg={false} />
-      <main>
-        <CareersHero />
-        <LifeAtGaiant />
-        <DoYouFit />
-        <WhatsInItForYou />
-        <OpenRoles />
-        <CallToAction />
+      <Navbar transparentBg={transparentNavbar} />
+      <main className="main-flex main-pb">
+        <PHero navbarTriggerRef={navbarBgTrigger} {...CAREERS_PAGE_DATA} />
+        <CurrentOpenings openings={CAREERS_PAGE_DATA.currentOpenings} />
       </main>
     </>
   );
