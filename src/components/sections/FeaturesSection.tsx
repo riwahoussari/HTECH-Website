@@ -1,13 +1,15 @@
 import FeatureCard from "../ui/cards/FeatureCard";
-import { TitleBlock } from "../ui/Titles";
+import { CenteredTitleBlock, TitleBlock } from "../ui/Titles";
 
 export default function FeaturesSection({
+  titleCentered = true,
   title,
   text,
   subtitle,
   features,
-  background = true
+  background = true,
 }: {
+  titleCentered?: boolean;
   title?: string;
   text?: string;
   subtitle?: string;
@@ -20,7 +22,12 @@ export default function FeaturesSection({
 }) {
   return (
     <section>
-      {title && (
+      {title && titleCentered && (
+        <div className="my-container side-padding">
+          <CenteredTitleBlock title={title} text={text} subtitle={subtitle} />
+        </div>
+      )}
+      {title && !titleCentered && (
         <div className="my-container side-padding">
           <TitleBlock title={title} text={text} subtitle={subtitle} />
         </div>

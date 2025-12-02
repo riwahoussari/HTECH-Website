@@ -58,11 +58,9 @@ export function TitleBlock({
         </div>
 
         {text && (
-          <div className="lg:w-1/2">
-            <p className=" text-20 leading-[1.25]! max-w-[600px]">
-              {text}
-            </p>
-          </div>
+          <SlideUpAnim isInView={isInView} className="lg:w-1/2">
+            <p className=" text-20 leading-[1.25]! max-w-[600px]">{text}</p>
+          </SlideUpAnim>
         )}
       </div>
     </div>
@@ -85,15 +83,18 @@ export function CenteredTitleBlock({
   const titleBlockRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(titleBlockRef, { once: true, margin: "-10%" });
   return (
-    <div ref={titleBlockRef} className={"text-center " + (className || "")}>
+    <div
+      ref={titleBlockRef}
+      className={"text-center max-w-[1000px] mx-auto " + (className || "")}
+    >
       {subtitle && (
-        <SlideUpAnim isInView={isInView} transition={{ duration: 0.6 }}>
-          <SectionSubTitle className="mb-5">{subtitle}</SectionSubTitle>
-        </SlideUpAnim>
+        <SectionSubTitle className="mb-5">
+          <AnimatedText isInView={isInView}>{subtitle}</AnimatedText>
+        </SectionSubTitle>
       )}
-      <SlideUpAnim isInView={isInView} transition={{ duration: 0.6 }}>
-        <SectionTitle big={big}>{title}</SectionTitle>
-      </SlideUpAnim>
+      <SectionTitle big={big}>
+        <AnimatedText isInView={isInView}>{title}</AnimatedText>
+      </SectionTitle>
       {text && (
         <SlideUpAnim isInView={isInView} transition={{ duration: 0.6 }}>
           <p className="text-16 mt-3">{text}</p>

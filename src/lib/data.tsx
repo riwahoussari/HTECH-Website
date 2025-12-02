@@ -2186,6 +2186,14 @@ export const AI_FOR_RETAILERS_DATA = [
             alt: "This is the alt tag",
           },
         },
+        {
+          title: "Gain full transparency into workflows",
+          text: "Get full visibility into workflows with visual execution graphs, confidence scores, and detailed validation reports.",
+          img: {
+            src: "/assets/products/horion-for-sales.jpg",
+            alt: "This is the alt tag",
+          },
+        },
       ],
     },
   },

@@ -121,6 +121,7 @@ export default function Button({
           }
           className={
             "group-hover:rotate-0 ease-in-out duration-200 -rotate-45 " +
+            (variant === "outline" ? "" : " group-hover:invert-100! ") +
             (size == "sm"
               ? " w-[17px] lg:w-[18px] "
               : size == "md"

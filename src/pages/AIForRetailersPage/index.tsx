@@ -44,7 +44,7 @@ function Page({ PRODUCT }: { PRODUCT: (typeof AI_FOR_RETAILERS_DATA)[0] }) {
         <PHero navbarTriggerRef={navbarBgTrigger} {...PRODUCT} />
         <TheChallenge content={PRODUCT.theChallenge} />
         <TheSolution content={PRODUCT.theSolution} />
-        <FeaturesSection {...PRODUCT.howItWorks} />
+        <FeaturesSection titleCentered={false} {...PRODUCT.howItWorks} />
         <CallToAction />
       </main>
     </>
