@@ -222,7 +222,7 @@ export function InitiativesFlyoutContent() {
   return (
     <div className="flex flex-col gap-5 ">
       {/* <FTitle text="INITIATIVES" /> */}
-      <Link className="group/link" to="/initiatives/code-for-lebanon">
+      <a target="_blank" className="group/link" href="https://codeforlebanon.com">
         <div className="min-w-full rounded-[10px] overflow-hidden relative  px-4 py-6 xl:p-8 xl:pt-32 flex justify-end flex-col gap-2">
           <TexturedBg
             color="var(--color-gold)"
@@ -241,7 +241,7 @@ export function InitiativesFlyoutContent() {
             minima.
           </p>
         </div>
-      </Link>
+      </a>
     </div>
   );
 }

@@ -1,12 +1,10 @@
 import { useAnimationFrame } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-
-
 export default function PartnersMarquee() {
   return (
     <>
-      <div className="bg-light-black flex items-center justify-center overflow-hidden">
+      <div className=" bg-light-black  flex items-center justify-center overflow-hidden ">
         <MarqueeLogos />
       </div>
     </>
@@ -21,7 +19,6 @@ const LOGOS = [
   {
     src: "/assets/logos/berytech-logo.png",
     alt: "Berytech Logo",
-    className: " invert-100 ",
   },
   { src: "/assets/logos/usj-logo.png", alt: "USJ Logo" },
   { src: "/assets/logos/lau-white-logo.svg", alt: "LAU Logo" },
@@ -33,7 +30,7 @@ const LOGOS = [
   { src: "/assets/logos/unicef-logo.svg", alt: "Unicef Logo" },
 ];
 
-function MarqueeLogos() {
+function MarqueeLogos({}: {}) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [contentWidth, setContentWidth] = useState<number>(0);
   const [iconWidth, setIconWidth] = useState<number>(0);
@@ -104,7 +101,7 @@ function MarqueeLogos() {
     <div className="relative flex justify-center 2xl:py-8 py-6  2xl:gap-32 lg:gap-20 gap-12 overflow-hidden">
       {/* main icons that start on screen */}
       <div
-        className="absolute flex items-center 2xl:gap-32 lg:gap-20 gap-12  2xl:pr-32 lg:pr-20 pr-12"
+        className="absolute flex items-center 2xl:gap-32 lg:gap-20 gap-12 2xl:pr-32 lg:pr-20 pr-12"
         style={{
           transform: `translateX(${-translateX + contentWidth}px)`,
           width: "max-content",
@@ -112,14 +109,8 @@ function MarqueeLogos() {
         ref={scrollRef}
         aria-hidden
       >
-        {[...LOGOS].map(({ src, alt, className }, i) => (
-          <Logo
-            key={i}
-            src={src}
-            alt={alt}
-            className={className}
-            opacity={calculateOpacity(i)}
-          />
+        {[...LOGOS].map(({ src, alt }, i) => (
+          <Logo key={i} src={src} alt={alt} opacity={calculateOpacity(i)} />
         ))}
       </div>
 
@@ -133,14 +124,8 @@ function MarqueeLogos() {
         ref={scrollRef}
         aria-hidden
       >
-        {[...LOGOS].map(({ src, alt, className }, i) => (
-          <Logo
-            key={i}
-            src={src}
-            alt={alt}
-            className={className}
-            opacity={calculateOpacity(i)}
-          />
+        {[...LOGOS].map(({ src, alt }, i) => (
+          <Logo key={i} src={src} alt={alt} opacity={calculateOpacity(i)} />
         ))}
       </div>
 
@@ -153,8 +138,8 @@ function MarqueeLogos() {
         }}
         ref={scrollRef}
       >
-        {[...LOGOS].map(({ src, alt, className }, i) => (
-          <Logo key={i} src={src} alt={alt} className={className} opacity={0} />
+        {[...LOGOS].map(({ src, alt }, i) => (
+          <Logo key={i} src={src} alt={alt} opacity={0} />
         ))}
       </div>
     </div>
@@ -176,7 +161,7 @@ function Logo({
     <img
       src={src}
       style={{ opacity }}
-      className={"2xl:w-48 lg:w-36 w-32 " + className}
+      className={"2xl:w-40 2xl:scale-125 lg:w-36 w-32 " + className}
       alt={alt}
     />
   );

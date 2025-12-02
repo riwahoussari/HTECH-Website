@@ -129,14 +129,16 @@ export default function Footer() {
             <div className="w-[180px] space-y-8">
               <p className="text-20">Initiatives</p>
               <div className="flex flex-col gap-5 text-14">
-                <Link to="/initiatives/Code For Lebanon">Code For Lebanon</Link>
+                <a href="https://codeforlebanon.com" target="_blank">
+                  Code For Lebanon
+                </a>
               </div>
             </div>
 
             <div className="w-[180px] space-y-8">
               <p className="text-20">Government</p>
               <div className="flex flex-col gap-5 text-14">
-                <Link to="/initiatives/Code For Lebanon">Public Sector</Link>
+                <Link to="/government/public-sector">Public Sector</Link>
               </div>
             </div>
           </div>

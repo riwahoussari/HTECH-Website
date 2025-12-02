@@ -105,17 +105,7 @@ function Card({
         }
       >
         {/* bg */}
-        <div
-        className="absolute object-cover left-1/2 -translate-x-1/2 min-h-full max-lg:top-0 min-w-full bg-blueish-gray"
-          // className={
-          //   "absolute object-cover left-1/2 -translate-x-1/2 min-h-full max-lg:top-0 min-w-full lg:scale-300 bg-blueish-gray " +
-          //   (index === 0 ? " lg:top-0 origin-top " : "") +
-          //   (index === 1
-          //     ? " lg:top-1/2 lg:-translate-y-1/2 origin-center "
-          //     : "") +
-          //   (index === 2 ? " lg:bottom-0 origin-bottom " : "")
-          // }
-        >
+        <div className="absolute object-cover left-1/2 -translate-x-1/2 min-h-full max-lg:top-0 max-lg:bottom-0 min-w-full bg-blueish-gray">
           <img
             src="/assets/textured-bg.png"
             alt="Textured Background"

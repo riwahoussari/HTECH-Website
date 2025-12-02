@@ -121,7 +121,6 @@ export default function Navbar({
             <FlyoutLink
               setHovering={setHovering}
               FlyoutContent={<InitiativesFlyoutContent />}
-              to="/initiatives/code-for-lebanon"
             >
               <p className="min-w-20 text-end text-sm">Initiatives</p>
             </FlyoutLink>

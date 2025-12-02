@@ -24,7 +24,7 @@ export default function ThreeOutlineCardsSection({
         {content.cards.map((card, i) => (
           <OutlineCard
             className={
-              i === 1
+              i % 2 === 1
                 ? " xl:translate-y-0 md:translate-y-[calc(50%+12px)] "
                 : ""
             }

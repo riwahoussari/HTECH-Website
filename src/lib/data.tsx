@@ -2442,7 +2442,7 @@ export const PUBLIC_SECTOR_PAGE_DATA = {
     {
       src: "/assets/logos/berytech-logo.png",
       alt: "Berytech Logo",
-      className: " invert-0! scale-85 ",
+      className: " scale-85 ",
     },
     { src: "/assets/logos/usj-logo.png", alt: "USJ Logo" },
     { src: "/assets/logos/unicef-logo.svg", alt: "Unicef Logo" },
@@ -2455,4 +2455,140 @@ export const PUBLIC_SECTOR_PAGE_DATA = {
       alt: "Lebanese Military Logo",
     },
   ],
+};
+
+export const PARTNERS_DATA = {
+  title: "Jointly delivering on the AI promise",
+  description:
+    "There’s opportunity ahead. Partner with AI21 and achieve reliable, results-driven AI solutions within your preferred environment.",
+  cloudPartners: {
+    title: "Cloud Partners ",
+    text: "To support diverse enterprise tech stacks, we offer multi-cloud deployment options with our leading cloud partners.",
+    partners: [
+      {
+        img: {
+          src: "/assets/logos/partners/cloud/AWS-logo.svg",
+          alt: "logo of AWS",
+        },
+        text: "As a launch partner for Bedrock and SageMaker JumpStart, AI21 provides Amazon customers with state-of-the- art AI systems, offering flexible deployment options to build secure, customized GenAI applications.",
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/cloud/Google-Cloud-logo.png",
+          alt: "logo of Google Cloud",
+        },
+        text: "A top strategic Google partner, AI21’s models are easily accessible to customers via Google Cloud Marketplace, ensuring simple procurement and consumption.",
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/cloud/Microsoft-logo.svg",
+          alt: "logo of Microsoft",
+        },
+        text: "Joining forces with Microsoft Cloud, AI21 brings its industry-leading foundation models and task-specific models directly to users within Microsoft AI Studio.",
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/cloud/NVIDIA-logo.png",
+          alt: "logo of NVIDIA",
+        },
+        text: "AI21’s models are accessible from NVIDIA’s API catalog, with seamless deployment via NVIDIA NIM.",
+      },
+    ],
+  },
+  systemPartners: {
+    title: "System integration partners",
+    text: "We provide seamless integration with industry leaders to empower diverse enterprise technology stacks.",
+    partners: [
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-329.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-330.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-331.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-332.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-333.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-334.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-335.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-336.svg",
+          alt: "System integration partner logo",
+        },
+      },
+      {
+        img: {
+          src: "/assets/logos/partners/system-integration/Frame-337.svg",
+          alt: "System integration partner logo",
+        },
+      },
+    ],
+  },
+  whyHtech: {
+    title: "Partners choose us for our",
+    subtitle: "WHY HTECH",
+    cards: [
+      {
+        title: "Reliable AI",
+        text: "Our suite of reliable AI systems help accelerate and scale the use of generative AI applications in production.",
+        icon: ICONS.LOADING,
+      },
+      {
+        title: "Production experience",
+        text: "With extensive experience deploying LLMs at scale, partners can trust us to provide models optimized for real-world production environments.",
+        icon: ICONS.GEAR,
+      },
+      {
+        title: "Enterprise-first approach",
+        text: "We built our AI systems to meet the strictest enterprise requirements around reliability, security, governance, and compliance.",
+        icon: ICONS.SHIELD,
+      },
+      {
+        title: "Flexible deployments",
+        text: "We enable easy deployment across multiple cloud platforms for a smooth integration, so customers can leverage our models however fits their tech stack.",
+        icon: ICONS.GRAPH,
+      },
+      {
+        title: "Thought partnerships",
+        text: "Working closely with partners, we empower customers with innovative applications, fine-tuned for nuanced and creative use cases.",
+        icon: ICONS.EYE,
+      },
+      {
+        title: "Continuous improvements",
+        text: "Our AI systems are continually updated and optimized based on the latest research.",
+        icon: ICONS.CHART,
+      },
+    ],
+  },
 };

@@ -19,6 +19,7 @@ import AIForRetailersPage from "./pages/AIForRetailersPage";
 import GenerativeAIPage from "./pages/GenerativeAIPage";
 import HorionForSalesPage from "./pages/HorionForSalesPage";
 import PublicSectorPage from "./pages/PublicSectorPage";
+import PartnersPage from "./pages/PartnersPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -58,6 +59,7 @@ const router = createBrowserRouter(
       <Route path="/news" element={<NewsPage />} />
       <Route path="/news/:id" element={<ArticlePage />} />
       <Route path="/careers" element={<CareersPage />} />
+      <Route path="/partners" element={<PartnersPage />} />
 
       {/* Initiatives */}
 
