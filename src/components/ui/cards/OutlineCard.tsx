@@ -17,12 +17,12 @@ export default function OutlineCard({
   return (
     <div
       className={
-        "group cursor-pointer w-full max-w-[700px] p-5 md:p-6 xl:p-8 h-full lg-rounded border border-light-black space-y-8 flex flex-col justify-between hover:bg-gold/75 duration-200 ease-in-out " +
+        "group relative cursor-pointer w-full max-w-[700px] p-5 md:p-6 xl:p-8 h-full lg-rounded border border-blueish-gray space-y-8 flex flex-col justify-between bg-blueish-gray text-white duration-200 ease-in-out " +
         className
       }
     >
       {icon && (
-        <div className="w-6 xl:w-7 aspect-square fill-light-black text-light-black">
+        <div className="w-6 xl:w-7 aspect-square fill-whtie text-whtie">
           {icon}
         </div>
       )}
@@ -35,8 +35,18 @@ export default function OutlineCard({
 
       <div className="flex justify-end">
         <ArrowSvg
+        color="white"
           strokeWidth={1.5}
           className="w-5 xl:w-7 -rotate-45 group-hover:rotate-0 group-hover:scale-125 duration-150 ease-in-out"
+        />
+      </div>
+
+      {/* bg */}
+      <div className="absolute z-0 object-cover top-0 bottom-0 left-0 right-0  min-h-full min-w-full">
+        <img
+          src="/assets/textured-bg.png"
+          alt="Textured Background"
+          className={"w-full h-full object-cover opacity-35"}
         />
       </div>
     </div>

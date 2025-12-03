@@ -94,13 +94,13 @@ export default function CardsSlider({
   return (
     <>
       {/* cards */}
-      <div {...swipeHandlers} ref={cardsContainerRef}>
+      <div {...swipeHandlers} className="cursor-grab" ref={cardsContainerRef}>
         <m.div
           animate={{
             x: `-${slideValue}px`,
           }}
           transition={{ ease: "easeOut", duration: 0.5 }}
-          className="flex w-max items-stretch gap-5 overflow-y-clip"
+          className="flex w-max select-none items-stretch gap-5 overflow-y-clip"
           ref={cardsRef}
         >
           {children}

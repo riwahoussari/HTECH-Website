@@ -49,10 +49,10 @@ export default function WhatWeDo() {
   const { scrollYProgress } = useScroll({
     target: cardsContainerRef,
     offset: ["start start", "end end"],
-  });
+})
 
   return (
-    <section ref={sectionRef} className="relative overflow-x-clip pb-24">
+    <section ref={sectionRef} className="relative overflow-x-clip ">
       <div
         className="side-padding my-container py-[10px]"
         style={{ paddingBottom: `${CARDS.length * 30}px` }}

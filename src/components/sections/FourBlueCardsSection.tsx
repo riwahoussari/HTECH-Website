@@ -16,7 +16,7 @@ export default function FourBlueCardsSection({
     <section className="my-container side-padding">
       <TitleBlock {...content} />
 
-      <div className="grid sm:grid-cols-2 2xl:grid-cols-4 cards-gap max-2xl:max-w-[1200px]">
+      <div className="grid sm:grid-cols-2 xl:grid-cols-4 cards-gap">
         {content.cards.map((card, i) => (
           <BlueCard key={i} {...card} />
         ))}

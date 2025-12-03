@@ -17,13 +17,13 @@ export default function SystemPartners({
           <div
             key={i}
             className={
-              "group hover:bg-light-black duration-200 ease-in-out rounded-md xl:rounded-lg bg-blueish-gray/15 flex justify-center items-center w-full py-3 lg:px-20" +
+              "group  rounded-md xl:rounded-lg bg-blueish-gray/15 flex justify-center items-center w-full py-3 lg:px-20" +
               ((i + 1) % 3 === 0 ? " sm:col-span-2 lg:col-span-1 " : "")
             }
           >
             <img
               className={
-                "lg:w-full sm:w-[200px] w-[180px] max-w-full lg:max-w-[225px] group-hover:invert-100 duration-200 ease-in-out "
+                "lg:w-full sm:w-[200px] w-[180px] max-w-full lg:max-w-[225px]  "
               }
               {...partner.img}
             />

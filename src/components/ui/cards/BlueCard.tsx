@@ -4,40 +4,37 @@ export default function BlueCard({
   title,
   text,
   icon,
-  list,
   className,
+  image,
 }: {
   title: string;
   text: string;
   icon: ReactNode;
-  list: string[];
   className?: string;
+  image?: ReactNode;
 }) {
   return (
     <div
       className={
-        "group relative overflow-hidden bg-blueish-gray text-white cursor-pointer w-full p-4 md:p-4 xl:p-6 h-full lg-rounded border border-blueish-gray gap-y-6 flex flex-col justify-between " +
+        "group overflow-clip relative cursor-pointer w-full max-w-[700px] p-5 md:p-6 xl:p-8 h-full lg-rounded border border-blueish-gray gap-y-8 flex flex-col justify-between bg-blueish-gray text-white duration-200 ease-in-out " +
         className
       }
     >
-      <div className="relative z-1 flex justify-between items-center">
-        <p className="text-25">{title}</p>
+      <div className="space-y-3">
+        {icon && (
+          <div className="w-6 xl:w-7 aspect-square fill-whtie text-whtie">
+            {icon}
+          </div>
+        )}
+        {image}
 
-        <div className="w-5 xl:w-6 aspect-square fill-light-black">{icon}</div>
+        <p className="text-32">{title}</p>
       </div>
 
-      <div className="relative z-1 space-y-2">
-        <p className="text-18">{text}</p>
-      </div>
-
-      <ul className="relative z-1 list-disc ps-4 leading-[2]! text-16 font-light">
-        {list.map((s, i) => (
-          <li key={i}>{s}</li>
-        ))}
-      </ul>
+      <p className="text-20">{text}</p>
 
       {/* bg */}
-      <div className="absolute z-0 object-cover top-0 bottom-0 left-0 right-0  min-h-full min-w-full">
+      <div className="absolute top-0 bottom-0 left-0 right-0 min-w-full min-h-full">
         <img
           src="/assets/textured-bg.png"
           alt="Textured Background"

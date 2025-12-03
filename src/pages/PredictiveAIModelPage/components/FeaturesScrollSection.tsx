@@ -24,6 +24,8 @@ export default function FeaturesScrollSection({
     })
   );
 
+  console.log(visible);
+
   return (
     <section
       ref={sectionRef}
@@ -49,16 +51,9 @@ export default function FeaturesScrollSection({
           <div className="relative 2xl:col-span-5 xl:col-span-4 col-span-3 h-full lg-rounded overflow-hidden">
             {content.map((f, i) => (
               <m.img
-                initial={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-                animate={{
-                  clipPath:
-                    visible === i
-                      ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
-                      : visible < i
-                        ? "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"
-                        : "polygon(0 0, 100% 0, 100% 0, 0 0)",
-                }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: visible === i ? 1 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="absolute top-0 bottom-0 left-0 right-0 w-full h-full object-cover"
                 key={i}
                 alt={f.img.alt}
@@ -72,11 +67,15 @@ export default function FeaturesScrollSection({
       <div className="lg:hidden space-y-20">
         {content.map((f, i) => (
           <div key={i} className={"space-y-6 "}>
-            <div className={"space-y-2 max-w-[600px] text-center " }>
+            <div className={"space-y-2 max-w-[600px] text-center "}>
               <p className="text-32">{f.title}</p>
               <p className="text-20 font-light">{f.text}</p>
             </div>
-            <img src={f.img.src} alt={f.img.alt} className="lg-rounded aspect-5/3 object-cover w-full max-w-[400px] mx-auto " />
+            <img
+              src={f.img.src}
+              alt={f.img.alt}
+              className="lg-rounded aspect-5/3 object-cover w-full max-w-[400px] mx-auto "
+            />
           </div>
         ))}
       </div>
