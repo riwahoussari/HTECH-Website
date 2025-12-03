@@ -15,12 +15,17 @@ export default function LandingHero({
       text="Htech is where powerful AI meets practical business solutions — so you can work smarter."
       buttons={
         <>
-          <Button size={"lg"} clr="white">
-            Request a demo
-          </Button>
-          <Button arrow="normal" size={"lg"} variant={"outline"}>
-            Explore Products
-          </Button>
+          <a href="#request-a-demo">
+            <Button size={"lg"} clr="white">
+              Request a demo
+            </Button>
+          </a>
+
+          <a href="#our-products">
+            <Button arrow="normal" size={"lg"} variant={"outline"}>
+              Explore Products
+            </Button>
+          </a>
         </>
       }
     />

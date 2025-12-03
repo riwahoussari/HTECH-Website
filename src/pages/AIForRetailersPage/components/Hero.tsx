@@ -1,7 +1,6 @@
 import type { RefObject } from "react";
 import Hero from "../../../components/sections/Hero";
 import Button from "../../../components/ui/Button";
-import { SlideUpSelf } from "../../../components/ui/Anims";
 
 export default function PHero({
   navbarTriggerRef,
@@ -25,15 +24,20 @@ export default function PHero({
         background="none"
         buttons={
           <>
-            <Button arrow={"normal"} size={"lg"}>
-              Request a demo
-            </Button>
+            <a href="#request-a-demo">
+              <Button arrow={"normal"} size={"lg"}>
+                Request a demo
+              </Button>
+            </a>
           </>
         }
         className="pb-0!"
       />
       <div className="side-padding my-container">
-        <img {...img} className="lg-rounded w-full lg:aspect-3/1 aspect-5/3 object-cover" />
+        <img
+          {...img}
+          className="lg-rounded w-full lg:aspect-3/1 aspect-5/3 object-cover"
+        />
       </div>
     </>
   );

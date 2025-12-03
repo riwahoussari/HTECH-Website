@@ -36,7 +36,7 @@ function Page({ PRODUCT }: { PRODUCT: (typeof AI_FOR_RETAILERS_DATA)[0] }) {
   return (
     <>
       <PageMeta
-        title={`AI For Retailers | ${PRODUCT.title}`}
+        title={`${PRODUCT.title} | AI For Retailers`}
         description={PRODUCT.description}
       />
       <Navbar transparentBg={transparentNavbar} />

@@ -17,10 +17,10 @@ export default function PHero({
   return (
     <Hero
       ref={navbarTriggerRef}
-      buttons={
-        <Button arrow={"normal"} size={"lg"} variant={"outline"}>
-          Learn more
-        </Button>
+      buttons={<></>
+        // <Button arrow={"normal"} size={"lg"} variant={"outline"}>
+        //   Learn more
+        // </Button>
       }
       title={title}
       text={text}

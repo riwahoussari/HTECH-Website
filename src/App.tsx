@@ -55,7 +55,7 @@ const router = createBrowserRouter(
       <Route path="/case-studies/:title" element={<CaseStudyPage />} />
 
       {/* Company */}
-      <Route path="/about" element={<AboutPage />} />
+      {/* <Route path="/about" element={<AboutPage />} /> */}
       <Route path="/news" element={<NewsPage />} />
       <Route path="/news/:id" element={<ArticlePage />} />
       <Route path="/careers" element={<CareersPage />} />

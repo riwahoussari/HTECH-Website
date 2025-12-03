@@ -9,7 +9,9 @@ export function PageMeta({
 }) {
   return (
     <Helmet>
-      <title>{title ? `${title} | My Website` : "My Website"}</title>
+      <title>
+        {title ? `${title.split("<br>").join(" ")} | HTECH` : "HTECH"}
+      </title>
       {description && <meta name="description" content={description} />}
     </Helmet>
   );

@@ -13,6 +13,7 @@ import IndustriesWeEmpower from "../LandingPage/components/IndustriesWeEmpower";
 import TestimonialCard from "../../components/ui/cards/TestimonialCard";
 import OurLatestNews from "../../components/sections/OurLatestNews";
 import ThreeOutlineCardsSection from "../../components/sections/ThreeOutlineCardsSection";
+import CallToAction from "../../components/sections/CallToAction";
 
 export default function PredictiveAIModelPage() {
   const { slug } = useParams();
@@ -45,11 +46,11 @@ function Page({
   return (
     <>
       <PageMeta
-        title={`Predictive AI Models | ${PRODUCT.title}`}
+        title={`${PRODUCT.title}`}
         description={PRODUCT.description}
       />
       <Navbar transparentBg={transparentNavbar} />
-      <main className="main-flex main-pb">
+      <main className="main-flex ">
         <PHero navbarTriggerRef={navbarBgTrigger} {...PRODUCT} />
         <ThreeOutlineCardsSection content={PRODUCT.section1} />
         <FeaturesScrollSection content={PRODUCT.section2} />
@@ -59,6 +60,7 @@ function Page({
           <TestimonialCard {...PRODUCT.testimonial} />
         </section>
         <OurLatestNews />
+        <CallToAction />
       </main>
     </>
   );

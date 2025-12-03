@@ -12,7 +12,6 @@ import PartnersMarquee from "../../components/sections/PartnersMarquee";
 import ThreeOutlineCardsSection from "../../components/sections/ThreeOutlineCardsSection";
 import AccordionFullSection from "./components/AccordionFullSection";
 import FeatureSection from "./components/FeatureSection";
-import Testimonial from "../CaseStudyPage/components/Testimonial";
 import TestimonialCard from "../../components/ui/cards/TestimonialCard";
 import OurLatestNews from "../../components/sections/OurLatestNews";
 
@@ -43,7 +42,7 @@ function Page({ INDUSTRY }: { INDUSTRY: (typeof GENERAL_DATA.INDUSTRIES)[0] }) {
   return (
     <>
       <PageMeta
-        title={`AI solutions for ${INDUSTRY.name}`}
+        title={`AI solutions for ${INDUSTRY.name} industry`}
         description={INDUSTRY.description}
       />
       <Navbar transparentBg={transparentNavbar} />

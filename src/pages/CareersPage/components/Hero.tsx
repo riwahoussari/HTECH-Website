@@ -22,7 +22,7 @@ export default function PHero({
       buttons={
         <>
           <Button arrow={"normal"} size={"lg"}>
-            Become a partner
+            Join Htech
           </Button>
         </>
       }

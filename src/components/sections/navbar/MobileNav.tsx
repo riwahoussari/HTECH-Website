@@ -1,19 +1,14 @@
-import { ChevronDown } from "lucide-react";
 import { motion as m, AnimatePresence, type Variants } from "motion/react";
-import { useEffect, useRef, useState, type MouseEventHandler, type ReactNode } from "react";
-import { Link } from "react-router-dom";
-import { LINKS, type TLinkRecord } from "../../../lib/data";
+import { useEffect, useState, type ReactNode } from "react";
 import { CompanyFlyoutContent, GovernmentFlyoutContent, InitiativesFlyoutContent, ProductsFlyoutContent, ResourcesFlyoutContent, SolutionsFlyoutContent } from "./FlyoutLink";
 import ArrowSvg from "../../ui/ArrowSvg";
 
 // MOBILE NAVBAR
 export default function MobileNavMenu({
   isOpen,
-  setIsOpen,
   ref,
 }: {
   isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   ref: React.RefObject<HTMLDivElement | null>;
 }) {
   const [selectedAccordion, setSelectedAccordion] = useState<number>(0);

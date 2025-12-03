@@ -34,9 +34,11 @@ export default function PHero({
         }
         buttons={
           <>
-            <Button arrow={"normal"} size={"lg"}>
-              Request a demo
-            </Button>
+            <a href="#request-a-demo">
+              <Button arrow={"normal"} size={"lg"}>
+                Request a demo
+              </Button>
+            </a>
           </>
         }
         className="xs:py-32! xs:pt-46! py-27! pt-42! lg:py-46! lg:pt-66! "

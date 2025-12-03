@@ -13,9 +13,11 @@ export default function PHero({
       title="Horion For Sales"
       text="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla."
       buttons={
-        <Button size={"lg"} arrow="normal">
-          Request a demo
-        </Button>
+        <a href="#request-a-demo">
+          <Button arrow={"normal"} size={"lg"}>
+            Request a demo
+          </Button>
+        </a>
       }
       background={
         <div className="absolute top-0 right-0 left-0 bottom-0 bg-gold-vertical-gradient" />

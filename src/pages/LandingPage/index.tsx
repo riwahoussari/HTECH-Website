@@ -9,10 +9,10 @@ import WhatWeDo from "./components/WhatWeDo";
 import IndustriesWeEmpower from "./components/IndustriesWeEmpower";
 import OurProducts from "./components/OurProducts";
 import OurLatestNews from "../../components/sections/OurLatestNews";
-import TestimonialSection from "../IndustriesPage/components/TestimonialsSection";
 import { INDUSTRIES_PAGE_DATA } from "../../lib/data";
 import { TitleBlock } from "../../components/ui/Titles";
 import CallToAction from "../../components/sections/CallToAction";
+import TestimonialSection from "./components/TestimonialsSection";
 
 export default function LandingPage() {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
@@ -28,7 +28,7 @@ export default function LandingPage() {
 
   return (
     <>
-      <PageMeta title="HTECH | Landing Page" description="lorem ipsum" />
+      <PageMeta title="Landing Page" description="lorem ipsum" />
       <Navbar transparentBg={transparentNavbar} />
       <main className="main-flex">
         {/* Hero */}

@@ -11,9 +11,8 @@ import { PerformBetter } from "./components/PerformBetter";
 import Undetectable from "./components/Undetectable";
 import Stats from "./components/Stats";
 import FAQs from "./components/FAQs";
-import CallToAction from "../../components/sections/CallToAction";
-import Cta from "./components/Cta";
 import Certification from "./components/Certification";
+import CallToAction from "../../components/sections/CallToAction";
 
 export default function HorionForSalesPage() {
   const [transparentNavbar, setTransparentNavbar] = useState(true);
@@ -30,7 +29,7 @@ export default function HorionForSalesPage() {
   return (
     <>
       <PageMeta
-        title="Generative AI | Horion for sales"
+        title="Horion for sales | Generative AI "
         description="lorem ipsum"
       />
       <Navbar transparentBg={transparentNavbar} />
@@ -44,7 +43,7 @@ export default function HorionForSalesPage() {
         <Stats stats={HORION_FOR_SALES.stats} />
         <Certification {...HORION_FOR_SALES.certification} />
         <FAQs faqs={HORION_FOR_SALES.faqs} />
-        <Cta />
+        <CallToAction />
       </main>
     </>
   );

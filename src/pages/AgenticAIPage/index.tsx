@@ -38,7 +38,7 @@ function Page({ PRODUCT }: { PRODUCT: (typeof AGENTIC_AI_DATA)[0] }) {
   return (
     <>
       <PageMeta
-        title={`Agentic AI | ${PRODUCT.title}`}
+        title={`${PRODUCT.title}`}
         description={PRODUCT.description}
       />
       <Navbar transparentBg={transparentNavbar} />
@@ -51,15 +51,7 @@ function Page({ PRODUCT }: { PRODUCT: (typeof AGENTIC_AI_DATA)[0] }) {
         </section>
         <UseCases content={PRODUCT.useCases} />
         <OurLatestNews />
-        <CallToAction>
-          <p className="text-24 font-light max-w-[800px] mt-5 xl:mt-10 leading-[1.4]! max-xl:text-center">
-            Deliver high-quality results with advanced retrieval, reasoning, and
-            self-validation techniques. Deliver high-quality results with
-            advanced retrieval, reasoning, and self-validation techniques.
-            Deliver high-quality results with advanced retrieval, reasoning, and
-            self-validation techniques.
-          </p>
-        </CallToAction>
+        <CallToAction />
       </main>
     </>
   );

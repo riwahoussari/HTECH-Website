@@ -4,8 +4,8 @@ import { TitleBlock } from "../../../components/ui/Titles";
 
 export default function OurProducts() {
   return (
-    <section className="my-container side-padding">
-      <TitleBlock title="Our in houst AI products" />
+    <section id="our-products" className="my-container side-padding">
+      <TitleBlock title="Our in house AI products" />
 
       <div className="grid grid-cols-1 xl:grid-cols-3 2xl:gap-y-12 xl:gap-y-8 sm:gap-y-12 gap-y-6">
         {/* card 1 */}

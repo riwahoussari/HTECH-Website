@@ -21,9 +21,11 @@ export default function PHero({
       align="center"
       buttons={
         <>
-          <Button arrow={"normal"} size={"lg"}>
-            Become a partner
-          </Button>
+          <a href="#become-a-partner">
+            <Button arrow={"normal"} size={"lg"}>
+              Become a partner
+            </Button>
+          </a>
         </>
       }
     />

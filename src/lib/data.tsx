@@ -2316,7 +2316,7 @@ export const PUBLIC_SECTOR_PAGE_DATA = {
       },
       {
         title: "Generative AI",
-        link: "/products/agentic-ai/ai-agents-for-enterprise",
+        link: "/products/generative-ai/horion-for-sales",
         list: [
           "Advanced AI Software: Unified platform for end-to-end ML Ops.",
           "State-of-the-Art Machine Learning: Leverage machine learning strategies to accelerate and strategically approach data annotation.",

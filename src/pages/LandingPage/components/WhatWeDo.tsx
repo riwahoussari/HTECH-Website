@@ -9,6 +9,7 @@ import {
   useTransform,
 } from "motion/react";
 import Button from "../../../components/ui/Button";
+import { Link } from "react-router-dom";
 
 const CARDS = [
   {
@@ -18,6 +19,7 @@ const CARDS = [
       src: "/assets/demos/generative-ai-and-automations.svg",
       alt: "Image of the Patient History Dashboard",
     },
+    link: "/products/generative-ai/horion-for-sales"
   },
   {
     title: "Predictive AI Models",
@@ -26,6 +28,7 @@ const CARDS = [
       src: "/assets/demos/predictive-ai-models.svg",
       alt: "Image of the Patient History Dashboard",
     },
+    link: "/products/predictive-ai-models/for-enterprise"
   },
   {
     title: "Agentic AI",
@@ -34,6 +37,7 @@ const CARDS = [
       src: "/assets/demos/agentic-ai.svg",
       alt: "Image of the Patient History Dashboard",
     },
+    link: "/products/agentic-ai/ai-agents-for-enterprise"
   },
 ];
 
@@ -90,6 +94,7 @@ function Card({
       src: string;
       alt: string;
     };
+    link: string;
   };
 }) {
   const scaleRange = [index * (1 / CARDS.length), 1];
@@ -125,15 +130,16 @@ function Card({
               {content.text}
             </p>
           </SlideUpAnim>
-          <Button
-            clr={"white"}
-            variant={"outline"}
-            size={"md"}
-            arrow={"normal"}
-            // className="border-0! p-0!"
-          >
-            Learn more
-          </Button>
+          <Link to={content.link}>
+            <Button
+              clr={"white"}
+              variant={"outline"}
+              size={"md"}
+              arrow={"normal"}
+            >
+              Learn more
+            </Button>
+          </Link>
         </div>
 
         {/* image */}

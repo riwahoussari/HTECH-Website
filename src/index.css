@@ -28,6 +28,10 @@
   --color-light-black: #212121;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica", sans-serif;
 }
@@ -49,7 +53,7 @@ body {
 }
 
 .cards-gap {
-  @apply gap-6 sm:gap-4 lg:gap-6
+  @apply gap-6 sm:gap-4 lg:gap-6;
 }
 
 .main-flex {
@@ -73,7 +77,6 @@ body {
 .bg-blueish-gray-gold-gradient {
   @apply bg-[linear-gradient(90deg,#CE9C35_0%,#7286A0_100%)];
 }
-
 
 .bg-linear-white-transparent-50 {
   background-image: linear-gradient(
@@ -182,6 +185,6 @@ body {
   }
 
   .row {
-    @apply flex gap-x-6 gap-y-8 max-sm:flex-col  ;
+    @apply flex gap-x-6 gap-y-8 max-sm:flex-col;
   }
 }

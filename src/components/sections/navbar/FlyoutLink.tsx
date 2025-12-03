@@ -10,11 +10,15 @@ export default function FlyoutLink({
   to,
   FlyoutContent,
   setHovering,
+  linkName,
+  className,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   to?: string;
   FlyoutContent: ReactNode;
   setHovering: React.Dispatch<React.SetStateAction<boolean>>;
+  linkName: string;
+  className?: string;
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -34,10 +38,34 @@ export default function FlyoutLink({
         {/* link text */}
         {to ? (
           <Link className="relative z-1" to={to}>
-            {children}
+            <p className={"min-w-20 text-end text-sm group " + className}>
+              <span className=" relative">
+                {linkName}
+                <div
+                  className={
+                    "absolute -bottom-2 left-0 right-0 h-0.5 bg-blueish-gray-gold-gradient rounded-full group-hover:w-full w-0 duration-200 ease-in-out "
+                  }
+                />
+              </span>
+            </p>
           </Link>
         ) : (
-          <div className="relative z-1">{children}</div>
+          <div className="relative z-1">
+            <p
+              className={
+                "min-w-20 text-end text-sm group cursor-default " + className
+              }
+            >
+              <span className=" relative">
+                {linkName}
+                <div
+                  className={
+                    "absolute -bottom-2 left-0 right-0 h-0.5 bg-blueish-gray-gold-gradient rounded-full group-hover:w-full w-0 duration-200 ease-in-out "
+                  }
+                />
+              </span>
+            </p>
+          </div>
         )}
 
         {/* bridge to maintain hover */}
@@ -174,12 +202,20 @@ export function SolutionsFlyoutContent() {
       <div className="grid xl:grid-cols-2 xl:gap-10">
         <div className="flex flex-col ">
           {left.map((industry, i) => (
-            <FLink key={i} text={industry.name} link={`/solutions/${industry.name}`} />
+            <FLink
+              key={i}
+              text={industry.name}
+              link={`/solutions/${industry.name}`}
+            />
           ))}
         </div>
         <div className="flex flex-col ">
           {right.map((industry, i) => (
-            <FLink key={i} text={industry.name} link={`/solutions/${industry.name}`} />
+            <FLink
+              key={i}
+              text={industry.name}
+              link={`/solutions/${industry.name}`}
+            />
           ))}
         </div>
       </div>
@@ -192,7 +228,7 @@ export function CompanyFlyoutContent() {
     <div className="flex xl:min-w-[320px] flex-col gap-4">
       <FTitle text="COMPANY" />
       <div className="flex flex-col ">
-        <FLink link="/about" text="About" />
+        {/* <FLink link="/about" text="About" /> */}
         <FLink link="/careers" text="Careers" />
         <FLink link="/news" text="News" />
         <FLink link="/partners" text="Partners" />
@@ -222,7 +258,11 @@ export function InitiativesFlyoutContent() {
   return (
     <div className="flex flex-col gap-5 ">
       {/* <FTitle text="INITIATIVES" /> */}
-      <a target="_blank" className="group/link" href="https://codeforlebanon.com">
+      <a
+        target="_blank"
+        className="group/link"
+        href="https://codeforlebanon.com"
+      >
         <div className="min-w-full rounded-[10px] overflow-hidden relative  px-4 py-6 xl:p-8 xl:pt-32 flex justify-end flex-col gap-2">
           <TexturedBg
             color="var(--color-gold)"

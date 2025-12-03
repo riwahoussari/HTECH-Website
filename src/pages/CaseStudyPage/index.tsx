@@ -44,7 +44,7 @@ function Page({
   return (
     <>
       <PageMeta
-        title={`Case Study | ${CASE_STUDY.name}`}
+        title={`${CASE_STUDY.name} | Case Study`}
         description={CASE_STUDY.description}
       />
       <Navbar transparentBg={transparentNavbar} />

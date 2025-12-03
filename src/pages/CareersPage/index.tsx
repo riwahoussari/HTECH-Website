@@ -21,7 +21,7 @@ export default function CareersPage() {
   return (
     <>
       <PageMeta
-        title={`Htech Partners`}
+        title={`Careers`}
         description={CAREERS_PAGE_DATA.description}
       />
       <Navbar transparentBg={transparentNavbar} />

@@ -26,7 +26,7 @@ export default function PartnersPage() {
   return (
     <>
       <PageMeta
-        title={`Htech Partners`}
+        title={`Partners`}
         description={PARTNERS_DATA.description}
       />
       <Navbar transparentBg={transparentNavbar} />

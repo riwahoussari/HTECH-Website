@@ -1,6 +1,5 @@
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { useRef, useState } from "react";
-import NewsCtaSection from "./components/NewsCtaSection";
 import ArticlesSection from "./components/ArticlesSection";
 import CallToAction from "../../components/sections/CallToAction";
 import Navbar from "../../components/sections/navbar/Navbar";
@@ -21,7 +20,7 @@ export default function NewsPage() {
   return (
     <>
       <PageMeta
-        title="Gaiant Insights | News & AI Perspectives"
+        title="News & AI Perspectives"
         description="Stay up to date with the latest from Gaiant. Explore articles and insights on AI innovation, automation, and how intelligent systems are transforming modern industries."
       />
       <Navbar transparentBg={transparentNavbar} />

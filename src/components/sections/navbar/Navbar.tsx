@@ -69,8 +69,11 @@ export default function Navbar({
           y: hideNavOnScroll && !mobileMenuOpen && !hovering ? "-100%" : "0%",
         }}
         style={{
-          backgroundColor:
-            transparentBg && !mobileMenuOpen ? "transparent" : "white",
+          backgroundColor: hovering
+            ? "white"
+            : transparentBg && !mobileMenuOpen
+              ? "transparent"
+              : "white",
         }}
         transition={{
           ease: "easeInOut",
@@ -97,47 +100,44 @@ export default function Navbar({
             <FlyoutLink
               setHovering={setHovering}
               FlyoutContent={<ProductsFlyoutContent />}
-            >
-              <p className="min-w-16 text-start text-sm">Products</p>
-            </FlyoutLink>
+              linkName="Products"
+              className="min-w-16! text-start!"
+            />
             <FlyoutLink
               setHovering={setHovering}
               FlyoutContent={<SolutionsFlyoutContent />}
-            >
-              <p className="min-w-20 text-center text-sm">Solutions</p>
-            </FlyoutLink>
+              linkName="Solutions"
+            />
             <FlyoutLink
               setHovering={setHovering}
               FlyoutContent={<ResourcesFlyoutContent />}
-            >
-              <p className="min-w-20 text-end text-sm">Resources</p>
-            </FlyoutLink>
+              linkName="Resources"
+            />
             <FlyoutLink
               setHovering={setHovering}
               FlyoutContent={<CompanyFlyoutContent />}
-            >
-              <p className="min-w-20 text-end text-sm">Company</p>
-            </FlyoutLink>
+              linkName="Company"
+            />
             <FlyoutLink
               setHovering={setHovering}
               FlyoutContent={<InitiativesFlyoutContent />}
-            >
-              <p className="min-w-20 text-end text-sm">Initiatives</p>
-            </FlyoutLink>
+              linkName="Initiatives"
+            />
             <FlyoutLink
               setHovering={setHovering}
               FlyoutContent={<GovernmentFlyoutContent />}
               to="/government/public-sector"
-            >
-              <p className="min-w-20 text-end text-sm">Government</p>
-            </FlyoutLink>
+              linkName="Government"
+            />
           </div>
 
           {/* CTA - Mobile Menu Trigger Btn */}
           <div className="relative z-1 flex items-center justify-end gap-5 xl:min-w-[160px]">
-            <Button size={"sm"} variant={"fill"}>
-              Book a demo
-            </Button>
+            <a href="#request-a-demo">
+              <Button size={"sm"} variant={"fill"}>
+                Book a demo
+              </Button>
+            </a>
 
             <div
               ref={burgerBtnRef}
@@ -153,7 +153,6 @@ export default function Navbar({
         <MobileNavMenu
           ref={mobileMenuRef}
           isOpen={mobileMenuOpen}
-          setIsOpen={setMobileMenuOpen}
         />
       </m.header>
 

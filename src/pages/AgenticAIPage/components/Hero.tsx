@@ -23,9 +23,11 @@ export default function PHero({
       align="left"
       buttons={
         <>
-          <Button arrow={"normal"} size={"lg"}>
-            Request a demo
-          </Button>
+          <a href="#request-a-demo">
+            <Button arrow={"normal"} size={"lg"}>
+              Request a demo
+            </Button>
+          </a>
         </>
       }
       image={
