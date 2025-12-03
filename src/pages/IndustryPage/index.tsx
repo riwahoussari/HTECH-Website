@@ -55,7 +55,7 @@ function Page({ INDUSTRY }: { INDUSTRY: (typeof GENERAL_DATA.INDUSTRIES)[0] }) {
           />
           <PartnersMarquee />
         </div>
-        <ThreeOutlineCardsSection content={INDUSTRY.outlineCardsSection} />
+        <ThreeOutlineCardsSection bg content={INDUSTRY.outlineCardsSection} />
         <GhostCardsSection cards={INDUSTRY.ghostCardsSection} />
         <AccordionFullSection content={INDUSTRY.accordionSection} />
         <FeatureSection content={INDUSTRY.featureSection} />

@@ -14,5 +14,5 @@ export default function TheChallenge({
     }[];
   };
 }) {
-  return <ThreeOutlineCardsSection content={content} />;
+  return <ThreeOutlineCardsSection bg content={content} />;
 }

@@ -44,7 +44,7 @@ export default function PublicSectorPage() {
         <UseCases content={data.useCases} />
         <AISolutionsSection content={data.AISolutionsSection} />
         <div>
-          <ThreeOutlineCardsSection content={data.outlineCardsSection} />
+          <ThreeOutlineCardsSection bg content={data.outlineCardsSection} />
           <section className="my-container side-padding mt-6 xl:mt-10">
             <TestimonialCard {...data.testimonial} />
           </section>

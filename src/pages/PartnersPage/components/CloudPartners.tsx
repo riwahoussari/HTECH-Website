@@ -16,7 +16,7 @@ export default function CloudPartners({
       <div className="grid sm:grid-cols-2 2xl:grid-cols-4 gap-6 sm:gap-4 lg:gap-6 max-2xl:max-w-[1200px]">
         {content.partners.map((partner, i) => (
           <OutlineCard
-            image={<img {...partner.img} className="w-1/2 invert-100 " />}
+            image={<img {...partner.img} className="w-1/2 " />}
             key={i}
             {...partner}
           />

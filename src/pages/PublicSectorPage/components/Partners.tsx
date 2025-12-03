@@ -1,3 +1,5 @@
+import { CenteredTitleBlock } from "../../../components/ui/Titles";
+
 export default function Partners({
   images,
 }: {
@@ -8,6 +10,7 @@ export default function Partners({
   const half2 = images.slice(midPoint, images.length);
   return (
     <section className="my-container side-padding flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 ">
+      <CenteredTitleBlock title="Our esteemed partners" />
       <div className="w-full flex justify-center flex-wrap items-center gap-y-10 lg:gap-y-20 ">
         {half1.map((img, i) => <Logo {...img} key={i} />)}
       </div>

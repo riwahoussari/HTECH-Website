@@ -17,7 +17,7 @@ export default function PutDataToWork({
 }) {
   return (
     <div>
-      <ThreeOutlineCardsSection content={content} />
+      <ThreeOutlineCardsSection bg content={content} />
       {content.img && (
         <div className="my-container side-padding mt-6 sm:mt-4 lg:mt-6">
           <img {...content.img} className="lg-rounded w-full lg:aspect-3/1 aspect-5/3 object-cover" />

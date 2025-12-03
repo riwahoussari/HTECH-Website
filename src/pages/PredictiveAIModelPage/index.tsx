@@ -52,7 +52,7 @@ function Page({
       <Navbar transparentBg={transparentNavbar} />
       <main className="main-flex ">
         <PHero navbarTriggerRef={navbarBgTrigger} {...PRODUCT} />
-        <ThreeOutlineCardsSection content={PRODUCT.section1} />
+        <ThreeOutlineCardsSection bg content={PRODUCT.section1} />
         <FeaturesScrollSection content={PRODUCT.section2} />
         <GhostCardsSection cards={PRODUCT.section3} />
         <IndustriesWeEmpower />

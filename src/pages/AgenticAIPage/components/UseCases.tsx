@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import FourBlueCardsSection from "../../../components/sections/FourBlueCardsSection";
+import FourSimpleCardsSection from "../../../components/sections/FourSimpleCardsSection";
 
 export default function UseCases({
   content,
@@ -11,5 +11,5 @@ export default function UseCases({
     cards: { title: string; text: string; icon: ReactNode; list: string[] }[];
   };
 }) {
-  return <FourBlueCardsSection content={content} />
+  return <FourSimpleCardsSection bg content={content} />;
 }
