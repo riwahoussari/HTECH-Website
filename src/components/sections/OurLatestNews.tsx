@@ -2,6 +2,7 @@ import NewsArticlesCarousel from "./NewsArticlesCarousel";
 import { TitleBlock } from "../ui/Titles";
 
 export default function OurLatestNews() {
+  
   return (
     <NewsArticlesCarousel
       titleBlock={

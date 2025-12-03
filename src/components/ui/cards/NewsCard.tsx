@@ -23,7 +23,7 @@ export default function NewsCard({
     <Link
       to={`/news/${title}`}
       className={
-        "group flex flex-col justify-between bg-[#EAEDF1] lg-rounded overflow-hidden h-full min-w-[320px] w-[80vw] sm:w-[50vw] lg:w-[30vw] max-w-[580px] " +
+        "group flex flex-col justify-between bg-[#EAEDF1] lg-rounded overflow-hidden h-full w-full " +
         className
       }
       aria-label={`Read more about ${title}`}

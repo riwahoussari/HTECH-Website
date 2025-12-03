@@ -55,7 +55,6 @@ export default function ArticlesSection({
                 src="/images/people-walking.webp"
                 alt="two people walking together in a hallway"
                 className="h-full w-full object-cover lg-rounded"
-                
               />
             </SlideUpAnim>
           </div>
@@ -90,7 +89,7 @@ export default function ArticlesSection({
       </div>
 
       {/* other articles */}
-      <div className="mt-11 grid grid-cols-1 gap-5 gap-y-10! xs:gap-8 sm:gap-5 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-11 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 cards-gap">
         {GENERAL_DATA.ARTICLES.map((article, i) => (
           <div>
             <SlideUpSelf className="w-full max-w-[550px] lg:max-w-none">

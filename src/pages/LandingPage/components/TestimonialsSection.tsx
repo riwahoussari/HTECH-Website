@@ -1,4 +1,4 @@
-import  { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import ArrowSvg from "../../../components/ui/ArrowSvg";
 import { motion as m, AnimatePresence, useInView } from "motion/react";
 import { SlideUpAnim } from "../../../components/ui/Anims";

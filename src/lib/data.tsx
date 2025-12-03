@@ -1285,7 +1285,7 @@ export const GENERAL_DATA = {
       title: "How AI is Reshaping Decision-Making Across Industries",
       subtitle: "GAIANT TEAM - SEP 19, 2025",
       imgSrc: "/blogs/blog-4.webp",
-    },
+    }
   ],
 
   CASE_STUDIES: [
@@ -2374,7 +2374,6 @@ export const PUBLIC_SECTOR_PAGE_DATA = {
       alt: "Berytech Logo",
       className: " scale-85 ",
     },
-    { src: "/assets/logos/usj-logo.png", alt: "USJ Logo" },
     { src: "/assets/logos/unicef-logo.svg", alt: "Unicef Logo" },
     {
       src: "/assets/logos/military-tribunal-logo.svg",
@@ -2383,6 +2382,15 @@ export const PUBLIC_SECTOR_PAGE_DATA = {
     {
       src: "/assets/logos/lebanese-military-logo.svg",
       alt: "Lebanese Military Logo",
+    },
+    { src: "/assets/logos/usj-logo.png", alt: "USJ Logo" },
+    {
+      src: "/assets/logos/lau-white-logo.svg",
+      alt: "LAU Logo",
+    },
+    {
+      src: "/assets/logos/aub-logo.svg",
+      alt: "AUB Logo",
     },
   ],
 };
