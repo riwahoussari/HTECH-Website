@@ -1,25 +1,28 @@
-import {
-  useEffect,
-  useRef,
-  useState,
-  type HTMLAttributes,
-  type ReactNode,
-} from "react";
-import ArrowSvg from "../ui/ArrowSvg";
+import { useEffect, useRef, useState, type HTMLAttributes } from "react";
+import { SlideUpAnim } from "../../../components/ui/Anims";
 import { useInView } from "motion/react";
-import { SlideUpAnim } from "../ui/Anims";
+import { CenteredTitleBlock } from "../../../components/ui/Titles";
+
+export default function FAQs({faqs} : {faqs: TAccordionContent[]}) {
+  return (
+    <section className="flex flex-col items-center max-w-[1200px]! my-container side-padding">
+      <CenteredTitleBlock title="FAQs" />
+
+      <AccordionSection
+        accordionContent={faqs}
+      />
+    </section>
+  );
+}
 
 type TAccordionContent = {
   title: string;
-  subtitle?: string;
-  list?: string[];
+  text: string;
 };
 
-export default function AccordionSection({
-  img,
+function AccordionSection({
   accordionContent,
 }: {
-  img: ReactNode;
   accordionContent: TAccordionContent[];
 }) {
   const [selected, setSelected] = useState<number | undefined>(0);
@@ -28,18 +31,13 @@ export default function AccordionSection({
   return (
     <div
       ref={sectionRef}
-      className="relative flex flex-col gap-14 lg:flex-row lg:justify-between xl:gap-14 lg:[&>div]:w-1/2"
+      className="relative w-full flex flex-col items-center"
     >
-      {/* image */}
-      <SlideUpAnim isInView={isInView} className="relative">
-        {img}
-      </SlideUpAnim>
-
       {/* Accordion */}
       <SlideUpAnim
         isInView={isInView}
         transition={{ delay: 0.2 }}
-        className="relative flex flex-col md:max-w-[720px]"
+        className="relative flex flex-col w-full md:max-w-[720px]"
       >
         {accordionContent.map((item, i) => (
           <AccordionItem
@@ -56,15 +54,13 @@ export default function AccordionSection({
 
 function AccordionItem({
   title,
-  subtitle,
-  list,
+  text,
   selected = false,
   onClick,
   ...props
 }: {
   title: string;
-  subtitle?: string;
-  list?: string[];
+  text: string;
   selected?: boolean;
   onClick: () => void;
 } & HTMLAttributes<HTMLDivElement>) {
@@ -84,7 +80,6 @@ function AccordionItem({
       window.removeEventListener("resize", setHeight);
     };
   }, []);
-  // const CONTENT_HEIGHT = "302px";
 
   return (
     <div className="relative" {...props}>
@@ -97,45 +92,47 @@ function AccordionItem({
       />
 
       {/* content */}
-
-      <p className="text-32 cursor-pointer py-6" onClick={onClick}>
-        {title}
-      </p>
-
-      {(subtitle || list) && (
+      <div
+        className="flex group justify-between cursor-pointer py-6"
+        onClick={onClick}
+      >
+        <p className="text-25">{title}</p>
         <div
-          style={{
-            height: selected ? accItemHeight || 0 : 0,
-          }}
           className={
-            "overflow-y-hidden text-xl transition-all duration-400 ease-in-out"
+            "w-8 duration-200 ease-in-out group-hover:opacity-70 group-hover:-rotate-90 " +
+            (selected ? " opacity-100! -rotate-180! " : "opacity-50 ")
           }
         >
-          <div ref={contentRef}>
-            {subtitle && (
-              <p
-                className="pb-10 pt-2 text-16 text-blueish-gray font-light"
-                style={{ letterSpacing: "1px" }}
-              >
-                {subtitle}
-              </p>
-            )}
-            {list && (
-              <div className="space-y-[28px] pb-8">
-                {list.map((string, i) => (
-                  <div key={i} className="flex items-center gap-4 xs:gap-7">
-                    <ArrowSvg
-                      strokeWidth={1}
-                      className="w-4.5 xs:w-5.5 -rotate-45"
-                    />
-                    <p className="text-20">{string}</p>
-                  </div>
-                ))}
-              </div>
-            )}
+          <svg
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 10.5L14 17.5L21 10.5"
+              stroke={"var(--color-light-black)"}
+              stroke-width="2.33333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div
+        style={{
+          height: selected ? accItemHeight || 0 : 0,
+        }}
+        className={
+          "overflow-y-hidden text-xl transition-all duration-400 ease-in-out"
+        }
+      >
+        <div ref={contentRef}>
+          <div className=" pb-8">
+            <p className="text-20 opacity-80 leading-[1.4]!">{text}</p>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

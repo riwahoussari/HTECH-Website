@@ -85,7 +85,7 @@ export function CenteredTitleBlock({
   return (
     <div
       ref={titleBlockRef}
-      className={"text-center max-w-[1000px] mx-auto " + (className || "")}
+      className={"text-center max-w-[1000px] mx-auto mb-10 lg:mb-14 " + (className || "")}
     >
       {subtitle && (
         <SectionSubTitle className="mb-5">

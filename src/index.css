@@ -139,6 +139,10 @@ body {
   @apply text-[23px] leading-[27px] xs:text-[25px] xs:leading-[31px];
 }
 
+.text-28 {
+  @apply text-[24px] sm:text-[26px] 2xl:text-[28px] leading-[1.2];
+}
+
 .text-32 {
   @apply text-[27px] sm:text-[30px] 2xl:text-[32px] leading-[1.2];
 }

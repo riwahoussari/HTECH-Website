@@ -1645,7 +1645,8 @@ export const ABOUT_PAGE_DATA = {
 
 export const CAREERS_PAGE_DATA = {
   title: "Dream big, build bigger",
-  description: "At Htech, we’re transforming ideas into reality. Let’s write the next chapter of your career together.",
+  description:
+    "At Htech, we’re transforming ideas into reality. Let’s write the next chapter of your career together.",
   currentOpenings: [
     {
       category: "Development",
@@ -2517,6 +2518,204 @@ export const PARTNERS_DATA = {
         title: "Continuous improvements",
         text: "Our AI systems are continually updated and optimized based on the latest research.",
         icon: ICONS.CHART,
+      },
+    ],
+  },
+};
+
+export const HORION_FOR_SALES = {
+  title: "Horion for sales",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.",
+  img: {
+    src: "/assets/demos/horion-for-sales.png",
+    alt: "Horion for sales demo",
+  },
+  realtimeAI: {
+    title: "Horion helps in the moment, when it matters most.",
+    subtitle: "Real-time AI for every moment",
+    rows: [
+      {
+        icon: {
+          src: "/assets/icons/horion-for-sales/headset.svg",
+          alt: "Icon of a headset",
+        },
+        title: "Sales calls",
+        text: "Win more deals by handling objections confidently and answering any product question in the moment.",
+      },
+      {
+        icon: {
+          src: "/assets/icons/horion-for-sales/compass.svg",
+          alt: "Icon of a compass",
+        },
+        title: "Recruiting",
+        text: "Hire faster with clearer signals — verify claims in real time and understand exactly what candidates say.",
+      },
+      {
+        icon: {
+          src: "/assets/icons/horion-for-sales/comment.svg",
+          alt: "Icon of a comment bubble",
+        },
+        title: "Consulting",
+        text: "Earn trust on the first call — give confident answers and lock next steps without hunting through docs.",
+      },
+      {
+        icon: {
+          src: "/assets/icons/horion-for-sales/network.svg",
+          alt: "Icon of a network",
+        },
+        title: "Customer support",
+        text: "Resolve faster and lift CSAT by being fed in real-time exactly how to handle every situation.",
+      },
+    ],
+  },
+  steps: [
+    {
+      img: {
+        src: "/assets/demos/horion-for-sales/Step-1.png",
+        alt: "image of step 1",
+      },
+      title: "Start Horion",
+      text: "Simply click Start Horion before your meeting begins.",
+    },
+    {
+      img: {
+        src: "/assets/demos/horion-for-sales/Step-2.png",
+        alt: "image of step 2",
+      },
+      title: "End Horion",
+      text: "Click the Stop button to end recording. That's it.",
+    },
+    {
+      img: {
+        src: "/assets/demos/horion-for-sales/Step-3.png",
+        alt: "image of step 3",
+      },
+      title: "Get notes",
+      text: "Horion uses what it heard and what it saw on your screen to generate notes.",
+    },
+  ],
+  performBetter: {
+    title:
+      "Understand exactly what your team is doing, and help them perform better.",
+    subtitle: "You can't see where your team is messing up",
+    features: [
+      {
+        title: "AI meeting summaries.",
+        text: "Every meeting neatly summarized — no effort needed.",
+        img: {
+          src: "/assets/demos/horion-for-sales/dashboard-1.png",
+          alt: "Demo of ai meeting summaries",
+        },
+      },
+      {
+        title: "Usage analytics.",
+        text: "See when and how reps are using Cluely effectively across calls.",
+        img: {
+          src: "/assets/demos/horion-for-sales/dashboard-2.png",
+          alt: "Demo of usafe analytics",
+        },
+      },
+      {
+        title: "AI meeting coaching.",
+        text: "Identify moments where Cluely could’ve helped but wasn’t used.",
+        img: {
+          src: "/assets/demos/horion-for-sales/dashboard-3.png",
+          alt: "Demo of ai meeting coaching",
+        },
+      },
+      {
+        title: "Cross-call AI chat.",
+        text: "Horion answers questions across all your meetings using saved context.",
+        img: {
+          src: "/assets/demos/horion-for-sales/dashboard-4.png",
+          alt: "Demo of Cross-call AI chat",
+        },
+      },
+    ],
+  },
+  stats: [
+    {
+      stat: "20+",
+      title: "Languages",
+      text: "We support over 12 different languages, including English, Chinese, Spanish, and more.",
+    },
+    {
+      stat: "300ms",
+      title: "Response time",
+      text: "We have the fastest live transcription available. Test us against any other competitor.",
+    },
+    {
+      stat: "95%",
+      title: "Transcription accuracy",
+      text: "Trusted by many teams for reliable transcription. All processed with industry-leading accuracy.",
+    },
+  ],
+  faqs: [
+    {
+      title: "Why real-time vs. a regular AI notetaker?",
+      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante.",
+    },
+    {
+      title: "Who is Horion for? ",
+      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante.",
+    },
+    {
+      title: "Is Horion free? ",
+      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante.",
+    },
+    {
+      title: "How is it undetectable in meetings?",
+      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante.",
+    },
+    {
+      title: "What languages and apps are supported?",
+      text: "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante.",
+    },
+  ],
+  certification: {
+    certificates: [
+      {
+        title: "ISO 27001 certified",
+        text: "International standard for information security management.",
+        badge: {
+          src: "/assets/icons/horion-for-sales/badges/badge-1.svg",
+          alt: "ISO badge",
+        },
+      },
+      {
+        title: "SOC 2 Type I & II compliant",
+        text: "Proven long-term data security through independent audits.",
+        badge: {
+          src: "/assets/icons/horion-for-sales/badges/badge-2.svg",
+          alt: "SOC 2 Type I & II badge",
+        },
+      },
+      {
+        title: "GDPR compliance",
+        text: "Working to align with EU data protection requirements.",
+        badge: {
+          src: "/assets/icons/horion-for-sales/badges/badge-3.svg",
+          alt: "GRDP badge",
+        },
+      },
+      {
+        title: "CCPA compliance",
+        text: "Working to meet California’s privacy protection standards.",
+        badge: {
+          src: "/assets/icons/horion-for-sales/badges/badge-4.svg",
+          alt: "CCPA badge",
+        },
+      },
+    ],
+    measures: [
+      {
+        title: "Data encryption at rest and in transit.",
+        text: "Encryption protects data stored and transferred.",
+      },
+      {
+        title: "Dedicated workspace isolation.",
+        text: "Organizations are isolated for team data security.",
       },
     ],
   },
